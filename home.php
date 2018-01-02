@@ -1,7 +1,6 @@
 <?php
 session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +9,6 @@ session_start();
   <meta name="description" content="Educacion">
   <meta name="author" content="E-learning">
   <title>B-Smart</title>
-
   <!-- core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -28,9 +26,7 @@ session_start();
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
-
 <body class="homepage">
-
 <header id="header">
   <div class="top-bar">
     <div class="container">
@@ -58,7 +54,6 @@ session_start();
       </div>
     </div><!--/.container-->
   </div><!--/.top-bar-->
-
   <nav class="navbar navbar-inverse">
     <div class="container">
       <div class="navbar-header">
@@ -70,7 +65,6 @@ session_start();
         </button>
         <a class="navbar-brand" href="index.php"><img src="images/logo2.png" alt="logo"></a>
       </div>
-
       <div class="collapse navbar-collapse navbar-right">
         <ul class="nav navbar-nav">
           <li class="active"><a href="home.php">Home</a></li>
@@ -81,10 +75,7 @@ session_start();
             <ul class="dropdown-menu">
               <li><a href="actividades/Actividad_list.php">Diario</a></li>
               <li><a href="horario.php">Horario de Clases</a></li>
-
             </ul>
-
-
             <!---doc     <ul class="dropdown-menu">
                  <li><a href="construccion.php">Diario</a></li>
                  <li><a href="horario.php">Horario de Clases</a></li>
@@ -93,24 +84,16 @@ session_start();
           </li>
           <li><a href="costruccion.html" class="dropdown-toggle" data-toggle="dropdown">Asignaturas <i
                 class="fa fa-angle-down"></i></a>
-
-
             <ul class="dropdown-menu">
               <li><a href="construccion.php">Materia</a></li>
-
             </ul>
-
-
             <!-- <ul class="dropdown-menu">
                 <li><a href="materias.php">Materia</a></li>
                 <li><a href="construccion.php">Cuestionarios</a></li>
                 <li><a href="construccion.html">Otros...</a></li>
             </ul>-->
           </li>
-
           <li><a href="notas/form_notas.php">Calificaciones</a></li>
-
-
           <li><a href="costruccion.html" class="dropdown-toggle" data-toggle="dropdown">Planificaciones <i
                 class="fa fa-angle-down"></i></a>
             <ul class="dropdown-menu">
@@ -122,17 +105,12 @@ session_start();
             </ul>
           </li>
           <!-- target="info"-->
-
-
           <li><a href="contactenos.php">Contactenos</a></li>
         </ul>
       </div>
     </div><!--/.container-->
   </nav><!--/nav-->
-
 </header><!--/header-->
-
-
 <!--/************************* IFRAME centro *************************************************************
     <section id="main-slider" class="no-margin">
       <div class="item">       
@@ -140,8 +118,6 @@ session_start();
       </div>
    </section>
 ************************ IFRAME centro **************************************************************-->
-
-
 <!--/************************* IFRAME centro **************************************************************-->
 <section id="main-slider" class="no-margin">
   <div class="carousel slide" data-ride="carousel">
@@ -151,7 +127,6 @@ session_start();
       <li data-target="#main-slider" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner">
-
       <div class="item active" style="background-image: url(images/slider/anime3.png)">
         <div class="container">
           <div class="row slide-margin">
@@ -162,17 +137,14 @@ session_start();
                 <a class="btn-slide animation animated-item-3" href="materias.php">Leer Más...</a>
               </div>
             </div>
-
             <div class="col-sm-6 hidden-xs animation animated-item-4">
               <div class="slider-img">
                 <img src="images/slider/anime1.png" alt="b-smart" class="img-responsive">
               </div>
             </div>
-
           </div>
         </div>
       </div><!--/.item-->
-
       <div class="item" style="background-image: url(images/slider/anime3.png)">
         <div class="container">
           <div class="row slide-margin">
@@ -183,17 +155,14 @@ session_start();
                 <a class="btn-slide animation animated-item-3" href="horario.php">Leer Más...</a>
               </div>
             </div>
-
             <div class="col-sm-6 hidden-xs animation animated-item-4">
               <div class="slider-img">
                 <img src="images/slider/img2.png" alt="b-smart" class="img-responsive">
               </div>
             </div>
-
           </div>
         </div>
       </div><!--/.item-->
-
       <div class="item" style="background-image: url(images/slider/anime3.png)">
         <div class="container">
           <div class="row slide-margin">
@@ -221,7 +190,6 @@ session_start();
     <i class="fa fa-chevron-right"></i>
   </a>
 </section><!--/#main-slider-->
-
 <!--/************************* IFRAME centro **************************************************************-->
 <section id="bottom">
   <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
@@ -231,28 +199,20 @@ session_start();
           <h3><a href="actividades/Actividad_list.php">Actividades académicas</a></h3>
         </div>
       </div><!--/.col-md-3-->
-
       <div class="col-md-5 col-sm-6">
         <div class="widget">
           <h3><a href="horario.php"> Horarios de Clases</a></h3>
-
         </div>
       </div><!--/.col-md-3-->
-
       <div class="col-md-2 col-sm-6">
         <div class="widget">
           <h3><a href="curso1/Curso_list.php">Cursos</a></h3>
-
         </div>
       </div><!--/.col-md-3-->
-
-
     </div><!--/.col-md-3-->
   </div>
   </div>
 </section><!--/#bottom-->
-
-
 <footer id="footer" class="midnight-blue">
   <div class="container">
     <div class="row">
@@ -271,7 +231,6 @@ session_start();
     </div>
   </div>
 </footer><!--/#footer-->
-
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.prettyPhoto.js"></script>

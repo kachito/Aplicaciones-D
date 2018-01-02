@@ -1,7 +1,15 @@
 <?php
+
 session_start();
-include_once("SesionCollector.php");
-$SesionCollectorObj = new SesionCollector();
+if (isset($_SESSION['usuario'])){
+  if($_SESSION['usuario']['descripcion']!='Administrador' && $_SESSION['usuario']['descripcion']!='Alumno' && $_SESSION['usuario']['descripcion']!='Docente' ){
+    header('Location:../visit/home.php');
+}
+
+}
+else{
+  header ('Location:../index.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -58,12 +66,16 @@ $SesionCollectorObj = new SesionCollector();
   </div><!--/.top-bar-->
   <nav class="navbar navbar-inverse">
     <div class="container">
-
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.php"><img src="../images/logo2.png" alt="logo"></a>
+      </div>
       <div class="collapse navbar-collapse navbar-right">
-        <div class="navbar-header">
-
-          <a class="navbar-brand" href="../index.php"><img src="../images/logo2.png" alt="logo"></a>
-        </div>
         <ul class="nav navbar-nav">
           <li class="active"><a href="../home.php">Home</a></li>
           <li><a href="../about-us.php">About Us</a></li>
@@ -75,30 +87,30 @@ $SesionCollectorObj = new SesionCollector();
               <li><a href="../horario.php">Horario de Clases</a></li>
             </ul>
             <!---doc     <ul class="dropdown-menu">
-                 <li><a href="construccion.php">Diario</a></li>                                
+                 <li><a href="construccion.php">Diario</a></li>
                  <li><a href="horario.php">Horario de Clases</a></li>
                  <li><a href="construccion.php">Horario de Examenes</a></li>
              </ul>-->
           </li>
-          <li><a href="../costruccion.htl" class="dropdown-toggle" data-toggle="dropdown">Asignaturas <i
+          <li><a href="../costruccion.html" class="dropdown-toggle" data-toggle="dropdown">Asignaturas <i
                 class="fa fa-angle-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="../construccion.php">Materia</a></li>
+              <li><a href="construccion.php">Materia</a></li>
             </ul>
             <!-- <ul class="dropdown-menu">
-                <li><a href="materias.php">Materia</a></li>                                
+                <li><a href="materias.php">Materia</a></li>
                 <li><a href="construccion.php">Cuestionarios</a></li>
                 <li><a href="construccion.html">Otros...</a></li>
             </ul>-->
           </li>
           <li><a href="../notas/form_notas.php">Calificaciones</a></li>
-          <li><a href="../costruccion.html" class="dropdown-toggle" data-toggle="dropdown">Planificaciones <i
+          <li><a href="costruccion.html" class="dropdown-toggle" data-toggle="dropdown">Planificaciones <i
                 class="fa fa-angle-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="../docente/form_docente.php">Docente</a></li>
+              <li><a href="docente/../form_docente.php">Docente</a></li>
               <!-- <li><a href="construccion.html">Alumnos</a></li> -->
-              <li><a href="form_Sesion.php">Sesiones</a></li>
-              <li><a href="../curso1/form_Curso.php">Cursos</a></li>
+              <li><a href="../actividades/form_Actividad.php">Actividades</a></li>
+              <li><a href="../tipo/form_Tipo.php">Cursos</a></li>
               <li><a href="../notas/form_notas.php">Notas</a></li>
             </ul>
           </li>
@@ -116,50 +128,85 @@ $SesionCollectorObj = new SesionCollector();
       </div>
    </section>
 ************************ IFRAME centro **************************************************************-->
-<header>
-  <h1>Mantenimiento Sesioness</h1>
-</header>
-<br/>
-<br/>
-<div class="container">
-  <div class="table-responsive">
-    <table class="table table-condensed table-bordered table-hover">
-      <thead>
-      <tr>
-
-        <th bgcolor="#D8D8D8">Usuario</th>
-        <th bgcolor="#D8D8D8">Pass</th>
-        <th bgcolor="#D8D8D8">Usuario</th>
-        <th bgcolor="#D8D8D8">Accion</th>
-      </tr>
-      </thead>
-      <?php
-      foreach ($SesionCollectorObj->showSesion() as $c) {
-        ?>
-        <tbody>
-        <tr>
-
-          <td><?php echo $c->getnickname() ?></td>
-          <td><?php echo $c->getpassword() ?></td>
-          <td><?php echo $c->getdescripcion() ?></td>
-          </td>
-          <td><a href="form_Sesion.php">Nuevo</a></td>
-        </tr>
-        </tbody>
-        <?php
-      }
-      ?>
-    </table>
-  </div>
-</div>
 <!--/************************* IFRAME centro **************************************************************-->
-<!--/************************* Foot **************************************************************-->
+<section id="main-slider" class="no-margin">
+  <div class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#main-slider" data-slide-to="0" class="active"></li>
+      <li data-target="#main-slider" data-slide-to="1"></li>
+      <li data-target="#main-slider" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="item active" style="background-image: url(../images/slider/anime3.png)">
+        <div class="container">
+          <div class="row slide-margin">
+            <div class="col-sm-6">
+              <div class="carousel-content">
+                <h1 class="animation animated-item-1">B-Smart</h1>
+                <h2 class="animation animated-item-2"> Accede el material visto en clases</h2>
+                <a class="btn-slide animation animated-item-3" href="../materias.php">Leer Más...</a>
+              </div>
+            </div>
+            <div class="col-sm-6 hidden-xs animation animated-item-4">
+              <div class="slider-img">
+                <img src="../images/slider/anime1.png" alt="b-smart" class="img-responsive">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!--/.item-->
+      <div class="item" style="background-image: url(../images/slider/anime3.png)">
+        <div class="container">
+          <div class="row slide-margin">
+            <div class="col-sm-6">
+              <div class="carousel-content">
+                <h1 class="animation animated-item-1">B-smart</h1>
+                <h2 class="animation animated-item-2">Revisa tu horario de clases</h2>
+                <a class="btn-slide animation animated-item-3" href="../horario.php">Leer Más...</a>
+              </div>
+            </div>
+            <div class="col-sm-6 hidden-xs animation animated-item-4">
+              <div class="slider-img">
+                <img src="../images/slider/img2.png" alt="b-smart" class="img-responsive">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!--/.item-->
+      <div class="item" style="background-image: url(../images/slider/anime3.png)">
+        <div class="container">
+          <div class="row slide-margin">
+            <div class="col-sm-6">
+              <div class="carousel-content">
+                <h1 class="animation animated-item-1">B-smart</h1>
+                <h2 class="animation animated-item-2">Mantente pendiente de tus acctividades académicas</h2>
+                <a class="btn-slide animation animated-item-3" href="../actividades/Actividad_list.php">Leer Más...</a>
+              </div>
+            </div>
+            <div class="col-sm-6 hidden-xs animation animated-item-4">
+              <div class="slider-img">
+                <img src="../images/slider/img03.png" alt="b-smart" class="img-responsive">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!--/.item-->
+    </div><!--/.carousel-inner-->
+  </div><!--/.carousel-->
+  <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
+    <i class="fa fa-chevron-left"></i>
+  </a>
+  <a class="next hidden-xs" href="#main-slider" data-slide="next">
+    <i class="fa fa-chevron-right"></i>
+  </a>
+</section><!--/#main-slider-->
+<!--/************************* IFRAME centro **************************************************************-->
 <section id="bottom">
   <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
     <div class="row">
       <div class="col-md-5 col-sm-6">
         <div class="widget">
-          <h3><a href="Actividad_list.php">Actividades académicas</a></h3>
+          <h3><a href="../actividades/Actividad_list.php">Actividades académicas</a></h3>
         </div>
       </div><!--/.col-md-3-->
       <div class="col-md-5 col-sm-6">

@@ -1,5 +1,14 @@
 <?php
 session_start();
+if (isset($_SESSION['usuario'])){
+  if(['descripcion']=="Administrador"){
+    header('Location: users/home ');
+
+  } else if(['descripcion']=="3"){
+    header('Location:formato');
+
+  }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -79,11 +88,11 @@ session_start();
                             </div>
                             <div class="form-group">
                               <label for="password">Contraseña</label>
-                              <input type="password" name="pasw">
+                              <input type="password" name="password">
                             </div>
 
                             <p>
-                              <button type="submit">Iniciar Sesion</button>
+                              <button type="submit">Iniciar Ses ion</button>
                             </p>
                             <div class="clearfix"></div>
                           </form>

@@ -1,21 +1,27 @@
 <?php
 include_once('Sesion.php');
 include_once('Collector.php');
+session_start();
 class SesionCollector extends Collector
 {
   function showSesion()
   {
-    $rows = self::$db->getRows("SELECT *FROM sesion ");
+    $rows = self::$db->getRows("SELECT nickname,password,descripcion FROM usuario 
+    JOIN
+      tipo 
+    ON
+      tipo.cod_tipo=usuario.tipo_cod"
+  );
     $arraySesion = array();
     foreach ($rows as $c) {
-      $aux = new Sesion($c{'id_sesion'}, $c{'usuario'}, $c{'pasw'});
+      $aux = new Sesion( $c{'nickname'}, $c{'password'},$c{'descripcion'});
       array_push($arraySesion, $aux);
     }
     return $arraySesion;
   }
-  function insertSesion($id_sesion, $usuario, $pasw)
+  function insertSesion($nickname, $password,$descripcion)
   {
-    $new_row = self::$db->getRow("Insert into sesion (id_sesion, usuario, pasw) values ('$id_sesion','$usuario','$pasw')");
+    $new_row = self::$db->getRow("Insert into sesion (id_sesion, usuario, pasw) values ('$nickname','$password','$descripcion')");
     return 1;
   }
 }

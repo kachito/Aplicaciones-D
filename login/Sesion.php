@@ -2,45 +2,47 @@
 
 class Sesion
 {
-  private $id_sesion;
-  private $usuario;
-  private $pasw;
 
-  function __construct($id_sesion, $usuario, $pasw)
+  private $nickname;
+  private $password;
+  private $descripcion;
+
+  function __construct($nickname, $password,$descripcion)
   {
-    $this->id_sesion = $id_sesion;
-    $this->usuario = $usuario;
-    $this->pasw = $pasw;
+
+    $this->nickname = $nickname;
+    $this->password = $password;
+    $this->descripcion = $descripcion;
   }
 
-  function setid_sesion($id_sesion)
+
+  function setnickname($nickname)
   {
-    $this->id_sesion = $id_sesion;
+    $this->nickname = $nickname;
   }
 
-  function getid_sesion()
+  function getnickname()
   {
-    return $this->id_sesion;
+    return $this->nickname;
   }
 
-  function setusuario($usuario)
+  function setpassword($password)
   {
-    $this->usuario = $usuario;
+    $this->password = $password;
   }
 
-  function getusuario()
+  function getpassword()
   {
-    return $this->usuario;
+    return $this->password;
+  }
+  function setdescripcion($descripcion)
+  {
+    $this->descripcion = $descripcion;
   }
 
-  function setpasw($pasw)
+  function getdescripcion()
   {
-    $this->pasw = $pasw;
-  }
-
-  function getpasw()
-  {
-    return $this->pasw;
+    return $this->descripcion;
   }
 }
 

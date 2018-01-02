@@ -1,8 +1,7 @@
 <?php
-session_start();
 include_once("SesionCollector.php");
 $usuario_form = $_POST['usuario'];
-$pasw_form = $_POST['pasw'];
+$password_form = $_POST['password'];
 $SesionCollectorObj = new SesionCollector();
 ?>
 <!DOCTYPE html>
@@ -47,10 +46,22 @@ $SesionCollectorObj = new SesionCollector();
           <?php
           $bandera = 0;
           foreach ($SesionCollectorObj->showSesion() as $c) {
-            if ($c->getusuario() == $usuario_form && $c->getpasw() == $pasw_form) {
-              echo "<h1> Bienvenido:&nbsp  $usuario_form </h1>
-                      <a class=\"home-button\" href=\"../home.php\" data-toggle=\"modal\" data-target=\".bs-example-modal-lg\"><i
+            if ($c->getnickname() == $usuario_form && $c->getpassword() == $password_form && $c->getdescripcion() != NULL) {
+
+              $datos =array (
+                'nickname'  =>$c->getnickname(),
+                'password'       =>$c->getpassword(),
+                'descripcion'  =>$c->getdescripcion()
+              );
+
+
+              echo "<h1> Bienvenido:&nbsp $usuario_form </h1>
+                      <a class=\"home-button\" href=\"../users/home.php\" data-toggle=\"modal\" data-target=\".bs-example-modal-lg\"><i
                   class=\"fa fa-star\"></i> EMPECEMOS</a>";
+
+
+
+              $_SESSION['usuario']=$datos;
               $bandera = 1;
               ?>
               <?php
