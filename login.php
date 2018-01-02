@@ -1,241 +1,117 @@
 <?php
 session_start();
+if (isset($_SESSION['usuario'])) {
+  header('Location: users/home.php ');
+} else if (['descripcion'] == "3") {
+  header('Location:index.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Educacion">
-  <meta name="author" content="E-learning">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Proyecto de Programacion Web">
+  <meta name="keywords" content="ESPOL, B-Smart">
+  <meta name="author" content="Grupo 4"/>
+  <meta name="robots" content="index, follow">
   <title>B-Smart</title>
-  <!-- core CSS -->
+  <!-- Bootstrap Core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/animate.min.css" rel="stylesheet">
-  <link href="css/prettyPhoto.css" rel="stylesheet">
-  <link href="css/main.css" rel="stylesheet">
-  <link href="css/responsive.css" rel="stylesheet">
-  <!--[if lt IE 9]>
-  <script src="js/html5shiv.js"></script>
-  <script src="js/respond.min.js"></script>
-  <![endif]-->
-  <link rel="shortcut icon" href="images/ico/bs1.ico">
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
-</head><!--/head-->
-<body class="homepage">
-<header id="header">
-  <div class="top-bar">
+  <!-- Custom CSS -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+  <!-- Animacije -->
+  <!-- Font Icons -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- parte 2 -->
+  <link href="css/style.css" rel="stylesheet">
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <script src="js/ie-emulation-modes-warning.js"></script>
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<!-- Navigation -->
+<section id="intro" class="intro-section">
+  <!-- Video Background -->
+  <video id="video_background" preload="auto" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="video/educacion.mp4" type="video/mp4"/>
+  </video>
+  <!-- / End Video Start Container -->
+  <div class="wow bounceIn" data-wow-delay="0.3s">
     <div class="container">
       <div class="row">
-        <div class="col-sm-6 col-xs-4">
-          <div class="top-number"><p><i class="fa fa-phone-square"></i> Call Us </p></div>
-        </div>
-        <div class="col-sm-6 col-xs-8">
-          <div class="social">
-            <ul class="social-share">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-              <li><a href="#"><i class="fa fa-skype"></i></a></li>
-            </ul>
-            <div class="search">
-              <form role="form">
-                <input type="text" class="search-form" autocomplete="off" placeholder="Search">
-                <i class="fa fa-search"></i>
-              </form>
-            </div>
+        <div class="col-lg-12">
+          <h1>Identifícate. </h1>
+
+          <!-- VENTANA MODAL PARA LOGIN -->
+          <!-- Modal -->
+                    <div class="modal-body">
+            <section class="row mt">
+              <div class="container">
+                <div class="row fondo-login">
+                    <section class="login element-emphasis-strong">
+                      <form action="login/datos.php" method="post">
+                        <div class="form-group">
+                          <label type="text"> <font color="white" > Usuario: </font></label>
+                          <input type="text" name="usuario">
+                        </div>
+                        <div class="form-group">
+                          <label for="password"><font color="white" > Contraseña: </font> </label>
+                          <input type="password" name="password">
+                        </div>
+                        <div class="btn_inicio">
+                          <button class="home-button" formaction="index.php"><font color="black">Regresar</font></button>
+                          <button class="home-button"><font color="black">Iniciar Sesi&oacute;n</font></button>
+
+                        </div>
+                        <div class="clearfix"></div>
+                      </form>
+                    </section>
+                  </div>
+              </div>
+            </section>
           </div>
+          <!-- FIN VENTANA MODAL -->
+
         </div>
-      </div>
-    </div><!--/.container-->
-  </div><!--/.top-bar-->
-  <nav class="navbar navbar-inverse">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.php"><img src="images/logo2.png" alt="logo"></a>
-      </div>
-      <div class="collapse navbar-collapse navbar-right">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="home.php">Home</a></li>
-          <li><a href="about-us.php">About Us</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Diario Virtual <i
-                class="fa fa-angle-down"></i></a>
-            <ul class="dropdown-menu">
-              <li><a href="actividades/Actividad_list.php">Diario</a></li>
-              <li><a href="horario.php">Horario de Clases</a></li>
-            </ul>
-            <!---doc     <ul class="dropdown-menu">
-                 <li><a href="construccion.php">Diario</a></li>
-                 <li><a href="horario.php">Horario de Clases</a></li>
-                 <li><a href="construccion.php">Horario de Examenes</a></li>
-             </ul>-->
-          </li>
-          <li><a href="costruccion.html" class="dropdown-toggle" data-toggle="dropdown">Asignaturas <i
-                class="fa fa-angle-down"></i></a>
-            <ul class="dropdown-menu">
-              <li><a href="construccion.php">Materia</a></li>
-            </ul>
-            <!-- <ul class="dropdown-menu">
-                <li><a href="materias.php">Materia</a></li>
-                <li><a href="construccion.php">Cuestionarios</a></li>
-                <li><a href="construccion.html">Otros...</a></li>
-            </ul>-->
-          </li>
-          <li><a href="notas/form_notas.php">Calificaciones</a></li>
-          <li><a href="costruccion.html" class="dropdown-toggle" data-toggle="dropdown">Planificaciones <i
-                class="fa fa-angle-down"></i></a>
-            <ul class="dropdown-menu">
-              <li><a href="docente/form_docente.php">Docente</a></li>
-              <!-- <li><a href="construccion.html">Alumnos</a></li> -->
-              <li><a href="actividades/form_Actividad.php">Actividades</a></li>
-              <li><a href="tipo/form_Tipo.php">Cursos</a></li>
-              <li><a href="notas/form_notas.php">Notas</a></li>
-            </ul>
-          </li>
-          <!-- target="info"-->
-          <li><a href="contactenos.php">Contactenos</a></li>
-        </ul>
-      </div>
-    </div><!--/.container-->
-  </nav><!--/nav-->
-</header><!--/header-->
-<!--/************************* IFRAME centro *************************************************************
-    <section id="main-slider" class="no-margin">
-      <div class="item">       
-        <iframe name="info"  height="730"  src="inicio.html"  ></iframe>         
-      </div>
-   </section>
-************************ IFRAME centro **************************************************************-->
-<!--/************************* IFRAME centro **************************************************************-->
-<section id="main-slider" class="no-margin">
-  <div class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#main-slider" data-slide-to="0" class="active"></li>
-      <li data-target="#main-slider" data-slide-to="1"></li>
-      <li data-target="#main-slider" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="item active" style="background-image: url(images/slider/anime3.png)">
-        <div class="container">
-          <div class="row slide-margin">
-            <div class="col-sm-6">
-              <div class="carousel-content">
-                <h1 class="animation animated-item-1">B-Smart</h1>
-                <h2 class="animation animated-item-2"> Accede el material visto en clases</h2>
-                <a class="btn-slide animation animated-item-3" href="materias.php">Leer Más...</a>
-              </div>
-            </div>
-            <div class="col-sm-6 hidden-xs animation animated-item-4">
-              <div class="slider-img">
-                <img src="images/slider/anime1.png" alt="b-smart" class="img-responsive">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div><!--/.item-->
-      <div class="item" style="background-image: url(images/slider/anime3.png)">
-        <div class="container">
-          <div class="row slide-margin">
-            <div class="col-sm-6">
-              <div class="carousel-content">
-                <h1 class="animation animated-item-1">B-smart</h1>
-                <h2 class="animation animated-item-2">Revisa tu horario de clases</h2>
-                <a class="btn-slide animation animated-item-3" href="horario.php">Leer Más...</a>
-              </div>
-            </div>
-            <div class="col-sm-6 hidden-xs animation animated-item-4">
-              <div class="slider-img">
-                <img src="images/slider/img2.png" alt="b-smart" class="img-responsive">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div><!--/.item-->
-      <div class="item" style="background-image: url(images/slider/anime3.png)">
-        <div class="container">
-          <div class="row slide-margin">
-            <div class="col-sm-6">
-              <div class="carousel-content">
-                <h1 class="animation animated-item-1">B-smart</h1>
-                <h2 class="animation animated-item-2">Mantente pendiente de tus acctividades académicas</h2>
-                <a class="btn-slide animation animated-item-3" href="actividades/Actividad_list.php">Leer Más...</a>
-              </div>
-            </div>
-            <div class="col-sm-6 hidden-xs animation animated-item-4">
-              <div class="slider-img">
-                <img src="images/slider/img03.png" alt="b-smart" class="img-responsive">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div><!--/.item-->
-    </div><!--/.carousel-inner-->
-  </div><!--/.carousel-->
-  <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
-    <i class="fa fa-chevron-left"></i>
-  </a>
-  <a class="next hidden-xs" href="#main-slider" data-slide="next">
-    <i class="fa fa-chevron-right"></i>
-  </a>
-</section><!--/#main-slider-->
-<!--/************************* IFRAME centro **************************************************************-->
-<section id="bottom">
-  <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-    <div class="row">
-      <div class="col-md-5 col-sm-6">
-        <div class="widget">
-          <h3><a href="actividades/Actividad_list.php">Actividades académicas</a></h3>
-        </div>
-      </div><!--/.col-md-3-->
-      <div class="col-md-5 col-sm-6">
-        <div class="widget">
-          <h3><a href="horario.php"> Horarios de Clases</a></h3>
-        </div>
-      </div><!--/.col-md-3-->
-      <div class="col-md-2 col-sm-6">
-        <div class="widget">
-          <h3><a href="curso1/Curso_list.php">Cursos</a></h3>
-        </div>
-      </div><!--/.col-md-3-->
-    </div><!--/.col-md-3-->
-  </div>
-  </div>
-</section><!--/#bottom-->
-<footer id="footer" class="midnight-blue">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-        &copy; 2015 <a target="_blank" href="http://shapebootstrap.net/"
-                       title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights
-        Reserved.
-      </div>
-      <div class="col-sm-6">
-        <ul class="pull-right">
-          <li><a href="home.php">Home</a></li>
-          <li><a href="about-us.php">About Us</a></li>
-          <li><a href="contactenos.php">Contact Us</a></li>
-        </ul>
       </div>
     </div>
   </div>
-</footer><!--/#footer-->
-<script src="js/jquery.js"></script>
+</section>
+<!-- Contenedor -->
+<!--************************** footer ************************-->
+<footer>
+</footer>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.prettyPhoto.js"></script>
-<script src="js/jquery.isotope.min.js"></script>
-<script src="js/main.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="js/ie10-viewport-bug-workaround.js"></script>
+<!-- / Contact -->
+<!-- jQuery Version 1.11.0 -->
+<script src="js/jquery-1.11.0.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Scrolling Nav JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/scrolling-nav.js"></script>
+<!-- Custom JS -->
+<script src="js/custom.js"></script>
 <script src="js/wow.min.js"></script>
+<script>
+    new WOW().init();
+    $(document).ready(function () {
+        $('#tooltipa').tooltip();
+        $('#tooltippic').tooltip();
+        $('#tooltipskype').tooltip();
+        $('#tooltiplinkedin').tooltip();
+        $('#tooltipfacebook').tooltip();
+        $('#tooltipgoogle').tooltip();
+        $('#tooltipinstagram').tooltip();
+    });
+</script>
 </body>
 </html>

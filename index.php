@@ -1,14 +1,14 @@
 <?php
 session_start();
 if (isset($_SESSION['usuario'])){
-  if(['descripcion']=="Administrador"){
-    header('Location: users/home ');
+
+    header('Location: ./users/home.php ');
 
   } else if(['descripcion']=="3"){
-    header('Location:formato');
+    header('Location:index.php');
 
   }
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,58 +56,11 @@ if (isset($_SESSION['usuario'])){
           </p>
         </div>
         <a class="home-button page-scroll" href="home.php" target="_top">EMPECEMOS</a>
-        <a class="home-button" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-star"></i>
+        <a class="home-button page-scroll"  href="login.php" target="_top"><i class="fa fa-star"></i>
           LOGIN</a>
         <!-- VENTANA MODAL PARA LOGIN -->
         <!-- Modal -->
-        <div class="modal fade bs-example-modal-lg modallog" tabindex="-1" role="dialog" id="myModal"
-             aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog mimodal">
-            <div class="modal-content modal-login">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                </button>
-                <h4 class="modal-title " id="myModalLabel">Identifícate o Crea una Cuenta</h4>
-              </div>
-              <div class="modal-body">
-                <section class="row mt">
-                  <div class="col-xs-6">
-                  </div>
-                  <div class="container">
-                    <div class="row fondo-login">
-                      <div class="col-md-3 space-right-2 linea">
-                        <section class="login element-emphasis-strong">
-                          <h3 class="strong-header large-header">
-                            Identifícate
-                          </h3>
 
-                          <form action="login/datos.php" method="post">
-                            <div class="form-group">
-                              <label type="text">Usuario</label>
-                              <input type="text" name="usuario">
-                            </div>
-                            <div class="form-group">
-                              <label for="password">Contraseña</label>
-                              <input type="password" name="password">
-                            </div>
-
-                            <p>
-                              <button type="submit">Iniciar Ses ion</button>
-                            </p>
-                            <div class="clearfix"></div>
-                          </form>
-
-                        </section>
-                      </div>
-
-                    </div>
-                  </div>
-                </section>
-              </div>
-
-            </div>
-          </div>
-        </div>
         <!-- FIN VENTANA MODAL -->
       </div>
     </div>

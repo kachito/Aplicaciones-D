@@ -1,4 +1,5 @@
 <?php
+
 include_once("SesionCollector.php");
 $usuario_form = $_POST['usuario'];
 $password_form = $_POST['password'];
@@ -78,49 +79,7 @@ $SesionCollectorObj = new SesionCollector();
         </div>
         <!-- VENTANA MODAL PARA LOGIN -->
         <!-- Modal -->
-        <div class="modal fade bs-example-modal-lg modallog" tabindex="-1" role="dialog" id="myModal"
-             aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog mimodal">
-            <div class="modal-content modal-login">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                </button>
-                <h4 class="modal-title " id="myModalLabel">Identifícate o Crea una Cuenta</h4>
-              </div>
-              <div class="modal-body">
-                <section class="row mt">
-                  <div class="col-xs-6">
-                  </div>
-                  <div class="container">
-                    <div class="row fondo-login">
-                      <div class="col-md-3 space-right-2 linea">
-                        <section class="login element-emphasis-strong">
-                          <h3 class="strong-header large-header">
-                            Identifícate
-                          </h3>
-                          <form action="login/datos.php" method="post">
-                            <div class="form-group">
-                              <label type="text">Usuario</label>
-                              <input type="text" name="usuario">
-                            </div>
-                            <div class="form-group">
-                              <label for="password">Contraseña</label>
-                              <input type="password" name="pasw">
-                            </div>
-                            <p>
-                              <button type="submit">Iniciar Sesion</button>
-                            </p>
-                            <div class="clearfix"></div>
-                          </form>
-                        </section>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-              </div>
-            </div>
-          </div>
-        </div>
+
         <!-- FIN VENTANA MODAL -->
       </div>
     </div>
