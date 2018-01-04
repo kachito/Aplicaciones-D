@@ -2,9 +2,15 @@
 session_start();
 include_once('TipoCollector.php');
 //$id = $_POST['ID'];
-$descripcion = $_POST['descripcion'];
-$TipoCollectorObj = new TipoCollector();
-$TipoCollectorObj->insertTipo($descripcion);
+if (isset($_POST["descripcion"]) && !empty($_POST["descripcion"])) {
+  $descripcion = $_POST['descripcion'];
+  $TipoCollectorObj = new TipoCollector();
+  $TipoCollectorObj->insertTipo($descripcion);
+}else{
+  echo "N0, descripcion is not set";
+}
+
+
 ?>
 <!doctype html>
 <html lang="es">
