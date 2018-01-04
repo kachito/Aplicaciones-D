@@ -115,7 +115,6 @@
         <option value="$PROJECT_DIR$/tipo/Tipo_list.php" />
         <option value="$PROJECT_DIR$/tipo/Tipo_edit.php" />
         <option value="$PROJECT_DIR$/tipo/Collector.php" />
-        <option value="$PROJECT_DIR$/tipo/dataBase.php" />
         <option value="$PROJECT_DIR$/tipo/form_tipo.php" />
         <option value="$PROJECT_DIR$/tipo/Tipo.php" />
         <option value="$PROJECT_DIR$/tipo/Tipo_delete.php" />
