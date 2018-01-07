@@ -93,6 +93,27 @@ of those sections to manage the look and feel of the site. */
     border: 1px Solid #FFF;
     text-shadow: 1px 1px 1px #000;
 }
+.login-button {
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+    font-size: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    text-decoration: none;
+    transition: all 0.3s;
+    color: #e4e4e4;
+    background-color: transparent;
+    border: 1px Solid #FFF;
+    text-shadow: 1px 1px 1px #000;
+}
+.login-button:hover {
+    transition: all 0.3s;
+    background-color: #FFF;
+    color: #171b1e;
+    text-shadow: 1px 1px 1px #FFF;
+    text-decoration: underline;
+}
 
 .thumbnail {
     background-image: url('../img/bg.png');

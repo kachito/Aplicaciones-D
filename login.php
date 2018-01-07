@@ -61,8 +61,8 @@ if (isset($_SESSION['usuario'])) {
                           <input type="password" name="password">
                         </div>
                         <div class="btn_inicio">
-                          <button class="home-button" formaction="index.php"><font color="black">Regresar</font></button>
-                          <button class="home-button"><font color="black">Iniciar Sesi&oacute;n</font></button>
+                          <button class="login-button" formaction="index.php">Regresar</button>
+                          <button class="login-button">Iniciar Sesi&oacute;n</button>
 
                         </div>
                         <div class="clearfix"></div>
