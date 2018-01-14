@@ -30,7 +30,7 @@ class PasswordCollector extends Collector
   function updatePassword($cod_usuario,$password) {
 	
 	//echo $cargo;
-    $update = self::$db->getRow("Update usuario set password='$password' where cod_usuario='cod_usuario' ");
+    $update = self::$db->getRow("Update usuario set password='$password' where cod_usuario='$cod_usuario' ");
  return 1;  
   }
 
