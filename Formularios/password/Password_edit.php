@@ -8,6 +8,7 @@
  include_once('PasswordCollector.php');
  $PasswordCollectorObj = new PasswordCollector();
  $ObjPassword = $PasswordCollectorObj->showPasswordId($id);
+
  //print_r($ObjTransportista);
 ?>
 
@@ -135,14 +136,25 @@
             </div>
             <br>
             <br>
-
             <div class="col-sm-5 col-sm-offset-1">
+
               <div class="form-group">
-                <label>Nombre *</label>
-                <input type="text" name="password" class="form-control" required="required"
-                       value="<?php echo $ObjPassword->getpassword(); ?>">
+                <label>Contraseña *</label>
+                <input type="password" name="passwordant" class="form-control" required="required" >
               </div>
+              <div class="form-group">
+                <label>Nueva contraseña *</label>
+                <input type="password" name="newpass" class="form-control" id="password" required="required" >
+              </div>
+              <div class="form-group">
+                <label>Confirme contraseña *</label>
+                <input type="password" name="confirmpass" class="form-control" required="required" id="confirm_password" onkeyup="check();">
+                <span id="message"></span>
+              </div>
+
             </div>
+
+
             <div class="form-group">
               <div class="col-xs-offset-4 col-xs-8">
                 <input type="submit" class="btn btn-primary" value="Actualizar">
@@ -211,7 +223,7 @@
             </div>
         </div>
     </footer><!--/#footer-->
-
+    <script src="hola.js"></script>
     <script src="../../js/jquery.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
     <script src="../../js/jquery.prettyPhoto.js"></script>
