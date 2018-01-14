@@ -13,7 +13,7 @@ session_start();
 
 //echo  $cargo;		
 
- $EstudianteCollectorObj = new EstudianteCollector();
+ $EstudianteCollectorObj = new PasswordCollector();
  $EstudianteCollectorObj->updateEstudiante($id_estudiante,$nombre,$apellido,(int)$edad,(int)$cedula,(int)$genero,$email);
 
 ?>

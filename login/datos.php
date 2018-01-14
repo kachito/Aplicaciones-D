@@ -1,5 +1,4 @@
 <?php
-
 include_once("SesionCollector.php");
 $usuario_form = $_POST['usuario'];
 $password_form = $_POST['password'];
@@ -12,11 +11,12 @@ $SesionCollectorObj = new SesionCollector();
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Meta tags -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Proyecto de Programacion Web">
+  <meta name="description" content="B-smart es un diario virtual el que permitira a la comunidad educativa tener una buena organizacion,
+  que intenta mantenar la comunicacion constante entre: alumno, docente, y representante legal">
   <meta name="keywords" content="ESPOL, B-Smart">
   <meta name="author" content="Lenin Yepez"/>
   <meta name="robots" content="index, follow">
-  <link rel="shortcut icon" href="favicon.png">
+  <link rel="shortcut icon" href="../favicon.png">
   <title>B-Smart</title>
   <!-- Bootstrap Core CSS -->
   <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -48,38 +48,36 @@ $SesionCollectorObj = new SesionCollector();
           $bandera = 0;
           foreach ($SesionCollectorObj->showSesion() as $c) {
             if ($c->getnickname() == $usuario_form && $c->getpassword() == $password_form && $c->getdescripcion() != NULL) {
-
-              $datos =array (
-                'nickname'  =>$c->getnickname(),
-                'password'       =>$c->getpassword(),
-                'descripcion'  =>$c->getdescripcion()
+              $datos = array(
+                'nickname' => $c->getnickname(),
+                'password' => $c->getpassword(),
+                'descripcion' => $c->getdescripcion()
               );
-
-
               echo "<h1> Bienvenido:&nbsp $usuario_form </h1>
                       <a class=\"home-button\" href=\"../users/home.php\" data-toggle=\"modal\" data-target=\".bs-example-modal-lg\"><i
                   class=\"fa fa-star\"></i> EMPECEMOS</a>";
-
-
-
-              $_SESSION['usuario']=$datos;
+              $_SESSION['usuario'] = $datos;
               $bandera = 1;
-              ?>
-              <?php
+
+
             }
           }
           if ($bandera == 0) {
+             header('Location:../login.php');
+
+             /*  if ($bandera == 0) {
             echo " <h1> Usuario incorrecto!!<br/> </h1>";
             ?>
             <a class="home-button" href="../index.php" data-toggle="modal" data-target=".bs-example-modal-lg"><i
                 class="fa fa-star"></i> REGRESAR</a>
             <?php
+          }*/
           }
           ?>
+
         </div>
         <!-- VENTANA MODAL PARA LOGIN -->
         <!-- Modal -->
-
         <!-- FIN VENTANA MODAL -->
       </div>
     </div>

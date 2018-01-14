@@ -19,10 +19,10 @@ class TipoCollector extends Collector
     $Tipo = new Tipo($row{'cod_tipo'}, $row{'descripcion'});
     return $Tipo;
   }
-  function updateTipo($cod_tipo, $descripcion)
+  function updateTipo($cod_tipo,$descripcion)
   {
     //echo $cargo;
-    $update = self::$db->getRow("Update Tipo set descripcion='$descripcion'");
+    $update = self::$db->getRow("Update tipo set descripcion='$descripcion' where cod_tipo='$cod_tipo'");
     return 1;
   }
   function deleteTipo($id)

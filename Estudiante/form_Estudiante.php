@@ -2,7 +2,7 @@
  session_start();
  include_once('Estudiante.php');
  include_once('EstudianteCollector.php');
- $EstudianteCollectorObj = new EstudianteCollector();
+ $EstudianteCollectorObj = new PasswordCollector();
 ?>
 
 

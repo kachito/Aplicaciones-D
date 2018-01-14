@@ -121,8 +121,7 @@ $ObjTipo = $TipoCollectorObj->showTipoId($id);
       <div class="status alert alert-success" style="display: none"></div>
       <form action="Tipo_update.php" method="post" action="form-horizontal">
         <div class="col-sm-8 col-sm-offset-4">
-          <input type="number" name="cod_tipo" required="required" style="visibility:hidden" readonly
-                 value="<?php echo $ObjTipo->getcod_tipo(); ?>">
+          <input type="number" name="cod_tipo" required="required" style="visibility:hidden" readonly value="<?php echo $ObjTipo->getcod_tipo(); ?>">
         </div>
         <br>
         <br>
@@ -131,7 +130,7 @@ $ObjTipo = $TipoCollectorObj->showTipoId($id);
         <div class="col-sm-5 col-sm-offset-1">
           <div class="form-group">
             <label>Nombre *</label>
-            <input type="text" name="nombre" class="form-control" required="required"
+            <input type="text" name="descripcion" class="form-control" required="required"
                    value="<?php echo $ObjTipo->getdescripcion(); ?>">
           </div>
         </div>

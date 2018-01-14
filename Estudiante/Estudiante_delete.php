@@ -3,7 +3,7 @@ session_start();
  include_once('EstudianteCollector.php');
  include_once('Estudiante.php');
  $id = $_GET['id'];
- $EstudianteCollectorObj = new EstudianteCollector();
+ $EstudianteCollectorObj = new PasswordCollector();
  $EstudianteCollectorObj->deleteEstudiante($id);
 ?>
 <!doctype html>

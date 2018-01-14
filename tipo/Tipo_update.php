@@ -4,6 +4,7 @@ include_once('TipoCollector.php');
 //include_once('Tipo.php
 $cod_tipo = $_POST['cod_tipo'];
 $descripcion = $_POST['descripcion'];
+
 //echo  $cargo;		
 $TipoCollectorObj = new TipoCollector();
 $TipoCollectorObj->updateTipo($cod_tipo, $descripcion);

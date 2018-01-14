@@ -91,16 +91,7 @@ if (isset($_SESSION['usuario'])) {
               <li><a href="../horario.php">Horario</a></li>
               <li><a href="../horario.php">Calendario</a></li>
             </ul>
-          </li>
-          <?php
-          if ($_SESSION['usuario']['descripcion'] == 'Alumno') {
-            echo "<li><a href=\"../costruccion.html\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Asignaturas <i
-                class=\"fa fa-angle-down\"></i></a>
-            <ul class=\"dropdown-menu\">
-              <li><a href=\"construccion.php\">Materia</a></li>";
-          }
-          ?>
-          </li>
+
           <li><a href="" class="dropdown-toggle" data-toggle="dropdown">Planificaciones <i
                 class="fa fa-angle-down"></i></a>
             <ul class="dropdown-menu">
@@ -109,15 +100,30 @@ if (isset($_SESSION['usuario'])) {
               <li><a href="../tipo/form_Tipo.php">Semanal</a></li>
             </ul>
           </li>
-          <li><a href="" class="dropdown-toggle" data-toggle="dropdown">Herramientas <i
-                class="fa fa-angle-down"></i></a>
-            <ul class="dropdown-menu">
-              <li><a href="docente/../form_docente.php">Docente</a></li>
-              <li><a href="../actividades/form_Actividad.php">Alumno</a></li>
-              <li><a href="../tipo/form_Tipo.php">Curso</a></li>
-              <li><a href="../tipo/form_Tipo.php">Tarea</a></li>
+          <?php
+          if ($_SESSION['usuario']['descripcion'] == 'Administrador' ) {
+            echo "<li>
+            <a href=\"\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Herramientas <i
+                class=\"fa fa-angle-down\"></i></a>
+            <ul class=\"dropdown-menu\">
+              <li><a href=\"docente/../form_docente.php\">Docente</a></li>
+              <li><a href=\"../actividades/form_Actividad.php\">Alumno</a></li>
+              <li><a href=\"../tipo/form_Tipo.php\">Curso</a></li>
+              <li><a href=\"../tipo/form_Tipo.php\">Tarea</a></li>
             </ul>
-          </li>
+          </li>";
+          }
+          elseif ($_SESSION['usuario']['descripcion'] == 'Docente' ) {
+            echo "<li>
+            <a href=\"\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Herramientas <i
+                class=\"fa fa-angle-down\"></i></a>
+            <ul class=\"dropdown-menu\">
+              <li><a href=\"../tipo/form_Tipo.php\">Tarea</a></li>
+            </ul>
+          </li>";
+          }
+          ?>
+
           <!-- target="info"-->
           <li><a href="../contactenos.php">Contactenos</a></li>
         </ul>
@@ -140,7 +146,7 @@ if (isset($_SESSION['usuario'])) {
           <div class="row slide-margin">
             <div class="col-sm-6">
               <div class="carousel-content">
-                <h1 class="animation animated-item-1">B-Smart</h1>
+                <h1 class="animation animated-item-1" >B-Smart</h1>
                 <h2 class="animation animated-item-2"> Accede el material visto en clases</h2>
                 <a class="btn-slide animation animated-item-3" href="../materias.php">Leer Más...</a>
               </div>

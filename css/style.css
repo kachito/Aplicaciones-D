@@ -284,6 +284,7 @@ blockquote {
 .banner-caption h5,
 .banner-caption h6 {
 	color: #ffffff;
+
 }
 .banner-caption h1 {
 	font-size: 60px;
@@ -673,7 +674,7 @@ textarea {
 	bottom: -1px;
 	left: 0;
 	right: -1px;
-	background-color: rgba(85, 172, 238, 0.9);
+	background-color: rgba(238, 178, 160, 0.9);
 	cursor: pointer;
 	overflow: hidden;
 	opacity: 0;

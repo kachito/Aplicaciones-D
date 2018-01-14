@@ -11,7 +11,7 @@
  $genero = $_POST['genero'];
  $email = $_POST['email'];
  
- $EstudianteCollectorObj = new EstudianteCollector();
+ $EstudianteCollectorObj = new PasswordCollector();
  $EstudianteCollectorObj->insertEstudiante($nombre,$apellido,(int)$edad,(int)$cedula,(int)$genero,$email);
 
 ?>

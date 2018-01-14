@@ -6,7 +6,7 @@
  // echo $id;
  include_once('Estudiante.php');
  include_once('EstudianteCollector.php');
- $EstudianteCollectorObj = new EstudianteCollector();
+ $EstudianteCollectorObj = new PasswordCollector();
  $ObjEstudiante = $EstudianteCollectorObj->showEstudianteId($id);
  //print_r($ObjTransportista);
 ?>
