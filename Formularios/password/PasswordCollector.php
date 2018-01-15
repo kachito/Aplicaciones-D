@@ -20,7 +20,7 @@ class PasswordCollector extends Collector
   function showPasswordId($id) {
 
     $row = self::$db->getRow("SELECT * FROM usuario where cod_usuario = '$id'");
-    
+
     $Password = new Password($row{'cod_usuario'},$row{'nickname'},$row{'password'},$row{'tipo_cod'});
     return $Password;
   }
@@ -28,6 +28,7 @@ class PasswordCollector extends Collector
 
  
   function updatePassword($cod_usuario,$password) {
+    $password=password_hash($password, PASSWORD_BCRYPT);
 	
 	//echo $cargo;
     $update = self::$db->getRow("Update usuario set password='$password' where cod_usuario='$cod_usuario' ");
@@ -36,7 +37,7 @@ class PasswordCollector extends Collector
 
   function deletePassword($id) {
 
- $delete = self::$db->getRow("Delete from usuario where id_password= '$id'");
+ $delete = self::$db->getRow("Delete from usuario where cod_usuario= '$id'");
    return 1;          
   }
 

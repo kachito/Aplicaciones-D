@@ -10,9 +10,13 @@ $PasswordCollectorObj = new PasswordCollector();
  $passwordant = $_POST['passwordant'];
  $newpass = $_POST['newpass'];
 
-$ObjPassword = $PasswordCollectorObj->showPasswordId($cod_usuario);
 
-if($ObjPassword->getpassword()==$passwordant){
+
+$ObjPassword = $PasswordCollectorObj->showPasswordId($cod_usuario);
+$password=$ObjPassword->getpassword();
+
+
+if(password_verify($passwordant,$password)){
   $PasswordCollectorObj = new PasswordCollector();
   $PasswordCollectorObj->updatePassword($cod_usuario,$newpass);
   echo "

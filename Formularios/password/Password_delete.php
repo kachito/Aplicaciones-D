@@ -3,8 +3,8 @@ session_start();
  include_once('PasswordCollector.php');
  include_once('Password.php');
  $id = $_GET['id'];
- $EstudianteCollectorObj = new PasswordCollector();
- $EstudianteCollectorObj->deleteEstudiante($id);
+ $PasswordCollectorObj = new PasswordCollector();
+ $PasswordCollectorObj->deletePassword($id);
 ?>
 <!doctype html>
 <html lang="es">
@@ -13,7 +13,7 @@ session_start();
 <meta name="viewport" content="width=device-width; initial-scale=1.0"> 
 <title>Sistema SGL</title>
     <!-- Estilos CSS vinculados -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
    
    <h3>Eliminacion Exitosa</h3>
    </head>

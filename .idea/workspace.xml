@@ -17,7 +17,39 @@
     <favorites_list name="Grupo-5" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Password_edit.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Formularios/password/Password_edit.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="132" column="33" lean-forward="false" selection-start-line="132" selection-start-column="33" selection-end-line="132" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Password_update.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Formularios/password/Password_update.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+              <folding>
+                <marker date="1515979894851" expanded="true" signature="573:1094" ph="..." />
+                <marker date="1515979894851" expanded="true" signature="580:857" ph="..." />
+                <marker date="1515979894851" expanded="true" signature="864:1086" ph="..." />
+                <marker date="1515979894851" expanded="true" signature="923:1075" ph="..." />
+                <marker date="1515979894851" expanded="true" signature="938:1060" ph="..." />
+                <marker date="1515979894851" expanded="true" signature="1149:1665" ph="..." />
+                <marker date="1515979894851" expanded="true" signature="1156:1428" ph="..." />
+                <marker date="1515979894851" expanded="true" signature="1435:1657" ph="..." />
+                <marker date="1515979894851" expanded="true" signature="1494:1646" ph="..." />
+                <marker date="1515979894851" expanded="true" signature="1509:1631" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -49,8 +81,8 @@
       <find>\n\n</find>
       <find>tipo_id</find>
       <find>n_password</find>
-      <find>Estudiante</find>
       <find>../</find>
+      <find>Estudiante</find>
     </findStrings>
     <replaceStrings>
       <replace>tipo</replace>
@@ -74,8 +106,8 @@
       <replace>\n</replace>
       <replace>tipo_id</replace>
       <replace>nickname</replace>
-      <replace>Password</replace>
       <replace>../../</replace>
+      <replace>Password</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -87,7 +119,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/about-us.php" />
         <option value="$PROJECT_DIR$/antconstruccion.php" />
         <option value="$PROJECT_DIR$/construccion.php" />
         <option value="$PROJECT_DIR$/contactenos.php" />
@@ -135,8 +166,9 @@
         <option value="$PROJECT_DIR$/tipo/Tipo_update.php" />
         <option value="$PROJECT_DIR$/tipo/Tipo_edit.php" />
         <option value="$PROJECT_DIR$/Formularios/password/hola.js" />
-        <option value="$PROJECT_DIR$/Formularios/password/PasswordCollector.php" />
         <option value="$PROJECT_DIR$/Formularios/password/Password_edit.php" />
+        <option value="$PROJECT_DIR$/Formularios/password/Password_delete.php" />
+        <option value="$PROJECT_DIR$/Formularios/password/PasswordCollector.php" />
         <option value="$PROJECT_DIR$/Formularios/password/Password_update.php" />
       </list>
     </option>
@@ -196,6 +228,12 @@
               <item name="Grupo-5" type="b2602c69:ProjectViewProjectNode" />
               <item name="Grupo-5" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Formularios" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Grupo-5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Grupo-5" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Formularios" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Grupo-5" type="b2602c69:ProjectViewProjectNode" />
@@ -310,12 +348,12 @@
       <workItem from="1515866579078" duration="10443000" />
       <workItem from="1515931627670" duration="20103000" />
       <workItem from="1515956268807" duration="151000" />
-      <workItem from="1515959963076" duration="7290000" />
+      <workItem from="1515959963076" duration="15428000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="210238000" />
+    <option name="totallyTimeSpent" value="218376000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -329,7 +367,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25113463" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25113463" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288364" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20573355" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
@@ -544,13 +582,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Formularios/password/Estudiante_delete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Formularios/Estudiante/EstudianteCollector.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-51">
@@ -649,29 +680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Formularios/password/dataBase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-340">
-          <caret line="14" column="46" lean-forward="false" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Formularios/password/Collector.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Formularios/password/Password_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="144" column="31" lean-forward="true" selection-start-line="144" selection-start-column="31" selection-end-line="144" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tipo/Tipo_update.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -696,49 +704,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Formularios/password/Password.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="42" column="24" lean-forward="true" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Formularios/password/Estudiante_insert.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="10" lean-forward="true" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Formularios/password/hola.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Formularios/password/PasswordCollector.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-          <folding>
-            <marker date="1515960561673" expanded="true" signature="178:192" ph="SELECT * FRO... estudiante" />
-            <marker date="1515960561673" expanded="true" signature="178:199" ph="SELECT * FRO... usuario" />
-            <marker date="1515960561673" expanded="true" signature="495:542" ph="SELECT * FRO... estudiante" />
-            <marker date="1515960561673" expanded="true" signature="786:858" ph="Update usuario... " />
-            <marker date="1515960561673" expanded="true" signature="945:989" ph="Delete from estudiante... " />
-            <marker date="1515960561673" expanded="true" signature="1114:1207" ph="Insert into estudiante... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Formularios/password/form_Password.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -771,30 +740,101 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Formularios/password/Password_update.php">
+    <entry file="file://$PROJECT_DIR$/Formularios/password/form_Password.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="53" column="10" lean-forward="true" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
+        <state relative-caret-position="3366">
+          <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/password/Estudiante_insert.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/password/Collector.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/password/dataBase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/password/Password.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/password/Password_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2244">
+          <caret line="144" column="31" lean-forward="true" selection-start-line="144" selection-start-column="31" selection-end-line="144" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/password/Password_delete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/password/PasswordCollector.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
-            <marker date="1515966523642" expanded="true" signature="533:1054" ph="..." />
-            <marker date="1515966523642" expanded="true" signature="540:817" ph="..." />
-            <marker date="1515966523642" expanded="true" signature="824:1046" ph="..." />
-            <marker date="1515966523642" expanded="true" signature="883:1035" ph="..." />
-            <marker date="1515966523642" expanded="true" signature="898:1020" ph="..." />
-            <marker date="1515966523642" expanded="true" signature="1109:1625" ph="..." />
-            <marker date="1515966523642" expanded="true" signature="1116:1388" ph="..." />
-            <marker date="1515966523642" expanded="true" signature="1395:1617" ph="..." />
-            <marker date="1515966523642" expanded="true" signature="1454:1606" ph="..." />
-            <marker date="1515966523642" expanded="true" signature="1469:1591" ph="..." />
+            <marker date="1515978350219" expanded="true" signature="178:192" ph="SELECT * FRO... estudiante" />
+            <marker date="1515978350219" expanded="true" signature="178:199" ph="SELECT * FRO... usuario" />
+            <marker date="1515978350219" expanded="true" signature="495:542" ph="SELECT * FRO... estudiante" />
+            <marker date="1515978350219" expanded="true" signature="839:911" ph="Update usuario... " />
+            <marker date="1515978350219" expanded="true" signature="998:1042" ph="Delete from estudiante... " />
+            <marker date="1515978350219" expanded="true" signature="1167:1260" ph="Insert into estudiante... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Formularios/password/Password_edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="9" selection-end-column="59" />
+        <state relative-caret-position="108">
+          <caret line="132" column="33" lean-forward="false" selection-start-line="132" selection-start-column="33" selection-end-line="132" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/password/Password_update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+          <folding>
+            <marker date="1515979894851" expanded="true" signature="573:1094" ph="..." />
+            <marker date="1515979894851" expanded="true" signature="580:857" ph="..." />
+            <marker date="1515979894851" expanded="true" signature="864:1086" ph="..." />
+            <marker date="1515979894851" expanded="true" signature="923:1075" ph="..." />
+            <marker date="1515979894851" expanded="true" signature="938:1060" ph="..." />
+            <marker date="1515979894851" expanded="true" signature="1149:1665" ph="..." />
+            <marker date="1515979894851" expanded="true" signature="1156:1428" ph="..." />
+            <marker date="1515979894851" expanded="true" signature="1435:1657" ph="..." />
+            <marker date="1515979894851" expanded="true" signature="1494:1646" ph="..." />
+            <marker date="1515979894851" expanded="true" signature="1509:1631" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
