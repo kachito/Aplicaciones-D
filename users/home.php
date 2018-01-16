@@ -80,8 +80,8 @@ if (isset($_SESSION['usuario'])) {
       </div>
       <div class="collapse navbar-collapse navbar-right">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="../home.php">Home</a></li>
-          <li><a href="../about-us.php">About Us</a></li>
+          <li class="active"><a href="home.php">Home</a></li>
+          <li><a href="about-us.php">About Us</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Diario Virtual <i
                 class="fa fa-angle-down"></i></a>
@@ -91,18 +91,19 @@ if (isset($_SESSION['usuario'])) {
               <li><a href="../horario.php">Horario</a></li>
               <li><a href="../horario.php">Calendario</a></li>
             </ul>
-
-          <li><a href="" class="dropdown-toggle" data-toggle="dropdown">Planificaciones <i
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Planificaciones <i
                 class="fa fa-angle-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="docente/../form_docente.php">Anual</a></li>
+              <li><a href="../form_docente.php">Anual</a></li>
               <li><a href="../actividades/form_Actividad.php">Bloque</a></li>
               <li><a href="../tipo/form_Tipo.php">Semanal</a></li>
             </ul>
           </li>
           <?php
           if ($_SESSION['usuario']['descripcion'] == 'Administrador' ) {
-            echo "<li>
+            echo "<li class=\"dropdown\">
             <a href=\"\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Herramientas <i
                 class=\"fa fa-angle-down\"></i></a>
             <ul class=\"dropdown-menu\">

@@ -18,21 +18,21 @@ if (isset($_SESSION['usuario'])) {
   <meta name="author" content="E-learning">
   <title>B-Smart</title>
   <!-- core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/animate.min.css" rel="stylesheet">
-  <link href="css/prettyPhoto.css" rel="stylesheet">
-  <link href="css/main.css" rel="stylesheet">
-  <link href="css/responsive.css" rel="stylesheet">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/font-awesome.min.css" rel="stylesheet">
+  <link href="../css/animate.min.css" rel="stylesheet">
+  <link href="../css/prettyPhoto.css" rel="stylesheet">
+  <link href="../css/main.css" rel="stylesheet">
+  <link href="../css/responsive.css" rel="stylesheet">
   <!--[if lt IE 9]>
-  <script src="js/html5shiv.js"></script>
-  <script src="js/respond.min.js"></script>
+  <script src="../js/html5shiv.js"></script>
+  <script src="../js/respond.min.js"></script>
   <![endif]-->
-  <link rel="shortcut icon" href="images/ico/bs1.ico">
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="../images/ico/bs1.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="../images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 <body class="homepage">
 <header id="header">
@@ -82,7 +82,7 @@ if (isset($_SESSION['usuario'])) {
       <div class="collapse navbar-collapse navbar-right">
         <ul class="nav navbar-nav">
           <li class="active"><a href="home.php">Home</a></li>
-          <li><a href="../about-us.php">About Us</a></li>
+          <li><a href="about-us.php">About Us</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Diario Virtual <i
                 class="fa fa-angle-down"></i></a>
@@ -92,18 +92,19 @@ if (isset($_SESSION['usuario'])) {
               <li><a href="../horario.php">Horario</a></li>
               <li><a href="../horario.php">Calendario</a></li>
             </ul>
-
-          <li><a href="" class="dropdown-toggle" data-toggle="dropdown">Planificaciones <i
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Planificaciones <i
                 class="fa fa-angle-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="docente/../form_docente.php">Anual</a></li>
+              <li><a href="../form_docente.php">Anual</a></li>
               <li><a href="../actividades/form_Actividad.php">Bloque</a></li>
               <li><a href="../tipo/form_Tipo.php">Semanal</a></li>
             </ul>
           </li>
           <?php
           if ($_SESSION['usuario']['descripcion'] == 'Administrador' ) {
-            echo "<li>
+            echo "<li class=\"dropdown\">
             <a href=\"\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Herramientas <i
                 class=\"fa fa-angle-down\"></i></a>
             <ul class=\"dropdown-menu\">
@@ -149,13 +150,13 @@ if (isset($_SESSION['usuario'])) {
 
         <div class="carousel-inner">
           <div class="item active">
-            <img src="images/ariel1.jpg" class="img-responsive" alt="">
+            <img src="../images/ariel1.jpg" class="img-responsive" alt="">
           </div>
           <div class="item">
-            <img src="images/ariel2.jpg" class="img-responsive" alt="">
+            <img src="../images/ariel2.jpg" class="img-responsive" alt="">
           </div>
           <div class="item">
-            <img src="images/ariel3.jpg" class="img-responsive" alt="">
+            <img src="../images/ariel3.jpg" class="img-responsive" alt="">
           </div>
         </div>
 
@@ -235,7 +236,7 @@ if (isset($_SESSION['usuario'])) {
           <div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
             <div class="media">
               <div class="pull-left">
-                <a href="http://www.espol.edu.ec/" target="_blank"><img class="media-object" src="images/logo-espol.png" alt=""></a>
+                <a href="http://www.espol.edu.ec/" target="_blank"><img class="media-object" src="../images/logo-espol.png" alt=""></a>
               </div>
               <div class="media-body">
                 <h4>Estudia </h4>
@@ -254,7 +255,7 @@ if (isset($_SESSION['usuario'])) {
           <div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
             <div class="media">
               <div class="pull-left">
-                <a href="http://www.espe.edu.ec/portal/portal/main.do?sectionCode=118" target="_blank"><img class="media-object" src="images/espe.png" alt=""></a>
+                <a href="http://www.espe.edu.ec/portal/portal/main.do?sectionCode=118" target="_blank"><img class="media-object" src="../images/espe.png" alt=""></a>
               </div>
               <div class="media-body">
                 <h4>Curso en:</h4>
@@ -293,7 +294,7 @@ if (isset($_SESSION['usuario'])) {
           <div class="single-profile-bottom wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
             <div class="media">
               <div class="pull-left">
-                <a href="https://www.facebook.com/pages/CELC-Computer-and-English-Learning-Courses/1623794451178249?fref=ts" target="_blank"><img class="media-object" src="images/celc.jpg" alt=""></a>
+                <a href="https://www.facebook.com/pages/CELC-Computer-and-English-Learning-Courses/1623794451178249?fref=ts" target="_blank"><img class="media-object" src="../images/celc.jpg" alt=""></a>
               </div>
 
               <div class="media-body">
@@ -357,24 +358,25 @@ if (isset($_SESSION['usuario'])) {
     <div class="row">
       <div class="col-sm-6">
         &copy; 2015 <a target="_blank" href="http://shapebootstrap.net/"
-                       title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights
+                       title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>.
+        All Rights
         Reserved.
       </div>
       <div class="col-sm-6">
         <ul class="pull-right">
-          <li><a href="home.php">Home</a></li>
-          <li><a href="about-us.php">About Us</a></li>
-          <li><a href="contactenos.php">Contact Us</a></li>
+          <li><a href="../home.php">Home</a></li>
+          <li><a href="../about-us.php">About Us</a></li>
+          <li><a href="../contactenos.php">Contact Us</a></li>
         </ul>
       </div>
     </div>
   </div>
 </footer><!--/#footer-->
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.prettyPhoto.js"></script>
-<script src="js/jquery.isotope.min.js"></script>
-<script src="js/main.js"></script>
-<script src="js/wow.min.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.prettyPhoto.js"></script>
+<script src="../js/jquery.isotope.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/wow.min.js"></script>
 </body>
 </html>
