@@ -2,7 +2,16 @@
 session_start();
 include_once('Estudiante.php');
 include_once('EstudianteCollector.php');
-$EstudianteCollectorObj = new PasswordCollector();
+
+$EstudianteCollectorObj = new EstudianteCollector();
+
+
+include_once('../../curso1/CursoCollector.php');
+$CursoCollectorObj = new CursoCollector();
+
+include_once('../password/PasswordCollector.php');
+$PasswordCollectorObj = new PasswordCollector();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,10 +29,10 @@ $EstudianteCollectorObj = new PasswordCollector();
   <link href="../../css/main.css" rel="stylesheet">
   <link href="../../css/responsive.css" rel="stylesheet">
   <!--[if lt IE 9]>
-  <script src="js/html5shiv.js"></script>
-  <script src="js/respond.min.js"></script>
+  <script src="../../js/html5shiv.js"></script>
+  <script src="../../js/respond.min.js"></script>
   <![endif]-->
-  <link rel="shortcut icon" href="images/ico/bs1.ico">
+  <link rel="shortcut icon" href="../../images/ico/bs1.ico">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../images/ico/apple-touch-icon-144-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../images/ico/apple-touch-icon-114-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../images/ico/apple-touch-icon-72-precomposed.png">
@@ -117,65 +126,83 @@ $EstudianteCollectorObj = new PasswordCollector();
         <div class="col-sm-5 col-sm-offset-1">
           <div class="form-group">
             <label>Cédula *</label>
-            <input type="number" name="cedula" class="form-control" required="required">
+            <input type="text" name="cedula" id="cedula" class="form-control" required="required"
+                   onkeypress="return isNumber(event)" onkeyup="isCedula();">
+            <span id="messageced"></span>
           </div>
           <div class="form-group">
             <label>Nombre *</label>
-            <input type="text" name="nombre" class="form-control" required="required">
+            <input type="text" name="nombre" id="nombre" class="form-control" required="required">
           </div>
           <div class="form-group">
             <label>Apellido *</label>
-            <input type="text" name="apellido" class="form-control" required="required">
+            <input type="text" name="apellido" id="apellido" class="form-control" required="required"
+                   onkeyup="nicknam();">
           </div>
           <div class="form-group">
             <label>Teléfono</label>
-            <input type="text" name="cedula" class="form-control">
+            <input type="text" name="telefono" class="form-control" onkeypress="return isNumber(event)" onkeyup="nicknam();">
           </div>
           <div class="form-group">
             <label>curso: *</label>
-            <select type="number" name="genero">
-              <option value="1" required="required">Masculino</option>
-              <option value="0" required="required">Femenino</option>
-            </select>
-            <label>Paralelo: *</label>
-            <select type="number" name="genero">
-              <option value="1" required="required">Masculino</option>
-              <option value="0" required="required">Femenino</option>
+            <select class="form-control" typeof="checkbox" name="curso">
+
+              <?php
+              foreach ($CursoCollectorObj->showCurso() as $c) {
+                echo '<option value=' . $c->getcod_curso() . '>';
+                echo $c->getdescripcion();
+                echo '</option>';
+              }
+              ?>
             </select>
           </div>
         </div>
         <div class="col-sm-5">
           <div class="form-group">
             <label>Email Alumno*</label>
-            <input type="email" name="email" class="form-control" required="required">
+            <input type="email" name="email1" id="email1" class="form-control" required="required"
+                   onkeyup="validateEmailA();">
+            <span id="messageemaila"></span>
           </div>
           <div class="form-group">
             <label>Email Representante*</label>
-            <input type="email" name="email" class="form-control" required="required">
+            <input type="email" id="email2" name="email2" class="form-control" required="required"
+                   onkeyup="validateEmailR();">
+            <span id="messageemail"></span>
           </div>
           <div class="form-group">
             <label>Nombres y Apellidos del representante legal*</label>
-            <input type="text"  class="form-control" required="required">
+            <input type="text" id="representante" name="representante" class="form-control" required="required">
           </div>
           <div class="form-group">
             <label>Usuario: *</label>
-            <input type="text"  class="form-control" required="required">
+
+            <input type="text" name="usuario" id="usuario" class="form-control" required="required" onchange="validateUser()" >
+            <span id="mesa"></span>
+
+          </div>
+
+
+
+
+
+
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-offset-4 col-xs-8">
+            <input type="button" value="Regresar" OnClick="history.back()" class="btn btn-primary">
+            <input type="reset" class="btn btn-primary" value="Limpiar">
+            <input type="submit" class="btn btn-primary" value="Guardar">
           </div>
         </div>
 
-    </div>
-    <div class="form-group">
-      <div class="col-xs-offset-4 col-xs-8">
-        <input type="submit" class="btn btn-primary" value="Ingresar">
-        <input type="reset" class="btn btn-primary" value="Limpiar">
-        <input type="button" value="Regresar" OnClick="history.back()" class="btn btn-primary">
-      </div>
-    </div>
-  </div>
 
-  </form>
-  </div><!--/.row-->
-  </div><!--/.container-->
+      </form>
+
+    </div><!--/.row-->
+  </div>
+  <!--/.container-->
 </section><!--/#contact-page-->
 <!--/************************* IFRAME centro **************************************************************-->
 <!--/************************* Foot **************************************************************-->
@@ -224,6 +251,7 @@ $EstudianteCollectorObj = new PasswordCollector();
     </div>
   </div>
 </footer><!--/#footer-->
+<script src="js/datos.js"></script>
 <script src="../../js/jquery.js"></script>
 <script src="../../js/bootstrap.min.js"></script>
 <script src="../../js/jquery.prettyPhoto.js"></script>

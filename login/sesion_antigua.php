@@ -15,7 +15,7 @@ if (isset($_SESSION['usuario'])) {
 } else {
   ?>
   <form action="datos.php" method="post">
-    <fieldset>
+
       <p> Usuario </p>
       <input type="text" name="usuario"/> </br>
       <p>

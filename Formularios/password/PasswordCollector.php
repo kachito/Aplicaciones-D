@@ -1,7 +1,7 @@
 <?php		
 
 include_once('Password.php');
-include_once('Collector.php');
+include_once('../../db/Collector.php');
 
 class PasswordCollector extends Collector
 {

@@ -2,55 +2,46 @@
 
 class Curso
 {
-    private $id_curso;
-    private $nombre;
-    private $nombre_curso;
+    private $cod_curso;
+    private $paralelo;
     private $descripcion;
-    private $estado;
+    private $materia_cod;
+    private $horario_id;
 
 
-    function __construct($id_curso, $nombre, $nombre_curso, $descripcion, $estado)
+    function __construct($cod_curso, $descripcion, $paralelo,  $materia_cod,$horario_id)
     {
-        $this->id_curso = $id_curso;
-        $this->nombre = $nombre;
-        $this->nombre_curso = $nombre_curso;
+        $this->cod_curso = $cod_curso;
+        $this->paralelo = $paralelo;
         $this->descripcion = $descripcion;
-        $this->estado = $estado;
+        $this->materia_cod = $materia_cod;
+        $this->horario_id = $horario_id;
 
 
     }
 
 
-    function setid_curso($id_curso)
+    function setcod_curso($cod_curso)
     {
-        $this->id_curso = $id_curso;
+        $this->cod_curso = $cod_curso;
     }
 
-    function getid_curso()
+    function getcod_curso()
     {
-        return $this->id_curso;
+        return $this->cod_curso;
     }
 
-    function setnombre($nombre)
+    function setparalelo($paralelo)
     {
-        $this->nombre = $nombre;
+        $this->paralelo = $paralelo;
     }
 
-    function getnombre()
+    function getparalelo()
     {
-        return $this->nombre;
+        return $this->paralelo;
     }
 
 
-    function setnombre_curso($nombre_curso)
-    {
-        $this->nombre_curso = $nombre_curso;
-    }
-
-    function getnombre_curso()
-    {
-        return $this->nombre_curso;
-    }
 
 
     function setdescripcion($descripcion)
@@ -63,15 +54,27 @@ class Curso
         return $this->descripcion;
     }
 
-    function setestado($estado)
+    function setmateria_cod($materia_cod)
     {
-        $this->estado = $estado;
+        $this->materia_cod = $materia_cod;
     }
 
-    function getestado()
+    function getmateria_cod()
     {
-        return $this->estado;
+        return $this->materia_cod;
     }
+
+  function sethorario_id($horario_id)
+  {
+    $this->horario_id = $horario_id;
+  }
+
+  function gethorario_id()
+  {
+    return $this->horario_id;
+  }
+
+
 
 
 }

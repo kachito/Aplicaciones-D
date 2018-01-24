@@ -6,7 +6,7 @@ $id = $_GET['id'];
 // echo $id;
 include_once('Curso.php');
 include_once('CursoCollector.php');
-$CursoCollectorObj = new TipoCollector();
+$CursoCollectorObj = new CursoCollector();
 $ObjCurso = $CursoCollectorObj->showCursoId($id);
 //print_r($ObjTransportista);
 

@@ -22,7 +22,7 @@ class dataBase
     } 
     catch(PDOException $e) { 
       $this->isConnected = false;
-      throw new Exception($e->getMessage());
+      Exception($e->getMessage());
     }
   }
 
@@ -32,11 +32,11 @@ class dataBase
   }
 
   public function getRow($query, $params=array()){
-    try{ 
-      $stmt = $this->datab->prepare($query); 
+    try{
+      $stmt = $this->datab->prepare($query);
       $stmt->execute($params);
-      return $stmt->fetch();  
-      }catch(PDOException $e){
+      return $stmt->fetch();
+    }catch(PDOException $e){
       throw new Exception($e->getMessage());
     }
   }

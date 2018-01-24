@@ -25,14 +25,10 @@ $name = strip_tags($_POST['nombre']);
 
 // Acomodar Dias
 echo'
-<div class="center">
-      <h2>Estudiante</h2>
-      <h2 ><i class="fa fa-calendar" aria-hidden="true"></i> '.$name.'</h2>
-    </div>
-
+<h1 class="horario-name"><i class="fa fa-calendar" aria-hidden="true"></i> '.$name.'</h1>
 <table id="thetable" class="table table-bordered">
 <thead class="thead">
-<th class="horarioheader"><i class="fa fa-clock-o"></i> Hora</th>
+<th class="horarioheader"><i class="fa fa-clock-o"></i> Horario</th>
 ';
 for ($i=0; $i < $countdays; $i++) { 
  if ($dias[$i] == 1) {
@@ -88,7 +84,7 @@ echo '<tr id="tr'.sha1($in).'">
 
 </td>';
 
-for ($i=1; $i < $columnas; $i++) { 
+for ($i=1; $i < $columnas; $i++) {
 	echo'
        <td class="td-line">
          <div id="'.$reverse.$i.'" class="col-sm-12 nopadding"></div>
@@ -132,7 +128,7 @@ echo '<tr id="tr'.sha1($in).'">
 </div>
 
 </td>';
-for ($i=1; $i < $columnas; $i++) { 
+for ($i=1; $i < $columnas; $i++) {
 	echo'
        <td class="td-line">
          <div  id="'.$reverse.$i.'" class="col-sm-12 nopadding"></div>

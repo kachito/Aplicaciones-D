@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once("EstudianteCollector.php");
- $EstudianteCollectorObj = new PasswordCollector();
+ $EstudianteCollectorObj = new EstudianteCollector();
 ?>
 
 
@@ -16,21 +16,21 @@ include_once("EstudianteCollector.php");
     <title>B-Smart</title>
     
     <!-- core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/font-awesome.min.css" rel="stylesheet">
-    <link href="../css/animate.min.css" rel="stylesheet">
-    <link href="../css/prettyPhoto.css" rel="stylesheet">
-    <link href="../css/main.css" rel="stylesheet">
-    <link href="../css/responsive.css" rel="stylesheet">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../css/animate.min.css" rel="stylesheet">
+    <link href="../../css/prettyPhoto.css" rel="stylesheet">
+    <link href="../../css/main.css" rel="stylesheet">
+    <link href="../../css/responsive.css" rel="stylesheet">
     <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
+    <script src="../../js/html5shiv.js"></script>
+    <script src="../../js/respond.min.js"></script>
     <![endif]-->       
-    <link rel="shortcut icon" href="../images/ico/bs1.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="../images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../../images/ico/bs1.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../../images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 
 <body class="homepage">
@@ -72,7 +72,7 @@ include_once("EstudianteCollector.php");
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php"><img src="../images/logo2.png" alt="logo"></a>
+                    <a class="navbar-brand" href="index.php"><img src="../../images/logo2.png" alt="logo"></a>
                 </div>
                 
                 <div class="collapse navbar-collapse navbar-right">
@@ -236,11 +236,11 @@ include_once("EstudianteCollector.php");
         </div>
     </footer><!--/#footer-->
 
-    <script src="../js/jquery.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jquery.prettyPhoto.js"></script>
-    <script src="../js/jquery.isotope.min.js"></script>
-    <script src="../js/main.js"></script>
-    <script src="../js/wow.min.js"></script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/jquery.prettyPhoto.js"></script>
+    <script src="../../js/jquery.isotope.min.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/wow.min.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <?php   
 
 include_once('Curso.php');
-include_once('Collector.php');
+include_once('../../db/Collector.php');
 
 class CursoCollector extends Collector
 {
@@ -13,7 +13,7 @@ function showCurso() {
     $rows = self::$db->getRows("SELECT * FROM curso ");        
     $arrayCurso= array();        
     foreach ($rows as $c){
-      $aux = new Curso($c{'id_curso'},$c{'nombre'},$c{'nombre_curso'},$c{'descripcion'},$c{'estado'});
+      $aux = new Curso($c{'cod_curso'},$c{'descripcion'},$c{'paralelo'},$c{'materia_cod'},$c{'horarios_id'});
 
       array_push($arrayCurso, $aux);
     }
@@ -22,30 +22,31 @@ function showCurso() {
 
   function showCursoId($id) {
 
-    $row = self::$db->getRow("SELECT * FROM curso where id_curso = '$id'");   
+    $row = self::$db->getRow("SELECT * FROM curso where cod_curso = '$id'");
     
-    $Curso = new Curso($row{'id_curso'},$row{'nombre'},$row{'nombre_curso'},$row{'descripcion'},$row{'estado'});
+    $Curso = new Curso($row{'cod_curso'},$row{'paralelo'},$row{'materia_cod'},$row{'descripcion'},$row{'horarios_id'});
     return $Curso;        
   }
 
 
 
+
  
-  function updateCurso($id_curso, $nombre, $nombre_curso, $descripcion, $estado) {
+  function updateCurso($cod_curso, $paralelo, $materia_cod, $descripcion, $horarios_id) {
   
   //echo $cargo;
-    $update = self::$db->getRow("Update curso set nombre='$nombre', nombre_curso='$nombre_curso,'descripcion='$descripcion',estado='$estado', where id_curso='$id_curso'");             
+    $update = self::$db->getRow("Update curso set paralelo='$paralelo', materia_cod='$materia_cod,'descripcion='$descripcion',horarios_id='$horarios_id', where cod_curso='$cod_curso'");
  return 1;  
   }
 
   function deleteCurso($id) {
 
- $delete = self::$db->getRow("Delete from curso where id_curso= '$id'");   
+ $delete = self::$db->getRow("Delete from curso where cod_curso= '$id'");
    return 1;          
   }
 
-  function insertCurso($nombre, $nombre_curso, $descripcion, $estado) {
-    $new_row = self::$db->getRow("Insert into Curso (nombre, nombre_curso, descripcion, estado) values ('$nombre','$nombre_curso','$descripcion','$estado')");
+  function insertCurso($paralelo, $materia_cod, $descripcion, $horarios_id) {
+    $new_row = self::$db->getRow("Insert into Curso (paralelo, materia_cod, descripcion, horarios_id) values ('$paralelo','$materia_cod','$descripcion','$horarios_id')");
  return 1;               
   }
 
