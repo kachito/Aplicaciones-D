@@ -9,10 +9,11 @@ class Password
 
   function __construct($cod_usuario,$nickname,$password, $tipo_cod)
   {
-    $this->password = $password;
-    $this->tipo_cod = $tipo_cod;
     $this->cod_usuario = $cod_usuario;
     $this->nickname=$nickname;
+    $this->password = $password;
+    $this->tipo_cod = $tipo_cod;
+
 
 
   }

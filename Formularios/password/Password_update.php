@@ -33,7 +33,7 @@ if(password_verify($passwordant,$password)){
    </head>
 <body>
 
-      <form action=\"Password_list.php\" method=\"Post\">
+      <form action=\"../../users/home.php\" method=\"Post\">
          <div>
          <input type=\"submit\" class=\"btn btn-primary\" name=\"Regresar al inicio\" value=\"Retornar\">
          </div>

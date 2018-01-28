@@ -35,54 +35,23 @@ if (isset($_SESSION['usuario'])) {
   <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 <body class="homepage">
-<header id="header">
-  <div class="top-bar">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6 col-xs-4">
-          <div class="top-number ">
-            <ul class="social-share">
-              <li><a><i class="fa fa-user-md"></i></a></li>
-            </ul>
-            <?php
-            echo $_SESSION['usuario']['nickname'];
-            ?>
-          </div>
-          <!-- <div class="top-number"><p><i class="fa fa-phone-square"></i> Call Us </p></div> -->
-        </div>
-        <div class="col-sm-6 col-xs-8">
-          <div class="social">
-            <!--<ul class="social-share">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-              <li><a href="#"><i class="fa fa-skype"></i></a></li>
-            </ul>
-            <div class="search">
-              <form role="form">
-                <input type="text" class="search-form" autocomplete="off" placeholder="Search">
-                <i class="fa fa-search"></i>
-              </form>-->
-            <ul class="social-share">
-              <a class="top-number " href="../login/logout.php">Cerrar Sesion</a>
-              <li><a href="../login/logout.php"><i class="fa fa-sign-out"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div><!--/.container-->
-  </div><!--/.top-bar-->
+<header id="header" style=" width: 100%; position: fixed; z-index: 100;">
+
+
+
+
+
   <nav class="navbar navbar-inverse">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="../index.php"><img src="../images/logo2.png" alt="logo"></a>
+        <a class="navbar-brand" href="../index.php"><img src="../images/logo2.png" alt="logo" height="80%"></a>
       </div>
       <div class="collapse navbar-collapse navbar-right">
         <ul class="nav navbar-nav">
           <li class="active"><a href="home.php">Home</a></li>
-          <li><a href="../about-us.php">About Us</a></li>
+          <li><a href="about-us.php">About Us</a></li>
+          <li><a href="../Formularios/Tarea/Tarea_list.php">Diario Virtual</a></li>
+          <!--
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Diario Virtual <i
                 class="fa fa-angle-down"></i></a>
@@ -92,45 +61,100 @@ if (isset($_SESSION['usuario'])) {
               <li><a href="../horario.php">Horario</a></li>
               <li><a href="../horario.php">Calendario</a></li>
             </ul>
-
-          <li><a href="" class="dropdown-toggle" data-toggle="dropdown">Planificaciones <i
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Planificaciones <i
                 class="fa fa-angle-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="docente/../form_docente.php">Anual</a></li>
+              <li><a href="../form_docente.php">Anual</a></li>
               <li><a href="../actividades/form_Actividad.php">Bloque</a></li>
-              <li><a href="../tipo/form_Tipo.php">Semanal</a></li>
+              <li><a href="../Formularios/tipo/form_Tipo.php">Semanal</a></li>
             </ul>
-          </li>
+          </li> -->
+
           <?php
           if ($_SESSION['usuario']['descripcion'] == 'Administrador' ) {
-            echo "<li>
-            <a href=\"\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Herramientas <i
-                class=\"fa fa-angle-down\"></i></a>
-            <ul class=\"dropdown-menu\">
-              <li><a href=\"docente/../form_docente.php\">Docente</a></li>
-              <li><a href=\"../actividades/form_Actividad.php\">Alumno</a></li>
-              <li><a href=\"../tipo/form_Tipo.php\">Curso</a></li>
-              <li><a href=\"../tipo/form_Tipo.php\">Tarea</a></li>
-            </ul>
-          </li>";
+
+            echo '
+              <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown">Herramientas <i
+                class="fa fa-angle-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="../Formularios/Docente/Docente_list.php">Docente</a></li>
+              <li><a href="../Formularios/Estudiante/Estudiante_list.php">Alumno</a></li>
+              <li><a href="../Formularios/Curso/Curso_list.php">Curso</a></li>
+              <li><a href="../Formularios/Tarea/Tarea_list.php">Tarea</a></li>
+              </ul>
+          </li>
+            ';
           }
           elseif ($_SESSION['usuario']['descripcion'] == 'Docente' ) {
-            echo "<li>
-            <a href=\"\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Herramientas <i
-                class=\"fa fa-angle-down\"></i></a>
-            <ul class=\"dropdown-menu\">
-              <li><a href=\"../tipo/form_Tipo.php\">Tarea</a></li>
-            </ul>
-          </li>";
+            echo '
+                <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown">Herramientas <i
+                class="fa fa-angle-down"></i></a>
+            <ul class="dropdown-menu">
+                <li><a href="../Formularios/Tarea/Tarea_list.php">Tarea</a></li>
+                </ul>
+          </li>
+                ';
+
           }
+
           ?>
+
 
           <!-- target="info"-->
           <li><a href="../contactenos.php">Contactenos</a></li>
-        </ul>
+
+          <li class=" dropdown"  >
+            <a href="#" class="dropdown-toggle"  ><div class="fa fa-user-md"></div> <i></i> <?php
+              echo $_SESSION['usuario']['nickname'];
+              ?></a>
+            <ul class="dropdown-menu">
+
+              <li><a href="../login/logout.php"> <div class="fa fa-sign-out"></div>  Cerrar Sesion</a></li>
+              <?php
+
+              echo '<li><a href="../Formularios/password/Password_edit.php?id='.$_SESSION['usuario']['cod_usuario'].'">Cambiar Contraseña</a></li>'
+              ?>
+
+            </ul>
+          </li>
       </div>
+
+      </ul>
+    </div>
     </div><!--/.container-->
   </nav><!--/nav-->
+
+  <!--
+
+  <div class="container" style=" width: 100%; position: fixed; z-index: 100" >
+    <div class="row" >
+      <div class="col-sm-12" >
+        <div class=" navbar-right" >
+          <li class=" dropdown"  >
+            <a href="#" class="dropdown-toggle top-number" style="text-shadow:  1px 1px 2px black, 0 0 25px gainsboro, 0 0 5px grey" ><h2 class="top-number fa fa-user-md"></h2>  <i
+              ></i>
+
+              < ?php
+              echo $_SESSION['usuario']['nickname'];
+              ?>
+
+               </a>
+            <ul class="dropdown-menu " style="width: auto; text-align: center;">
+              <li><a href="../login/logout.php"><li class="fa fa-sign-out"></li> Cerrar Sesion</a></li>
+
+            </ul>
+          </li>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  -->
+
 </header><!--/header-->
 <!--/************************* IFRAME centro **************************************************************-->
 

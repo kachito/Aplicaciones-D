@@ -6,7 +6,7 @@ class SesionCollector extends Collector
 {
   function showSesion()
   {
-    $rows = self::$db->getRows("SELECT nickname,password,descripcion FROM usuario 
+    $rows = self::$db->getRows("SELECT cod_usuario, nickname,password,descripcion FROM usuario 
     JOIN
       tipo 
     ON
@@ -14,7 +14,7 @@ class SesionCollector extends Collector
   );
     $arraySesion = array();
     foreach ($rows as $c) {
-      $aux = new Sesion( $c{'nickname'}, $c{'password'},$c{'descripcion'});
+      $aux = new Sesion($c{'cod_usuario'}, $c{'nickname'}, $c{'password'},$c{'descripcion'});
       array_push($arraySesion, $aux);
     }
     return $arraySesion;

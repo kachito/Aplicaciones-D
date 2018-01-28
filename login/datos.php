@@ -49,6 +49,7 @@ $SesionCollectorObj = new SesionCollector();
           foreach ($SesionCollectorObj->showSesion() as $c) {
             if ($c->getnickname() == $usuario_form && password_verify($password_form,$c->getpassword()) && $c->getdescripcion() != NULL) {
               $datos = array(
+                'cod_usuario'=>$c->getcod_usuario(),
                 'nickname' => $c->getnickname(),
                 'password' => $c->getpassword(),
                 'descripcion' => $c->getdescripcion()

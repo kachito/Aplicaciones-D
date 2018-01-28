@@ -1,8 +1,11 @@
 <?php
 session_start();
-include_once("SesionCollector.php");
-$SesionCollectorObj = new SesionCollector();
+
+include_once("CursoCollector.php");
+$CursoCollectorObj = new CursoCollector();
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,24 +14,27 @@ $SesionCollectorObj = new SesionCollector();
   <meta name="description" content="Educacion">
   <meta name="author" content="E-learning">
   <title>B-Smart</title>
+
   <!-- core CSS -->
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
-  <link href="../css/font-awesome.min.css" rel="stylesheet">
-  <link href="../css/animate.min.css" rel="stylesheet">
-  <link href="../css/prettyPhoto.css" rel="stylesheet">
-  <link href="../css/main.css" rel="stylesheet">
-  <link href="../css/responsive.css" rel="stylesheet">
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/font-awesome.min.css" rel="stylesheet">
+  <link href="../../css/animate.min.css" rel="stylesheet">
+  <link href="../../css/prettyPhoto.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/responsive.css" rel="stylesheet">
   <!--[if lt IE 9]>
-  <script src="js/html5shiv.js"></script>
-  <script src="js/respond.min.js"></script>
+  <script src="../../js/html5shiv.js"></script>
+  <script src="../../js/respond.min.js"></script>
   <![endif]-->
-  <link rel="shortcut icon" href="../images/ico/bs1.ico">
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/ico/apple-touch-icon-144-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/ico/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/ico/apple-touch-icon-72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="../images/ico/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="../../images/ico/bs1.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../images/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../images/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../images/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="../../images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
+
 <body class="homepage">
+
 <header id="header">
   <div class="top-bar">
     <div class="container">
@@ -56,59 +62,81 @@ $SesionCollectorObj = new SesionCollector();
       </div>
     </div><!--/.container-->
   </div><!--/.top-bar-->
+
   <nav class="navbar navbar-inverse">
     <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.php"><img src="../../images/logo2.png" alt="logo"></a>
+      </div>
 
       <div class="collapse navbar-collapse navbar-right">
-        <div class="navbar-header">
-
-          <a class="navbar-brand" href="../index.php"><img src="../images/logo2.png" alt="logo"></a>
-        </div>
         <ul class="nav navbar-nav">
-          <li class="active"><a href="../home.php">Home</a></li>
-          <li><a href="../about-us.php">About Us</a></li>
+          <li class="active"><a href="../../home.php">Home</a></li>
+          <li><a href="../../about-us.php">About Us</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Diario Virtual <i
                 class="fa fa-angle-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="../actividades/Actividad_list.php">Diario</a></li>
-              <li><a href="../horario.php">Horario de Clases</a></li>
+              <li><a href="../../actividades/Actividad_list.php">Diario</a></li>
+              <li><a href="../../horario.php">Horario de Clases</a></li>
+
             </ul>
+
+
             <!---doc     <ul class="dropdown-menu">
-                 <li><a href="construccion.php">Diario</a></li>                                
+                 <li><a href="construccion.php">Diario</a></li>
                  <li><a href="horario.php">Horario de Clases</a></li>
                  <li><a href="construccion.php">Horario de Examenes</a></li>
              </ul>-->
           </li>
-          <li><a href="../costruccion.htl" class="dropdown-toggle" data-toggle="dropdown">Asignaturas <i
+          <li><a href="../../costruccion.htl" class="dropdown-toggle" data-toggle="dropdown">Asignaturas <i
                 class="fa fa-angle-down"></i></a>
+
+
             <ul class="dropdown-menu">
-              <li><a href="../construccion.php">Materia</a></li>
+              <li><a href="../../construccion.php">Materia</a></li>
+
             </ul>
+
+
             <!-- <ul class="dropdown-menu">
-                <li><a href="materias.php">Materia</a></li>                                
+                <li><a href="materias.php">Materia</a></li>
                 <li><a href="construccion.php">Cuestionarios</a></li>
                 <li><a href="construccion.html">Otros...</a></li>
             </ul>-->
           </li>
-          <li><a href="../notas/form_notas.php">Calificaciones</a></li>
-          <li><a href="../costruccion.html" class="dropdown-toggle" data-toggle="dropdown">Planificaciones <i
+
+          <li><a href="../../notas/form_notas.php">Calificaciones</a></li>
+
+
+          <li><a href="../../costruccion.html" class="dropdown-toggle" data-toggle="dropdown">Planificaciones <i
                 class="fa fa-angle-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="../docente/form_docente.php">Docente</a></li>
+              <li><a href="../../docente/form_docente.php">Docente</a></li>
               <!-- <li><a href="construccion.html">Alumnos</a></li> -->
-              <li><a href="form_Sesion.php">Sesiones</a></li>
-              <li><a href="../curso1/form_Curso.php">Cursos</a></li>
-              <li><a href="../notas/form_notas.php">Notas</a></li>
+              <li><a href="../../actividades/form_Actividad.php">Actividades</a></li>
+              <li><a href="form_Curso.php">Cursos</a></li>
+              <li><a href="../../notas/form_notas.php">Notas</a></li>
             </ul>
           </li>
           <!-- target="info"-->
-          <li><a href="../contactenos.php">Contactenos</a></li>
+
+
+          <li><a href="../../contactenos.php">Contactenos</a></li>
         </ul>
       </div>
     </div><!--/.container-->
   </nav><!--/nav-->
+
 </header><!--/header-->
+
+
 <!--/************************* IFRAME centro *************************************************************
     <section id="main-slider" class="no-margin">
       <div class="item">       
@@ -117,64 +145,73 @@ $SesionCollectorObj = new SesionCollector();
    </section>
 ************************ IFRAME centro **************************************************************-->
 <header>
-  <h1>Mantenimiento Sesioness</h1>
+  <h1>Mantenimiento Actividades</h1>
 </header>
 <br/>
 <br/>
-<div class="container">
+<div class="container" style="width: 50%">
   <div class="table-responsive">
     <table class="table table-condensed table-bordered table-hover">
       <thead>
       <tr>
-
-        <th bgcolor="#D8D8D8">Usuario</th>
-        <th bgcolor="#D8D8D8">Pass</th>
-        <th bgcolor="#D8D8D8">Usuario</th>
-        <th bgcolor="#D8D8D8">Accion</th>
+        <th bgcolor="#D8D8D8">CURSO</th>
+        <th bgcolor="#D8D8D8">PARALELO</th>
+        <th colspan='3' bgcolor="#D8D8D8" style="text-align: center">ACCION</th>
       </tr>
       </thead>
       <?php
-      foreach ($SesionCollectorObj->showSesion() as $c) {
-        ?>
+        foreach ($CursoCollectorObj->showCurso() as $c) {
+          echo '
         <tbody>
         <tr>
-          <td><?php echo $c->getnickname() ?></td>
-          <td><?php echo $c->getpassword() ?></td>
-          <td><?php echo $c->getdescripcion() ?></td>
-          </td>
-          <td><a href="form_Sesion.php">Nuevo</a></td>
+          <td >'.$c->getdescripcion().'</td>
+          <td>'.$c->getparalelo().'</td>
+          <td><a href="form_Curso.php"><i class="fa fa-plus-square-o"></i> Nuevo</a></td>
+          <td><a href="Curso_edit.php?id='.$c->getcod_curso().'"><i class="fa fa-pencil-square-o" ></i> Editar</a></td>
+          <td ><a  href="Curso_delete.php?id='.$c->getcod_curso().'"><i class="fa fa-trash-o"></i> Eliminar</a></td>
         </tr>
-        </tbody>
-        <?php
+        </tbody>';
       }
       ?>
     </table>
   </div>
 </div>
+
+
 <!--/************************* IFRAME centro **************************************************************-->
+
+
 <!--/************************* Foot **************************************************************-->
 <section id="bottom">
   <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
     <div class="row">
       <div class="col-md-5 col-sm-6">
         <div class="widget">
-          <h3><a href="Actividad_list.php">Actividades académicas</a></h3>
+          <h3><a href="../../actividades/Actividad_list.php">Actividades académicas</a></h3>
         </div>
       </div><!--/.col-md-3-->
+
       <div class="col-md-5 col-sm-6">
         <div class="widget">
-          <h3><a href="../horario.php"> Horarios de Clases</a></h3>
+          <h3><a href="../../horario.php"> Horarios de Clases</a></h3>
+
         </div>
       </div><!--/.col-md-3-->
+
       <div class="col-md-2 col-sm-6">
         <div class="widget">
-          <h3><a href="../curso1/Curso_list.php">Cursos</a></h3>
+          <h3><a href="Curso_list.php">Cursos</a></h3>
+
         </div>
       </div><!--/.col-md-3-->
+
+
     </div><!--/.col-md-3-->
   </div>
   </div>
 </section><!--/#bottom-->
+
+
 <footer id="footer" class="midnight-blue">
   <div class="container">
     <div class="row">
@@ -185,19 +222,20 @@ $SesionCollectorObj = new SesionCollector();
       </div>
       <div class="col-sm-6">
         <ul class="pull-right">
-          <li><a href="../home.php">Home</a></li>
-          <li><a href="../about-us.php">About Us</a></li>
-          <li><a href="../contactenos.php">Contact Us</a></li>
+          <li><a href="../../home.php">Home</a></li>
+          <li><a href="../../about-us.php">About Us</a></li>
+          <li><a href="../../contactenos.php">Contact Us</a></li>
         </ul>
       </div>
     </div>
   </div>
 </footer><!--/#footer-->
-<script src="../js/jquery.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/jquery.prettyPhoto.js"></script>
-<script src="../js/jquery.isotope.min.js"></script>
-<script src="../js/main.js"></script>
-<script src="../js/wow.min.js"></script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/jquery.prettyPhoto.js"></script>
+<script src="../../js/jquery.isotope.min.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/wow.min.js"></script>
 </body>
 </html>

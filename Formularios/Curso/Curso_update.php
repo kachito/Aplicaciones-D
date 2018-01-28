@@ -1,21 +1,17 @@
 <?php
-error_reporting(0);
- session_start();
+session_start();
  include_once('CursoCollector.php');
- //$id = $_POST['ID'];
+ //include_once('Tipo.php
+
+ $curso = $_POST['curso'];
+  $descripcion = $_POST['descripcion'];
+ $paralelo = $_POST['paralelo'];
  
- 
- $nombre = $_POST['nombre'];
- $nombre_curso = $_POST['nombre_curso'];
- $descripcion = $_POST['descripcion'];
- $estado = $_POST['estado'];
- 
- 
+
+//echo  $cargo;		
+
  $CursoCollectorObj = new CursoCollector();
- $CursoCollectorObj->insertCurso($nombre, $nombre_curso,$descripcion, $estado);
-
-
-
+ $CursoCollectorObj->updateCurso($curso, $descripcion, $paralelo);
 
 ?>
 <!doctype html>
@@ -26,8 +22,8 @@ error_reporting(0);
 <title>B-Smart</title>
     <!-- Estilos CSS vinculados -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-     
-   <h3>Ingresado Exitosamente</h3>
+   
+   <h3>Actualizacion Exitosamente</h3>
    </head>
 <body>
   

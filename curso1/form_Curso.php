@@ -2,7 +2,7 @@
 session_start();
 include_once('Curso.php');
 include_once('CursoCollector.php');
-$CursoCollectorObj = new TipoCollector();
+$CursoCollectorObj = new CursoCollector();
 ?>
 
 

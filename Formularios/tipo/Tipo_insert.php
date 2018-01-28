@@ -19,7 +19,7 @@ if (isset($_POST["descripcion"]) && !empty($_POST["descripcion"])) {
   <meta name="viewport" content="width=device-width; initial-scale=1.0">
   <title>B-Smart</title>
   <!-- Estilos CSS vinculados -->
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <!--/************************* IFRAME centro **************************************************************-->
@@ -36,7 +36,7 @@ if (isset($_POST["descripcion"]) && !empty($_POST["descripcion"])) {
                   <!-- Indicators -->
                   <div class="carousel-inner">
                     <div class="col-md-8 col-sm-6">
-                      <img src="../images/slider/insertar.jpg" class="img-responsive" alt="horario">
+                      <img src="../../images/slider/insertar.jpg" class="img-responsive" alt="horario">
                     </div>
                     <div class="col-md-4 col-sm-6">
                       <br>

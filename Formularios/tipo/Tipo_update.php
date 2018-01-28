@@ -16,7 +16,7 @@ $TipoCollectorObj->updateTipo($cod_tipo, $descripcion);
   <meta name="viewport" content="width=device-width; initial-scale=1.0">
   <title>B-Smart</title>
   <!-- Estilos CSS vinculados -->
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
   <h3>Actualizacion Exitosamente</h3>
 </head>
 <body>

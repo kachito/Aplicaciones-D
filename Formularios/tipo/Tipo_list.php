@@ -12,21 +12,21 @@ $TipoCollectorObj = new TipoCollector();
   <meta name="author" content="E-learning">
   <title>B-Smart</title>
   <!-- core CSS -->
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
-  <link href="../css/font-awesome.min.css" rel="stylesheet">
-  <link href="../css/animate.min.css" rel="stylesheet">
-  <link href="../css/prettyPhoto.css" rel="stylesheet">
-  <link href="../css/main.css" rel="stylesheet">
-  <link href="../css/responsive.css" rel="stylesheet">
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/font-awesome.min.css" rel="stylesheet">
+  <link href="../../css/animate.min.css" rel="stylesheet">
+  <link href="../../css/prettyPhoto.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/responsive.css" rel="stylesheet">
   <!--[if lt IE 9]>
   <script src="js/html5shiv.js"></script>
   <script src="js/respond.min.js"></script>
   <![endif]-->
-  <link rel="shortcut icon" href="../images/ico/bs1.ico">
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/ico/apple-touch-icon-144-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/ico/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/ico/apple-touch-icon-72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="../images/ico/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="../../images/ico/bs1.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../images/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../images/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../images/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="../../images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 <body class="homepage">
 <header id="header">
@@ -65,18 +65,18 @@ $TipoCollectorObj = new TipoCollector();
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.php"><img src="../images/logo2.png" alt="logo"></a>
+        <a class="navbar-brand" href="../../index.php"><img src="../../images/logo2.png" alt="logo"></a>
       </div>
       <div class="collapse navbar-collapse navbar-right">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="../home.php">Home</a></li>
-          <li><a href="../about-us.php">About Us</a></li>
+          <li class="active"><a href="../../home.php">Home</a></li>
+          <li><a href="../../about-us.php">About Us</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Diario Virtual <i
                 class="fa fa-angle-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="../Actividad_list.php">Diario</a></li>
-              <li><a href="../horario.php">Horario de Clases</a></li>
+              <li><a href="../../horario.php">Horario de Clases</a></li>
             </ul>
             <!---doc     <ul class="dropdown-menu">
                  <li><a href="construccion.php">Diario</a></li>
@@ -87,7 +87,7 @@ $TipoCollectorObj = new TipoCollector();
           <li><a href="../costruccion.htl" class="dropdown-toggle" data-toggle="dropdown">Asignaturas <i
                 class="fa fa-angle-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="../materias.php">Materia</a></li>
+              <li><a href="../../materias.php">Materia</a></li>
             </ul>
             <!-- <ul class="dropdown-menu">
                 <li><a href="materias.php">Materia</a></li>
@@ -101,13 +101,13 @@ $TipoCollectorObj = new TipoCollector();
             <ul class="dropdown-menu">
               <li><a href="form_tipo.php">Docente</a></li>
               <!-- <li><a href="construccion.html">Alumnos</a></li> -->
-              <li><a href="../actividades/form_Actividad.php">Actividades</a></li>
-              <li><a href="../curso1/form_Curso.php">Cursos</a></li>
+              <li><a href="../../actividades/form_Actividad.php">Actividades</a></li>
+              <li><a href="../../curso1/form_Curso.php">Cursos</a></li>
               <li><a href="../notas/form_notas.php">Notas</a></li>
             </ul>
           </li>
           <!-- target="info"-->
-          <li><a href="../contactenos.php">Contactenos</a></li>
+          <li><a href="../../contactenos.php">Contactenos</a></li>
         </ul>
       </div>
     </div><!--/.container-->
@@ -159,17 +159,17 @@ $TipoCollectorObj = new TipoCollector();
     <div class="row">
       <div class="col-md-5 col-sm-6">
         <div class="widget">
-          <h3><a href="../actividades/Actividad_list.php">Actividades académicas</a></h3>
+          <h3><a href="../../actividades/Actividad_list.php">Actividades académicas</a></h3>
         </div>
       </div><!--/.col-md-3-->
       <div class="col-md-5 col-sm-6">
         <div class="widget">
-          <h3><a href="../horario.php"> Horarios de Clases</a></h3>
+          <h3><a href="../../horario.php"> Horarios de Clases</a></h3>
         </div>
       </div><!--/.col-md-3-->
       <div class="col-md-2 col-sm-6">
         <div class="widget">
-          <h3><a href="../curso1/Curso_list.php">Cursos</a></h3>
+          <h3><a href="../../curso1/Curso_list.php">Cursos</a></h3>
         </div>
       </div><!--/.col-md-3-->
     </div><!--/.col-md-3-->
@@ -186,19 +186,19 @@ $TipoCollectorObj = new TipoCollector();
       </div>
       <div class="col-sm-6">
         <ul class="pull-right">
-          <li><a href="../home.php">Home</a></li>
-          <li><a href="../about-us.php">About Us</a></li>
-          <li><a href="../contactenos.php">Contact Us</a></li>
+          <li><a href="../../home.php">Home</a></li>
+          <li><a href="../../about-us.php">About Us</a></li>
+          <li><a href="../../contactenos.php">Contact Us</a></li>
         </ul>
       </div>
     </div>
   </div>
 </footer><!--/#footer-->
-<script src="../js/jquery.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/jquery.prettyPhoto.js"></script>
-<script src="../js/jquery.isotope.min.js"></script>
-<script src="../js/main.js"></script>
-<script src="../js/wow.min.js"></script>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/jquery.prettyPhoto.js"></script>
+<script src="../../js/jquery.isotope.min.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/wow.min.js"></script>
 </body>
 </html>

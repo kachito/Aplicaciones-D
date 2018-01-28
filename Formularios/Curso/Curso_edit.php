@@ -1,10 +1,16 @@
 <?php
 session_start();
-include_once("PasswordCollector.php");
-$PasswordCollectorObj = new PasswordCollector();
+
+$id = $_GET['id'];
+
+// echo $id;
+include_once('Curso.php');
+include_once('CursoCollector.php');
+$CursoCollectorObj = new CursoCollector();
+$ObjCurso = $CursoCollectorObj->showCursoId($id);
+//print_r($ObjTransportista);
+
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,8 +28,8 @@ $PasswordCollectorObj = new PasswordCollector();
   <link href="../../css/main.css" rel="stylesheet">
   <link href="../../css/responsive.css" rel="stylesheet">
   <!--[if lt IE 9]>
-  <script src="js/html5shiv.js"></script>
-  <script src="js/respond.min.js"></script>
+  <script src="../../js/html5shiv.js"></script>
+  <script src="../../js/respond.min.js"></script>
   <![endif]-->
   <link rel="shortcut icon" href="../../images/ico/bs1.ico">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../images/ico/apple-touch-icon-144-precomposed.png">
@@ -62,7 +68,7 @@ $PasswordCollectorObj = new PasswordCollector();
     </div><!--/.container-->
   </div><!--/.top-bar-->
 
-  <nav class="navbar navbar-inverse" role="banner">
+  <nav class="navbar navbar-inverse">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -71,34 +77,63 @@ $PasswordCollectorObj = new PasswordCollector();
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.php"><img src="../../../../images/logo2.png" alt="logo"></a>
+        <a class="navbar-brand" href="index.php"><img src="../../images/logo2.png" alt="logo"></a>
       </div>
 
       <div class="collapse navbar-collapse navbar-right">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="home.html">Home</a></li>
-          <li><a href="about-us - copia.html">About Us</a></li>
+          <li class="active"><a href="../../home.php">Home</a></li>
+          <li><a href="../../about-us.php">About Us</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Diario Virtual <i
                 class="fa fa-angle-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="construccion.html">Diario</a></li>
-              <li><a href="horario.html">Horario de Clases</a></li>
-              <li><a href="construccion.html">Horario de Examenes</a></li>
+              <li><a href="../../Actividad_list.php">Diario</a></li>
+              <li><a href="../../horario.php">Horario de Clases</a></li>
+
             </ul>
+
+
+            <!---doc     <ul class="dropdown-menu">
+                 <li><a href="construccion.php">Diario</a></li>
+                 <li><a href="horario.php">Horario de Clases</a></li>
+                 <li><a href="construccion.php">Horario de Examenes</a></li>
+             </ul>-->
           </li>
-          <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Asignaturas <i
+          <li><a href="../../costruccion.htl" class="dropdown-toggle" data-toggle="dropdown">Asignaturas <i
+                class="fa fa-angle-down"></i></a>
+
+
+            <ul class="dropdown-menu">
+              <li><a href="../../materias.php">Materia</a></li>
+
+            </ul>
+
+
+            <!-- <ul class="dropdown-menu">
+                <li><a href="materias.php">Materia</a></li>
+                <li><a href="construccion.php">Cuestionarios</a></li>
+                <li><a href="construccion.html">Otros...</a></li>
+            </ul>-->
+          </li>
+
+          <li><a href="../../notas/form_notas.php">Calificaciones</a></li>
+
+
+          <li><a href="../../costruccion.html" class="dropdown-toggle" data-toggle="dropdown">Planificaciones <i
                 class="fa fa-angle-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="materias.html">Materia</a></li>
-              <li><a href="construccion.html">Cuestionarios</a></li>
-              <li><a href="construccion.html">Otros...</a></li>
+              <li><a href="../../docente/form_docente.php">Docente</a></li>
+              <!-- <li><a href="construccion.html">Alumnos</a></li> -->
+              <li><a href="../../actividades/form_Actividad.php">Actividades</a></li>
+              <li><a href="form_Curso.php">Cursos</a></li>
+              <li><a href="../../notas/form_notas.php">Notas</a></li>
             </ul>
           </li>
           <!-- target="info"-->
-          <li><a href="construccion.html">Calificaciones</a></li>
-          <li><a href="construccion.html">Planificaciones</a></li>
-          <li><a href="contactenos.html">Contactenos</a></li>
+
+
+          <li><a href="../../contactenos.php">Contactenos</a></li>
         </ul>
       </div>
     </div><!--/.container-->
@@ -106,55 +141,61 @@ $PasswordCollectorObj = new PasswordCollector();
 
 </header><!--/header-->
 
-
 <!--/************************* IFRAME centro *************************************************************
     <section id="main-slider" class="no-margin">
       <div class="item">       
         <iframe name="info"  height="730"  src="inicio.html"  ></iframe>         
       </div>
    </section>
-************************ IFRAME centro **************************************************************-->
-<header>
-  <h1>Mantenimiento Estudiante</h1>
-</header>
-<br/>
-<br/>
-<div class="container">
-  <div class="table-responsive">
-    <table class="table table-condensed table-bordered table-hover">
-      <thead>
-      <tr>
-        <th bgcolor="#D8D8D8">CODIGO</th>
-        <th bgcolor="#D8D8D8">NOMBRE</th>
-        <th bgcolor="#D8D8D8">APELLIDO</th>
-        <th bgcolor="#D8D8D8">EDAD</th>
-        <th bgcolor="#D8D8D8">CEDULA</th>
-        <th bgcolor="#D8D8D8">GENERO</th>
-        <th bgcolor="#D8D8D8">EMAIL</th>
-        <th colspan=3 bgcolor="#D8D8D8">ACCION</th>
-      </tr>
-      </thead>
-      <?php
-      foreach ($PasswordCollectorObj->showPassword() as $c) {
-        ?>
-        <tbody>
-        <tr>
-          <td><?php echo $c->getcod_usuario() ?></td>
-          <td><?php echo $c->getnickname() ?></td>
-          <td><?php echo $c->getpassword() ?></td>
-          <td><?php echo $c->gettipo_cod() ?></td>
-          <td><a href="form_estudiante.php">Nuevo</a></td>
-          <td><a href="Password_edit.php?id=<?php echo $c->getcod_usuario() ?>">Editar</a></td>
-          <td><a href="Password_delete.php?id=<?php echo $c->getcod_usuario() ?>">Eliminar</a></td>
-        </tr>
-        </tbody>
-        <?php
-      }
-      ?>
-    </table>
-  </div>
-</div>
+************************ Fortmulario **************************************************************-->
+<section id="contact-page">
+  <div class="container">
+    <div class="center">
+      <br>
+      <br>
 
+      <h2>Cursos</h2>
+      <p class="lead">B-Smart</p>
+    </div>
+    <div class="row contact-wrap">
+      <div class="status alert alert-success" style="display: none"></div>
+
+      <form action="Curso_update.php" method="post" action="form-horizontal">
+        <input type="text" name="curso" hidden="hidden" value="<?php echo $ObjCurso->getcod_curso(); ?>">
+        <div class="col-sm-5 col-sm-offset-1">
+
+          <div class="form-group">
+            <label>Descripción *</label>
+            <input type="text" name="descripcion" class="form-control" required="required"
+                   value="<?php echo $ObjCurso->getdescripcion(); ?>">
+          </div>
+          <div class="form-group">
+            <label>Paralelo *</label>
+            <input type="text" name="paralelo" class="form-control" required="required"
+                   value="<?php echo $ObjCurso->getparalelo(); ?>">
+          </div>
+
+          <br><br><br>
+
+
+        </div>
+        <div class="col-sm-5">
+
+
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-offset-4 col-xs-8">
+            <input type="button" value="Regresar" OnClick="history.back()" class="btn btn-primary">
+            <input type="reset" class="btn btn-primary" value="Limpiar">
+            <input type="submit" class="btn btn-primary" value="Actualizar">
+
+          </div>
+        </div>
+      </form>
+    </div><!--/.row-->
+  </div><!--/.container-->
+</section><!--/#contact-page-->
 
 <!--/************************* IFRAME centro **************************************************************-->
 
@@ -163,59 +204,48 @@ $PasswordCollectorObj = new PasswordCollector();
 <section id="bottom">
   <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
     <div class="row">
-      <div class="col-md-3 col-sm-6">
+      <div class="col-md-5 col-sm-6">
         <div class="widget">
-          <h3><a href="#">Actividades académicas</a></h3>
+          <h3><a href="../../Actividad_list.php">Actividades académicas</a></h3>
         </div>
       </div><!--/.col-md-3-->
 
-      <div class="col-md-3 col-sm-6">
+      <div class="col-md-5 col-sm-6">
         <div class="widget">
-          <h3><a href="#">Calendario académico</a></h3>
-
-        </div>
-      </div><!--/.col-md-3-->
-
-      <div class="col-md-3 col-sm-6">
-        <div class="widget">
-          <h3><a href="#">Nuevos cursos</a></h3>
+          <h3><a href="../../horario.php"> Horarios de Clases</a></h3>
 
         </div>
       </div><!--/.col-md-3-->
 
-      <div class="col-md-3 col-sm-6">
+      <div class="col-md-2 col-sm-6">
         <div class="widget">
-          <h3><a href="#">Anuncios de profesores</a></h3>
-
+          <h3><a href="curso1/Curso_list.php">Cursos</a></h3>
         </div>
       </div><!--/.col-md-3-->
-    </div>
+    </div><!--/.col-md-3-->
   </div>
-</section><!--/#bottom-->
-
-
+  </div>
+</section> <!--/#bottom-->
 <footer id="footer" class="midnight-blue">
   <div class="container">
     <div class="row">
       <div class="col-sm-6">
         &copy; 2015 <a target="_blank" href="http://shapebootstrap.net/"
-                       title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights
-        Reserved.
+                       title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>.
+        All Rights Reserved.
       </div>
       <div class="col-sm-6">
         <ul class="pull-right">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Faq</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="../../home.php">Home</a></li>
+          <li><a href="../../about-us.php">About Us</a></li>
+          <li><a href="../../contactenos.php">Contact Us</a></li>
         </ul>
       </div>
     </div>
   </div>
 </footer><!--/#footer-->
-
-<script src="../../../../js/jquery.js"></script>
-<script src="../../../../js/bootstrap.min.js"></script>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
 <script src="../../js/jquery.prettyPhoto.js"></script>
 <script src="../../js/jquery.isotope.min.js"></script>
 <script src="../../js/main.js"></script>

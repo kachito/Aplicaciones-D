@@ -1,7 +1,7 @@
 <?php   
 
 include_once('Curso.php');
-include_once('../../db/Collector.php');
+include_once('../db/Collector.php');
 
 class CursoCollector extends Collector
 {
