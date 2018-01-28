@@ -4,7 +4,7 @@
 include_once('Estudiante.php');
 include_once('../../db/Collector.php');
 
-class EstudianteCollector extends Collector
+class DocenteCollector extends Collector
 {
 
   function showEstudiante()
@@ -49,100 +49,41 @@ class EstudianteCollector extends Collector
     $tipo = 3;
     $password = password_hash($cedula, PASSWORD_BCRYPT);
 
-    $row = self::$db->getRow("SELECT COUNT (cedula) FROM persona where cedula = '$cedula'");
+    echo $usuario;
+
+    $row = self::$db->getRow("SELECT COUNT (nickname) FROM usuario where nickname = '$usuario'");
+    echo '<br></br>';
 
 
+    // no existen usuarios con ese nickname
+    if ($row["count"] == 0) {
 
-    if ($row['count']==0){
+      $new_row = self::$db->getRow("Insert into usuario (nickname,password,tipo_cod) values ('$usuario','$password','$tipo')");
+      $row = self::$db->getRow("SELECT * FROM usuario where nickname='$usuario'");
+      $id_user=$row['cod_usuario'];
+      $new_row = self::$db->getRow("Insert into alumno (mail_rep,curso_cod,usuario_cod,representante) values ('$email2','$curso','$id_user','$representante')");
+      $row = self::$db->getRow("SELECT * FROM alumno where usuario_cod='$id_user'");
+      $id_user=$row['cod_alumno'];
+      $new_row = self::$db->getRow("Insert into persona (cedula,nombre,apellido, telefono,mail,alumno_cod) values ('$cedula','$nombre','$apellido', '$telefono','$email1','$id_user')");
 
-
-
-
-      $row = self::$db->getRow("SELECT COUNT (nickname) FROM usuario where nickname = '$usuario'");
-      echo '<br></br>';
-
-
-
-      // no existen usuarios con ese nickname
-      if ($row["count"] == 0) {
-
-        $new_row = self::$db->getRow("Insert into usuario (nickname,password,tipo_cod) values ('$usuario','$password','$tipo')");
-        $row = self::$db->getRow("SELECT * FROM usuario where nickname='$usuario'");
-        $id_user=$row['cod_usuario'];
-        $new_row = self::$db->getRow("Insert into alumno (mail_rep,curso_cod,usuario_cod,representante) values ('$email2','$curso','$id_user','$representante')");
-        $row = self::$db->getRow("SELECT * FROM alumno where usuario_cod='$id_user'");
-        $id_user=$row['cod_alumno'];
-        $new_row = self::$db->getRow("Insert into persona (cedula,nombre,apellido, telefono,mail,alumno_cod) values ('$cedula','$nombre','$apellido', '$telefono','$email1','$id_user')");
-
-        echo'<div class="container">
-
-    <div class="row object-non-visible" data-animation-effect="fadeIn">
-      <div class="col-md-12">
+      echo '<h3>Usuario asignado es:</h3>';
+      print '<h>'.$usuario.'</h>';
 
 
-        <!-- isotope filters end -->
-
-
-        <div class="modal-content">
-
-          <div class="modal-body">
-            <div class="item">
-
-              <div id="about-slider">
-                <div id="carousel-slider" class="carousel slide" data-ride="carousel">
-                  <!-- Indicators -->
-
-
-                  <div class="carousel-inner">
-                    <div class="col-md-8 col-sm-6">
-                      <img src="../../images/slider/insertar.jpg" class="img-responsive" alt="horario">
-
-                    </div>
-
-                    <div class="col-md-4 col-sm-6">
-
-                      <br>
-                      <br>
-                      <br>
-                      <br>
-                      <h2>El usuario signado es:</h2>
-                      <h1>'.$usuario.'</h1>
-
-                      <br>
-                      <br>
-                      <br>
-
-                      <h2>Ingresado Exitosamente</h2>
-                    </div>
-
-                  </div>
-
-                </div> <!--/#carousel-slider-->
-              </div>
-
-
-            </div>
-          </div>
-          <div class="modal-footer">
-            <a href="Docente_list.php">
-              <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Retornar</button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>';
 
 
 
 // insertas
-      } else {
+    } else {
 
-        $row = self::$db->getRow("SELECT * FROM usuario where nickname='ldyepez'");
-        $cas = 1;
-        $usuario = $usuario . $cas;
+      $row = self::$db->getRow("SELECT * FROM usuario where nickname='ldyepez'");
+       $cas = 1;
+      $usuario = $usuario . $cas;
+      echo '<br></br>';
 
-        echo'<div class="container">
+
+
+      echo'<div class="container">
 
     <div class="row object-non-visible" data-animation-effect="fadeIn">
       <div class="col-md-12">
@@ -201,18 +142,17 @@ class EstudianteCollector extends Collector
     </div>
   </div>';
 
-        print('Exite al menos un registro');
+
+
+
+
+
+
+
+
+      print('Exite al menos un registro');
 
 // ya existe un registro con ese id
-      }
-
-
-
-
-    }
-
-    else{
-      echo "Daniel es puto";
     }
 
 

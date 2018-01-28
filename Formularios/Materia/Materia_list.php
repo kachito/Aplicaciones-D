@@ -1,7 +1,7 @@
 <?php
 session_start();
-include_once("EstudianteCollector.php");
- $EstudianteCollectorObj = new DocenteCollector();
+include_once("MateriaCollector.php");
+ $NotasCollectorObj = new MateriaCollector();
 ?>
 
 
@@ -16,21 +16,21 @@ include_once("EstudianteCollector.php");
     <title>B-Smart</title>
     
     <!-- core CSS -->
-    <link href="../../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../css/font-awesome.min.css" rel="stylesheet">
-    <link href="../../css/animate.min.css" rel="stylesheet">
-    <link href="../../css/prettyPhoto.css" rel="stylesheet">
-    <link href="../../css/main.css" rel="stylesheet">
-    <link href="../../css/responsive.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/animate.min.css" rel="stylesheet">
+    <link href="../css/prettyPhoto.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
     <!--[if lt IE 9]>
-    <script src="../../js/html5shiv.js"></script>
-    <script src="../../js/respond.min.js"></script>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
     <![endif]-->       
-    <link rel="shortcut icon" href="../../images/ico/bs1.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="../../images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../images/ico/bs1.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 
 <body class="homepage">
@@ -72,7 +72,7 @@ include_once("EstudianteCollector.php");
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php"><img src="../../images/logo2.png" alt="logo"></a>
+                    <a class="navbar-brand" href="index.php"><img src="../images/logo2.png" alt="logo"></a>
                 </div>
                 
                 <div class="collapse navbar-collapse navbar-right">
@@ -114,7 +114,7 @@ include_once("EstudianteCollector.php");
    </section>
 ************************ IFRAME centro **************************************************************-->
 <header>
-    <h1>Mantenimiento Estudiante</h1>
+    <h1>Calificaciones</h1>
 </header>
 <br/>
 <br/>
@@ -124,47 +124,34 @@ include_once("EstudianteCollector.php");
         <thead>
             <tr>
                   <th bgcolor="#D8D8D8">CODIGO</th>
-                  <th bgcolor="#D8D8D8">NOMBRE</th>
-                  <th bgcolor="#D8D8D8">APELLIDO</th>
-                  <th bgcolor="#D8D8D8">EDAD</th>
-                  <th bgcolor="#D8D8D8">CEDULA</th>
-                    <th bgcolor="#D8D8D8">GENERO</th>
-                  <th bgcolor="#D8D8D8">EMAIL</th>
+                  <th bgcolor="#D8D8D8">FECHA</th>
+                  <th bgcolor="#D8D8D8">1ER PARCIAL</th>
+                  <th bgcolor="#D8D8D8">2DO PARCIAL</th>
+                  <th bgcolor="#D8D8D8">3ER PARCIAL</th>
+                    <th bgcolor="#D8D8D8">EXÁMEN</th>
+                  <th bgcolor="#D8D8D8">PROMEDIO</th>
+                  <th bgcolor="#D8D8D8">RECUPERACIÓN</th>
                   <th colspan = 3 bgcolor="#D8D8D8">ACCION</th>
            </tr>
         </thead>
   <?php  
 
-    foreach ($EstudianteCollectorObj->showEstudiante() as $c){
+    foreach ($NotasCollectorObj->showNotas() as $c){
   ?>
   <tbody>
   <tr>
-     <td><?php echo $c->getid_estudiante() ?></td>
-     <td><?php echo $c->getnombre() ?></td>
-     <td><?php echo $c->getapellido() ?></td>
-     <td><?php echo $c->getedad() ?></td>
-     <td><?php echo $c->getcedula() ?></td>
-
-
-     <td> <?php
-        
-        if ($c->getgenero()== 0 )
-        {
-          
-          echo "Femenino";
-        }
-        else {
-          
-         echo "Masculino";
-        }
-      ?>
-      </td>
-
-     <td><?php echo $c->getemail() ?></td>
+     <td><?php echo $c->getid_nota() ?></td>
+     <td><?php echo $c->getanio() ?></td>
+     <td><?php echo $c->getnota1() ?></td>
+     <td><?php echo $c->getnota2() ?></td>
+     <td><?php echo $c->getnota3() ?></td>
+     <td><?php echo $c->getnota4() ?></td>
+     <td><?php echo $c->getpromedio() ?></td>
+     <td><?php echo $c->getrecuperacion() ?></td>
    
-     <td><a href="form_estudiante.php">Nuevo</a></td>   
-     <td><a href="Estudiante_edit.php?id=<?php echo $c->getid_estudiante() ?>">Editar</a></td>
-     <td><a href="Estudiante_delete.php?id=<?php echo $c->getid_estudiante() ?>">Eliminar</a></td>
+     <td><a href="form_materia.php">Nuevo</a></td>
+     <td><a href="Materia_edit.php?id=<?php echo $c->getid_nota() ?>">Editar</a></td>
+     <td><a href="Materia_delete.php?id=<?php echo $c->getid_nota() ?>">Eliminar</a></td>
   </tr>
   </tbody> 
   <?php  
@@ -236,11 +223,11 @@ include_once("EstudianteCollector.php");
         </div>
     </footer><!--/#footer-->
 
-    <script src="../../js/jquery.js"></script>
-    <script src="../../js/bootstrap.min.js"></script>
-    <script src="../../js/jquery.prettyPhoto.js"></script>
-    <script src="../../js/jquery.isotope.min.js"></script>
-    <script src="../../js/main.js"></script>
-    <script src="../../js/wow.min.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.prettyPhoto.js"></script>
+    <script src="../js/jquery.isotope.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/wow.min.js"></script>
 </body>
 </html>

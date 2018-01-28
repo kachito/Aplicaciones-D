@@ -11,13 +11,11 @@ class Conexion
         try {
 
             $host = 'localhost';
-            $db =   'edusmart';
-            $user = 'postgres';
-            $pwd =  '12345';
-            $this->dbh = new PDO('pgsql:host='.$host.';dbname='.$db, $user, $pwd);
+            $db =   'test';
+            $user = 'root';
+            $pwd =  '';
+            $this->dbh = new PDO('mysql:host='.$host.';dbname='.$db, $user, $pwd);
             $this->dbh->exec("SET CHARACTER SET utf8");
-
-
 
         } catch (PDOException $e) {
 

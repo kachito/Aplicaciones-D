@@ -1,6 +1,6 @@
 <?php
 session_start();
- include_once('EstudianteCollector.php');
+ include_once('DocenteCollector.php');
  //include_once('Estudiante.php');
 
  $id_estudiante = $_POST['id_estudiante'];

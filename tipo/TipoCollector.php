@@ -1,6 +1,6 @@
 <?php
 include_once('Tipo.php');
-include_once('Collector.php');
+include_once('../../db/Collector.php');
 class TipoCollector extends Collector
 {
   function showTipo()

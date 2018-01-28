@@ -1,9 +1,15 @@
 <?php
-session_start();
-include_once("EstudianteCollector.php");
- $EstudianteCollectorObj = new DocenteCollector();
-?>
+  session_start();
 
+  $id = $_GET['id'];
+
+ // echo $id;
+ include_once('Estudiante.php');
+ include_once('DocenteCollector.php');
+ $EstudianteCollectorObj = new PasswordCollector();
+ $ObjEstudiante = $EstudianteCollectorObj->showEstudianteId($id);
+ //print_r($ObjTransportista);
+?>
 
 
 <!DOCTYPE html>
@@ -16,21 +22,21 @@ include_once("EstudianteCollector.php");
     <title>B-Smart</title>
     
     <!-- core CSS -->
-    <link href="../../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../css/font-awesome.min.css" rel="stylesheet">
-    <link href="../../css/animate.min.css" rel="stylesheet">
-    <link href="../../css/prettyPhoto.css" rel="stylesheet">
-    <link href="../../css/main.css" rel="stylesheet">
-    <link href="../../css/responsive.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/animate.min.css" rel="stylesheet">
+    <link href="../css/prettyPhoto.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
     <!--[if lt IE 9]>
-    <script src="../../js/html5shiv.js"></script>
-    <script src="../../js/respond.min.js"></script>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
     <![endif]-->       
-    <link rel="shortcut icon" href="../../images/ico/bs1.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="../../images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="images/ico/bs1.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 
 <body class="homepage">
@@ -72,7 +78,7 @@ include_once("EstudianteCollector.php");
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php"><img src="../../images/logo2.png" alt="logo"></a>
+                    <a class="navbar-brand" href="index.php"><img src="images/logo2.png" alt="logo"></a>
                 </div>
                 
                 <div class="collapse navbar-collapse navbar-right">
@@ -112,72 +118,87 @@ include_once("EstudianteCollector.php");
         <iframe name="info"  height="730"  src="inicio.html"  ></iframe>         
       </div>
    </section>
-************************ IFRAME centro **************************************************************-->
-<header>
-    <h1>Mantenimiento Estudiante</h1>
-</header>
-<br/>
-<br/>
-<div class="container">
-<div class="table-responsive"> 
-    <table class="table table-condensed table-bordered table-hover">
-        <thead>
-            <tr>
-                  <th bgcolor="#D8D8D8">CODIGO</th>
-                  <th bgcolor="#D8D8D8">NOMBRE</th>
-                  <th bgcolor="#D8D8D8">APELLIDO</th>
-                  <th bgcolor="#D8D8D8">EDAD</th>
-                  <th bgcolor="#D8D8D8">CEDULA</th>
-                    <th bgcolor="#D8D8D8">GENERO</th>
-                  <th bgcolor="#D8D8D8">EMAIL</th>
-                  <th colspan = 3 bgcolor="#D8D8D8">ACCION</th>
-           </tr>
-        </thead>
-  <?php  
+************************ Fortmulario **************************************************************-->
+<section id="contact-page">
+        <div class="container">
+            <div class="center">
+                <br>
+                <br>        
+                
+                <h2>Estudiante</h2>
+                <p class="lead">B-Smart</p>
+            </div> 
+            <div class="row contact-wrap"> 
+                <div class="status alert alert-success" style="display: none"></div>
 
-    foreach ($EstudianteCollectorObj->showEstudiante() as $c){
-  ?>
-  <tbody>
-  <tr>
-     <td><?php echo $c->getid_estudiante() ?></td>
-     <td><?php echo $c->getnombre() ?></td>
-     <td><?php echo $c->getapellido() ?></td>
-     <td><?php echo $c->getedad() ?></td>
-     <td><?php echo $c->getcedula() ?></td>
+                <form action= "Estudiante_update.php" method="post" action="form-horizontal"> 
+                    <div class="col-sm-8 col-sm-offset-4"  >
+                            
+                            <input type="number" name="id_estudiante" required="required" style="visibility:hidden" readonly value = "<?php echo $ObjEstudiante->getid_estudiante(); ?>" >
+                        </div>
 
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    <div class="col-sm-5 col-sm-offset-1">
+                       
+                        <div class="form-group">
+                            <label>Nombre *</label>
+                            <input type="text" name="nombre" class="form-control" required="required" value = "<?php echo $ObjEstudiante->getnombre(); ?>">
+                        </div>
+                        <div class="form-group">
+                            <label>Apellido *</label>
+                            <input type="text" name="apellido" class="form-control" required="required" value = "<?php echo $ObjEstudiante->getapellido(); ?>">
+                        </div>
+                        <div class="form-group" >
+                            <label>Edad *</label>
+                            <input type="number" name="edad" class="form-control" required="required"value = "<?php echo $ObjEstudiante->getedad(); ?>">
+                        </div>
+                        <div class="form-group">
+                            <label>Cédula</label>
+                            <input type="text" name="cedula" class="form-control" value = "<?php echo $ObjEstudiante->getcedula(); ?>">
+                        </div> 
+                                               
+                    </div>
+                    <div class="col-sm-5">
+                        
+                        <div class="form-group">
+                            <label >Genero</label>
+                            <select type="number" name="genero" value = "<?php echo $ObjEstudiante->getgenero(); ?>">
+                            <option value="1" required="required">Masculino</option>
+                            <option value="0" required="required">Femenino</option>
+                            </select>
 
-     <td> <?php
-        
-        if ($c->getgenero()== 0 )
-        {
-          
-          echo "Femenino";
-        }
-        else {
-          
-         echo "Masculino";
-        }
-      ?>
-      </td>
+                        </div>
 
-     <td><?php echo $c->getemail() ?></td>
-   
-     <td><a href="form_estudiante.php">Nuevo</a></td>   
-     <td><a href="Estudiante_edit.php?id=<?php echo $c->getid_estudiante() ?>">Editar</a></td>
-     <td><a href="Estudiante_delete.php?id=<?php echo $c->getid_estudiante() ?>">Eliminar</a></td>
-  </tr>
-  </tbody> 
-  <?php  
-  }
-  ?>
-</table>
-</div>
-</div>
+                        <div class="form-group">
+                            <label>Dirigencia *</label>
+                            <input type="text" name="dirigencia" class="form-control" required="required" value = "<?php echo $ObjEstudiante->getdirigencia(); ?>">
+                        </div>
+                        <div class="form-group">
+                            <label>Cargo*</label>
+                            <input type="text" name="cargo" class="form-control" required="required" value = "<?php echo $ObjEstudiante->getcargo(); ?>">
+                        </div>
+                        <div class="form-group">
+                            <label>Email *</label>  
+                            <input type="email" name="email" class="form-control" required="required" value = "<?php echo $ObjEstudiante->getemail(); ?>">
+                            
+                        </div>                        
+                        
+                    </div>
 
-
-
-
-
+                    <div class="form-group">
+                        <div class="col-xs-offset-4 col-xs-8">
+                            <input type="submit" class="btn btn-primary" value="Actualizar">
+                            <input type="reset" class="btn btn-primary" value="Limpiar">
+                            <input type="button" value="Regresar" OnClick="history.back()" class="btn btn-primary">     
+                        </div>
+                    </div>
+                </form> 
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#contact-page-->
 
 <!--/************************* IFRAME centro **************************************************************-->
 
@@ -236,11 +257,11 @@ include_once("EstudianteCollector.php");
         </div>
     </footer><!--/#footer-->
 
-    <script src="../../js/jquery.js"></script>
-    <script src="../../js/bootstrap.min.js"></script>
-    <script src="../../js/jquery.prettyPhoto.js"></script>
-    <script src="../../js/jquery.isotope.min.js"></script>
-    <script src="../../js/main.js"></script>
-    <script src="../../js/wow.min.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.prettyPhoto.js"></script>
+    <script src="../js/jquery.isotope.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/wow.min.js"></script>
 </body>
 </html>

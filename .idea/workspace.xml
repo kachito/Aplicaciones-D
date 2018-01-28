@@ -47,27 +47,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EstudianteCollector.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Formularios/Estudiante/EstudianteCollector.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="63" column="33" lean-forward="true" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
-              <folding>
-                <marker date="1516814406945" expanded="true" signature="192:206" ph="SELECT * FRO... estudiante" />
-                <marker date="1516814406945" expanded="true" signature="192:212" ph="SELECT * FRO... alumno" />
-                <marker date="1516814406945" expanded="true" signature="561:613" ph="SELECT * FRO... estudiante" />
-                <marker date="1516814406945" expanded="true" signature="954:1112" ph="Update estudiante... " />
-                <marker date="1516814406945" expanded="true" signature="1206:1255" ph="Delete from estudiante... " />
-                <marker date="1516814406945" expanded="true" signature="1525:1562" ph="SELECT nickn... usuario" />
-                <marker date="1516814406945" expanded="true" signature="1525:1589" ph="SELECT nickn... usuario" />
-                <marker date="1516814406945" expanded="true" signature="1782:1828" ph="SELECT * FRO... usuario" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -78,39 +58,38 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fa-pl</find>
-      <find>horariostable</find>
-      <find>hola</find>
-      <find>messa</find>
-      <find>document</find>
-      <find>documet</find>
-      <find>usuario</find>
-      <find>hola.js</find>
-      <find>src=&quot;</find>
+      <find>new</find>
+      <find>label-d</find>
+      <find>time</find>
+      <find>frm</find>
+      <find>form</find>
+      <find>lt</find>
+      <find>td-</find>
+      <find>dat</find>
+      <find>drop</find>
+      <find>tiempo2</find>
+      <find>btn</find>
+      <find>page</find>
+      <find>war</find>
+      <find>time2</find>
+      <find>btn-group</find>
       <find>horarios</find>
-      <find>id</find>
-      <find>conta</find>
-      <find>src</find>
-      <find>href</find>
-      <find>Ingresar</find>
-      <find>cedula</find>
-      <find>contai</find>
-      <find>urso</find>
-      <find>urso1</find>
-      <find>nombre_curso</find>
-      <find>nombre</find>
-      <find>estado</find>
-      <find>iscur</find>
-      <find>pas</find>
-      <find>representante</find>
-      <find>represe</find>
-      <find>para</find>
-      <find>$usuario_form</find>
-      <find>nickname</find>
-      <find>pass</find>
+      <find>lunes</find>
+      <find>ver</find>
+      <find>ver ho</find>
+      <find>imprir</find>
+      <find>addin</find>
+      <find>impri</find>
+      <find>ver h</find>
+      <find>inser</find>
+      <find>descripcion</find>
+      <find>insert</find>
+      <find>usuario</find>
+      <find>Notas</find>
+      <find>hora</find>
+      <find>horario</find>
     </findStrings>
     <replaceStrings>
-      <replace>#B31217</replace>
       <replace>#C52D2F</replace>
       <replace>#D43133</replace>
       <replace>#DD4B39</replace>
@@ -140,6 +119,7 @@
       <replace>materia_cod</replace>
       <replace>paralelo</replace>
       <replace>horarios_id</replace>
+      <replace>Materia</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -151,30 +131,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/wow.min.js" />
-        <option value="$PROJECT_DIR$/Formularios/password/hola.php" />
-        <option value="$PROJECT_DIR$/Formularios/password/form_Estudiante.php" />
-        <option value="$PROJECT_DIR$/Formularios/password/Estudiante.php" />
-        <option value="$PROJECT_DIR$/Formularios/password/Estudiante_list.php" />
-        <option value="$PROJECT_DIR$/Formularios/password/Estudiante_update.php" />
-        <option value="$PROJECT_DIR$/Formularios/Estudiante/Estudiante_update.php" />
-        <option value="$PROJECT_DIR$/tipo/TipoCollector.php" />
-        <option value="$PROJECT_DIR$/tipo/Tipo_update.php" />
-        <option value="$PROJECT_DIR$/tipo/Tipo_edit.php" />
-        <option value="$PROJECT_DIR$/Formularios/password/hola.js" />
-        <option value="$PROJECT_DIR$/Formularios/password/Password_edit.php" />
-        <option value="$PROJECT_DIR$/Formularios/password/Password_delete.php" />
-        <option value="$PROJECT_DIR$/Formularios/password/Password_update.php" />
-        <option value="$PROJECT_DIR$/about-us.php" />
-        <option value="$PROJECT_DIR$/users/home.php" />
-        <option value="$PROJECT_DIR$/users/about-us.php" />
-        <option value="$PROJECT_DIR$/Formularios/Horario/home.php" />
         <option value="$PROJECT_DIR$/Formularios/Horario/style.css" />
         <option value="$PROJECT_DIR$/Formularios/Horario/horario_list.php" />
-        <option value="$PROJECT_DIR$/Formularios/Horariov2/include/config.php" />
-        <option value="$PROJECT_DIR$/Formularios/Horariov2/style.css" />
         <option value="$PROJECT_DIR$/Formularios/Horariov2/horario_list.php" />
-        <option value="$PROJECT_DIR$/Formularios/Horariov2/include/functions.php" />
         <option value="$PROJECT_DIR$/Formularios/Horariov2/include/process.php" />
         <option value="$PROJECT_DIR$/Formularios/Estudiante/Estudiante_list.php" />
         <option value="$PROJECT_DIR$/Formularios/Horario/include/functions.php" />
@@ -195,13 +154,34 @@
         <option value="$PROJECT_DIR$/Formularios/Estudiante/Estudiante.php" />
         <option value="$PROJECT_DIR$/login/sesion_antigua.php" />
         <option value="$PROJECT_DIR$/Formularios/Estudiante/js/datos.js" />
-        <option value="$PROJECT_DIR$/Formularios/Estudiante/form_Estudiante.php" />
         <option value="$PROJECT_DIR$/Formularios/password/Password.php" />
         <option value="$PROJECT_DIR$/Formularios/Estudiante/dataBase.php" />
         <option value="$PROJECT_DIR$/db/dataBase.php" />
         <option value="$PROJECT_DIR$/db/Collector.php" />
+        <option value="$PROJECT_DIR$/Formularios/Horariov2/form_Estudiante.php" />
+        <option value="$PROJECT_DIR$/Formularios/Horariov2/form_horario.php" />
+        <option value="$PROJECT_DIR$/Formularios/Horario/index.php" />
+        <option value="$PROJECT_DIR$/Formularios/Horariov2/include/config.php" />
+        <option value="$PROJECT_DIR$/Formularios/Horariov2/css/animate.css" />
+        <option value="$PROJECT_DIR$/Formularios/Horariov2/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/Formularios/Horariov2/css/custom.css" />
+        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/Formularios/Horariov2/js/npm.js" />
+        <option value="$PROJECT_DIR$/Formularios/Horariov2/index.php" />
+        <option value="$PROJECT_DIR$/Formularios/Horariov2/style.css" />
+        <option value="$PROJECT_DIR$/Formularios/Horariov2/lista.php" />
+        <option value="$PROJECT_DIR$/Formularios/Horariov2/imprimir.php" />
+        <option value="$PROJECT_DIR$/Formularios/Horariov2/listaalu.php" />
+        <option value="$PROJECT_DIR$/Formularios/Horariov2/include/functions.php" />
+        <option value="$PROJECT_DIR$/tipo/TipoCollector.php" />
+        <option value="$PROJECT_DIR$/Formularios/Docente/Estudiante_insert.php" />
+        <option value="$PROJECT_DIR$/Formularios/Docente/form_Docente.php" />
+        <option value="$PROJECT_DIR$/Formularios/Estudiante/form_Estudiante.php" />
         <option value="$PROJECT_DIR$/Formularios/Estudiante/Estudiante_insert.php" />
         <option value="$PROJECT_DIR$/Formularios/Estudiante/EstudianteCollector.php" />
+        <option value="$PROJECT_DIR$/Formularios/Materia/form_materia.php" />
+        <option value="$PROJECT_DIR$/Formularios/Materia/MateriaCollector.php" />
+        <option value="$PROJECT_DIR$/Formularios/Materia/Materia_insert.php" />
       </list>
     </option>
   </component>
@@ -265,6 +245,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -272,41 +253,11 @@
               <item name="Grupo-5" type="b2602c69:ProjectViewProjectNode" />
               <item name="Grupo-5" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="Grupo-5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Grupo-5" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="db" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Grupo-5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Grupo-5" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Formularios" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Grupo-5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Grupo-5" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Formularios" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Estudiante" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Grupo-5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Grupo-5" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Formularios" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Estudiante" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Grupo-5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Grupo-5" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Formularios" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -318,16 +269,16 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Grupo-5\Formularios" />
-      <recent name="C:\xampp\htdocs\Grupo-5\Tipo" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Grupo-5\Formularios\Estudiante" />
       <recent name="C:\xampp\htdocs\Grupo-5\Base de Datos" />
       <recent name="C:\xampp\htdocs\Grupo-5\Formularios\Horariov2\include" />
       <recent name="C:\xampp\htdocs\Grupo-5\Formularios\Horario" />
       <recent name="C:\xampp\htdocs\Grupo-5\Formularios\Horario\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Grupo-5\Formularios" />
+      <recent name="C:\xampp\htdocs\Grupo-5\Tipo" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -431,11 +382,17 @@
       <workItem from="1516755861370" duration="3986000" />
       <workItem from="1516793441090" duration="6836000" />
       <workItem from="1516811909033" duration="1824000" />
+      <workItem from="1516823140808" duration="50000" />
+      <workItem from="1516824948628" duration="5860000" />
+      <workItem from="1516888456120" duration="29401000" />
+      <workItem from="1516979206001" duration="5514000" />
+      <workItem from="1516988271653" duration="2865000" />
+      <workItem from="1517076729670" duration="17961000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="352234000" />
+    <option name="totallyTimeSpent" value="413885000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -449,8 +406,9 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23146747" sideWeight="0.49025974" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26096824" sideWeight="0.49025974" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288364" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20573355" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -464,32 +422,10 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3262987" sideWeight="0.4969743" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32546374" sideWeight="0.4969743" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288364" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20573355" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22768533" sideWeight="0.49025974" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3262987" sideWeight="0.4969743" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.4940171" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25256222" sideWeight="0.50974023" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39967105" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -517,356 +453,393 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bootstrap/css/bootstrap1.css">
+    <entry file="file://$PROJECT_DIR$/Formularios/Horariov2/css/bootstrap-datetimepicker.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="3" column="49" lean-forward="false" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/Horariov2/css/bootstrap-theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-29">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/Horariov2/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="62" column="16" lean-forward="true" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/Horariov2/css/font-awesome.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-29">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/Horariov2/js/scripts-custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-29">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/Horariov2/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
-          <caret line="5722" column="40" lean-forward="true" selection-start-line="5722" selection-start-column="40" selection-end-line="5722" selection-end-column="40" />
+          <caret line="65" column="11" lean-forward="false" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Formularios/password/hola.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="22" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docente/Collector.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docente/dataBase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/curso1/dataBase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/curso1/Curso.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Formularios/password/Collector.php" />
-    <entry file="file://$PROJECT_DIR$/Formularios/password/dataBase.php" />
-    <entry file="file://$PROJECT_DIR$/db/Password.php" />
-    <entry file="file://$PROJECT_DIR$/curso1/Collector.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="2" lean-forward="false" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/curso1/Curso_edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="49" lean-forward="true" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docente/Docente_insert.php">
+    <entry file="file://$PROJECT_DIR$/Formularios/Horariov2/js/npm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docente/form_docente.php">
+    <entry file="file://$PROJECT_DIR$/Formularios/Horariov2/js/moment-with-locales.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="208" column="44" lean-forward="false" selection-start-line="208" selection-start-column="44" selection-end-line="208" selection-end-column="44" />
+        <state relative-caret-position="460">
+          <caret line="9126" column="12" lean-forward="false" selection-start-line="9126" selection-start-column="12" selection-end-line="9126" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Estudiante/Estudiante_list.php">
+    <entry file="file://$PROJECT_DIR$/Formularios/Horariov2/js/jquery.validate.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-29">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login/dataBase.php">
+    <entry file="file://$PROJECT_DIR$/Formularios/Horariov2/js/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login/Collector.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Formularios/password/Estudiante_insert.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-29">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/curso1/CursoCollector.php">
+    <entry file="file://$PROJECT_DIR$/Formularios/Horariov2/js/html2canvas.svg.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="24" column="27" lean-forward="false" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docente/DocenteCollector.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-492">
+        <state relative-caret-position="-29">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Estudiante/EstudianteCollector.php">
+    <entry file="file://$PROJECT_DIR$/Formularios/Horariov2/js/html2canvas.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-306">
+        <state relative-caret-position="-29">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/actividades/ActividadCollector.php">
+    <entry file="file://$PROJECT_DIR$/Formularios/Horariov2/js/bootstrap-datetimepicker.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="43" column="44" lean-forward="true" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+        <state relative-caret-position="-29">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/Horariov2/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="6" column="36" lean-forward="true" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/Horariov2/js/additional-methods.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-29">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/Horario/css/bootstrap-datetimepicker.css" />
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/_types.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2367">
+          <caret line="105" column="13" lean-forward="false" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="6" column="48745" lean-forward="false" selection-start-line="6" selection-start-column="48741" selection-end-line="6" selection-end-column="48745" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/Horario/css/bootstrap.min.css" />
+    <entry file="file://$PROJECT_DIR$/Formularios/Horariov2/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2414">
+          <caret line="142" column="17" lean-forward="false" selection-start-line="142" selection-start-column="8" selection-end-line="142" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/Horariov2/include/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/Horariov2/imprimir.php" />
+    <entry file="file://$PROJECT_DIR$/Formularios/Horariov2/form_horario.php" />
+    <entry file="file://$PROJECT_DIR$/Formularios/Horariov2/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1011">
+          <caret line="207" column="104" lean-forward="false" selection-start-line="207" selection-start-column="104" selection-end-line="207" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/Horariov2/lista.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="75" column="54" lean-forward="false" selection-start-line="75" selection-start-column="54" selection-end-line="75" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/Horariov2/listaalu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/Horariov2/include/process.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="217" column="83" lean-forward="false" selection-start-line="217" selection-start-column="72" selection-end-line="217" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/Horariov2/include/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="59" column="141" lean-forward="false" selection-start-line="59" selection-start-column="141" selection-end-line="59" selection-end-column="141" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/Docente/Docente_userya.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4111">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Estudiante/form_Estudiante.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="149" column="43" lean-forward="true" selection-start-line="149" selection-start-column="43" selection-end-line="149" selection-end-column="43" />
+        <state relative-caret-position="238">
+          <caret line="149" column="28" lean-forward="true" selection-start-line="149" selection-start-column="28" selection-end-line="150" selection-end-column="83" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Formularios/Estudiante/Collector.php">
+    <entry file="file://$PROJECT_DIR$/curso1/CursoCollector.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login/logout.php">
+    <entry file="file://$PROJECT_DIR$/tipo/TipoCollector.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="34">
+          <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login/Sesion_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="148" column="13" lean-forward="true" selection-start-line="148" selection-start-column="13" selection-end-line="148" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login/Sesion_insert.php">
+    <entry file="file://$PROJECT_DIR$/tipo/Collector.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login/sesion_antigua.php">
+    <entry file="file://$PROJECT_DIR$/Formularios/Docente/Collector.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Formularios/password/Password_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="160" column="52" lean-forward="true" selection-start-line="160" selection-start-column="52" selection-end-line="160" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Formularios/password/Password_update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Formularios/password/form_Password.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1587">
-          <caret line="130" column="97" lean-forward="true" selection-start-line="130" selection-start-column="97" selection-end-line="130" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login/form_Sesion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1836">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login/index.php">
+    <entry file="file://$PROJECT_DIR$/Formularios/Materia/Collector.php" />
+    <entry file="file://$PROJECT_DIR$/Formularios/Docente/DocenteCollector.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="29" lean-forward="true" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login/Sesion.php">
+    <entry file="file://$PROJECT_DIR$/Formularios/Docente/form_Docente.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login/datos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="73" column="13" lean-forward="true" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="53" column="46" lean-forward="true" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login/SesionCollector.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Formularios/Estudiante/js/datos.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Formularios/Estudiante/Estudiante.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Formularios/password/Password_edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="49" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="8" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Formularios/password/PasswordCollector.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Formularios/Estudiante/Password.php" />
-    <entry file="file://$PROJECT_DIR$/Formularios/password/Password.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="52" column="3" lean-forward="false" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Formularios/Estudiante/Estudiante_edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2499">
-          <caret line="147" column="122" lean-forward="false" selection-start-line="147" selection-start-column="122" selection-end-line="147" selection-end-column="150" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Formularios/Estudiante/Estudiante_userya.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Formularios/Estudiante/dataBase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="31" column="3" lean-forward="true" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/dataBase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="2856">
+          <caret line="168" column="13" lean-forward="false" selection-start-line="168" selection-start-column="10" selection-end-line="180" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Formularios/Estudiante/form_Estudiante.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="18" column="24" lean-forward="false" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Formularios/Estudiante/Estudiante_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="137" column="60" lean-forward="false" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/Collector.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="85">
+          <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Formularios/Estudiante/Estudiante_insert.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-          <folding>
-            <marker date="1516812580594" expanded="true" signature="590:607" ph="..." />
-            <marker date="1516812580594" expanded="true" signature="854:868" ph="..." />
-            <marker date="1516812580594" expanded="true" signature="912:929" ph="..." />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/Docente/Estudiante_insert.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="114" lean-forward="false" selection-start-line="15" selection-start-column="114" selection-end-line="15" selection-end-column="114" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docente/form_docente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docente/Docente_insert.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="21" column="3" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="29" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Formularios/Estudiante/EstudianteCollector.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="63" column="33" lean-forward="true" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
+        <state relative-caret-position="-765">
+          <caret line="76" column="13" lean-forward="true" selection-start-line="76" selection-start-column="13" selection-end-line="133" selection-end-column="8" />
           <folding>
-            <marker date="1516814406945" expanded="true" signature="192:206" ph="SELECT * FRO... estudiante" />
-            <marker date="1516814406945" expanded="true" signature="192:212" ph="SELECT * FRO... alumno" />
-            <marker date="1516814406945" expanded="true" signature="561:613" ph="SELECT * FRO... estudiante" />
-            <marker date="1516814406945" expanded="true" signature="954:1112" ph="Update estudiante... " />
-            <marker date="1516814406945" expanded="true" signature="1206:1255" ph="Delete from estudiante... " />
-            <marker date="1516814406945" expanded="true" signature="1525:1562" ph="SELECT nickn... usuario" />
-            <marker date="1516814406945" expanded="true" signature="1525:1589" ph="SELECT nickn... usuario" />
-            <marker date="1516814406945" expanded="true" signature="1782:1828" ph="SELECT * FRO... usuario" />
+            <marker date="1517079983199" expanded="true" signature="192:212" ph="SELECT * FRO... alumno" />
+            <marker date="1517079983199" expanded="true" signature="561:613" ph="SELECT * FRO... estudiante" />
+            <marker date="1517079983199" expanded="true" signature="954:1112" ph="Update estudiante... " />
+            <marker date="1517079983199" expanded="true" signature="1206:1255" ph="Delete from estudiante... " />
+            <marker date="1517079983199" expanded="true" signature="1505:1564" ph="SELECT cedul... persona" />
+            <marker date="1517079983199" expanded="true" signature="1634:1698" ph="SELECT COUNT... usuario" />
+            <marker date="1517079983199" expanded="true" signature="1846:1934" ph="Insert into usuario... " />
+            <marker date="1517079983199" expanded="true" signature="1972:2019" ph="SELECT * FRO... usuario" />
+            <marker date="1517079983199" expanded="true" signature="2099:2220" ph="Insert into alumno... " />
+            <marker date="1517079983199" expanded="true" signature="2258:2307" ph="SELECT * FRO... alumno" />
+            <marker date="1517079983199" expanded="true" signature="2386:2531" ph="Insert into persona... " />
+            <marker date="1517079983199" expanded="true" signature="2571:4038" ph="..." />
+            <marker date="1517079983199" expanded="true" signature="2644:4029" ph="..." />
+            <marker date="1517079983199" expanded="true" signature="2674:4018" ph="..." />
+            <marker date="1517079983199" expanded="true" signature="2751:4005" ph="..." />
+            <marker date="1517079983199" expanded="true" signature="2787:3773" ph="..." />
+            <marker date="1517079983199" expanded="true" signature="2818:3756" ph="..." />
+            <marker date="1517079983199" expanded="true" signature="2857:3735" ph="..." />
+            <marker date="1517079983199" expanded="true" signature="2944:3689" ph="..." />
+            <marker date="1517079983199" expanded="true" signature="3031:3665" ph="..." />
+            <marker date="1517079983199" expanded="true" signature="3083:3215" ph="..." />
+            <marker date="1517079983199" expanded="true" signature="3268:3639" ph="..." />
+            <marker date="1517079983199" expanded="true" signature="3810:3990" ph="..." />
+            <marker date="1517079983199" expanded="true" signature="3850:3973" ph="..." />
+            <marker date="1517079983199" expanded="true" signature="4107:4153" ph="SELECT * FRO... usuario" />
+            <marker date="1517079983199" expanded="true" signature="4247:5714" ph="..." />
+            <marker date="1517079983199" expanded="true" signature="4320:5705" ph="..." />
+            <marker date="1517079983199" expanded="true" signature="4350:5694" ph="..." />
+            <marker date="1517079983199" expanded="true" signature="4427:5681" ph="..." />
+            <marker date="1517079983199" expanded="true" signature="4463:5449" ph="..." />
+            <marker date="1517079983199" expanded="true" signature="4494:5432" ph="..." />
+            <marker date="1517079983199" expanded="true" signature="4533:5411" ph="..." />
+            <marker date="1517079983199" expanded="true" signature="4620:5365" ph="..." />
+            <marker date="1517079983199" expanded="true" signature="4707:5341" ph="..." />
+            <marker date="1517079983199" expanded="true" signature="4759:4891" ph="..." />
+            <marker date="1517079983199" expanded="true" signature="4944:5315" ph="..." />
+            <marker date="1517079983199" expanded="true" signature="5486:5666" ph="..." />
+            <marker date="1517079983199" expanded="true" signature="5526:5649" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/curso1/form_Curso.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/curso1/Curso_insert.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-272">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actividades/Direccion_insert.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Estudiante/Estudiante_insert.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tipo/Tipo_insert.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510">
+          <caret line="14" column="2" lean-forward="false" selection-start-line="13" selection-start-column="2" selection-end-line="69" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/Materia/Materia_insert.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="88" column="7" lean-forward="true" selection-start-line="88" selection-start-column="7" selection-end-line="88" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/Materia/MateriaCollector.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-371">
+          <caret line="46" column="3" lean-forward="false" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
+          <folding>
+            <marker date="1517099451966" expanded="true" signature="182:200" ph="SELECT * FRO... nota" />
+            <marker date="1517099451966" expanded="true" signature="545:585" ph="SELECT * FRO... nota" />
+            <marker date="1517099451966" expanded="true" signature="933:1096" ph="Update nota... " />
+            <marker date="1517099451966" expanded="true" signature="1187:1224" ph="Delete from nota... " />
+            <marker date="1517099451966" expanded="true" signature="1341:1398" ph="Insert into materia... " />
+            <marker date="1517099451966" expanded="true" signature="1432:1486" ph="SELECT * FRO... materia" />
+            <marker date="1517099451966" expanded="true" signature="1595:1666" ph="Insert into matexcurso... " />
+            <marker date="1517099451966" expanded="true" signature="1720:1752" ph="insert into publicacion... " />
+            <marker date="1517099451966" expanded="true" signature="1976:2036" ph="SELECT * FRO... materia" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Formularios/Materia/form_materia.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="184" column="0" lean-forward="false" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

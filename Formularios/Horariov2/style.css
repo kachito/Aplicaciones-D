@@ -1,17 +1,26 @@
 
-
-@import url('css/bootstrap-datetimepicker.css');
-
-
-
 body{
 
-    background: url(../../images/slider/anime31.png) no-repeat ;
-
+    background: url(../../images/slider/anime31.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 
+.day-option{
+	-moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    border: 1px solid #777;
+    color: #777;
+}
 
+a:hover{
+    color: #777;
+}
 
 button{
 	-moz-transition: all .2s ease-in;
@@ -21,6 +30,11 @@ button{
 }
 
 
+label {
+	float: left;
+    margin-top: 2px;
+    margin-bottom: 0px;
+}
 
 
 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
@@ -31,26 +45,23 @@ button{
     border: none;
 }
 
+.modal-backdrop {
+    background-color: #AD0000;
+}
 
 
 .modal-content{
     float: left;
     width: 100%;
-  webkit-border-radius: 200px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
 }
 
 .modal-header {
-  background-color: #C52D2F;
-  color: #ffffff;
-  padding-top: 20px;
+    background: #0A961A;
+    color: #FFF;
     float: left;
     width: 100%;
 }
-.modal-header h4 {
-  color: #ffffff;
-}
+
 .modal-body {
     float: left;
     width: 100%;
@@ -71,7 +82,7 @@ button{
 
 #days-list{
     margin-top: 10px;
-    margin-bottom: 5px;	
+    margin-bottom: 5px;
 }
 
 #days-list .day-option{
@@ -87,14 +98,14 @@ button{
 .active-day,.active-day:hover,.active-day:focus,.active-day:active{
     border: 1px solid #EC901D;
     background: #EC901D;
-    color: #fff;	
+    color: #fff;
 }
 
 
 .error{
     float: left;
     width: 100%;
-    color: #F50000;	
+    color: #F50000;
 }
 
 
@@ -102,13 +113,13 @@ button{
     margin-top: 30px;
     width: 100%;
     float: left;
-    display: none;    
+    display: none;
 }
 
 
 .td-time{
     width: 230px;
-    text-align: center;    
+    text-align: center;
 }
 
 .table-bordered {
@@ -126,9 +137,8 @@ button{
     bottom: 15px;
     right: 15px;
     display: none;
-    z-index: 9999999;  
+    z-index: 9999999;
 }
-
 
 #mynew .btn-group-xs>.btn, .btn-xs {
     padding: 0px 3px;
@@ -165,7 +175,7 @@ button{
     border-radius: 4px;
     color: #fff;
     font-weight: 100;
-    font-size: 12px;  
+    font-size: 12px;
 }
 
 
@@ -173,9 +183,9 @@ button{
     color: #FFF;
     float: right;
     margin-right: 5px;
-    cursor: pointer; 
+    cursor: pointer;
     border: none;
-    display: none;   
+    display: none;
 }
 
 .label-desc:hover a{
@@ -183,10 +193,7 @@ button{
 }
 
 .horario-name{
-    color: #2e2e2e;
-    font-size: 36px;
-    margin-top: 0;
-    margin-bottom: 20px;
+    color: #FFF;
 }
 
 .purple-label{
@@ -196,39 +203,39 @@ button{
 
 .red-label{
    background: #D45252;
-   color: #FFF; 
+   color: #FFF;
 }
 
 .blue-label{
   background: #52B6D4;
-  color: #FFF;    
+  color: #FFF;
 }
 
 .pink-label{
   background: #D659AA;
-  color: #FFF;    
+  color: #FFF;
 }
 
 .green-label{
     background: #46BD28;
-    color: #FFF;   
+    color: #FFF;
 }
 
 
 .horarioheader{
     color: #FFF;
-    background: #C52D2F;
+    background: #5cb85c;
 }
 
 .thead{
     font-size: 16px;
-    background: #C52D2F;
+    background: #000;
     color: #FFF;
 }
 
 .td-time{
     background: #ffffff;
-    color: #2e2e2e;
+    color: #3392b7;
     font-size: 16px;
 }
 
@@ -257,7 +264,7 @@ button{
 
 .panel-info>.panel-heading {
     color: #FFF;
-    background-color: #C52D2F;
+    background-color: #31708f;
     border-color: #31708f;
 }
 
@@ -274,7 +281,7 @@ button{
 }
 
 #modalblue{
-
+    background: #257dc7;
 }
 
 

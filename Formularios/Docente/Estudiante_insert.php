@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once('EstudianteCollector.php');
+include_once('DocenteCollector.php');
 //$id = $_POST['ID'];
 
 $cedula = $_POST['cedula'];
@@ -12,8 +12,8 @@ $email1 = $_POST['email1'];
 $email2 = $_POST['email2'];
 $representante = $_POST['representante'];
 $usuario = $_POST['usuario'];
-$EstudianteCollectorObj = new EstudianteCollector();
-$EstudianteCollectorObj->insertEstudiante($cedula, $nombre, $apellido, $telefono, $curso, $email1, $email2, $representante, $usuario);
+$EstudianteCollectorObj = new DocenteCollector();
+$EstudianteCollectorObj->insertEstudiante($cedula, $nombre, $apellido, $telefono, $tipo, $email1, $curso, $materia, $usuario);
 ?>
 <!doctype html>
 <html lang="es">

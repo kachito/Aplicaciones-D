@@ -56,8 +56,8 @@ function horariostable($page){
                 <td>'.$key['descripcion'].'</td>
                 <td>'.$fecha.'</td>
                 <td>
-                  <button data-id="'.$key['id'].'" class="verhorario btn btn-sm btn-success"><i class="fa fa-pencil-square-o"></i> Ver Horario</button>
-                  
+                
+                  <button data-id="'.$key['id'].'" class="verhorario btn btn-sm btn-success"><i class="fa fa-pencil-square-o"></i> Ver Horario</button>                 
                   <button data-id="'.$key['id'].'" class="delhorario btn btn-sm btn-danger"><i class="fa fa-times"></i> Eliminar</button>
                 </td>
               </tr>
@@ -129,5 +129,5 @@ if (empty($resultados)){
        echo $key['horario'];
        
    }
-  }
+  }  
 }
