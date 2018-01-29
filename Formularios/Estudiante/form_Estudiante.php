@@ -6,7 +6,7 @@ include_once('EstudianteCollector.php');
 $EstudianteCollectorObj = new EstudianteCollector();
 
 
-include_once('../../curso1/CursoCollector.php');
+include_once('../curso/CursoCollector.php');
 $CursoCollectorObj = new CursoCollector();
 
 include_once('../password/PasswordCollector.php');

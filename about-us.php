@@ -5,8 +5,9 @@ if (isset($_SESSION['usuario'])) {
   header('Location:../visit/home.php');
 } */
 } else {
-  header('Location:../index.php');
+  header('Location:index.php');
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +16,7 @@ if (isset($_SESSION['usuario'])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Educacion">
-  <meta name="author" content="E-learning">
+  <meta name="author" content="Lenin Yepez">
   <title>B-Smart</title>
   <!-- core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -44,7 +45,7 @@ if (isset($_SESSION['usuario'])) {
   <nav class="navbar navbar-inverse">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="../index.php"><img src="../images/logo2.png" alt="logo" height="80%"></a>
+        <a class="navbar-brand" href="../index.php"><img src="images/logo2.png" alt="logo" height="80%"></a>
       </div>
       <div class="collapse navbar-collapse navbar-right">
         <ul class="nav navbar-nav">

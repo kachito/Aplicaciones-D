@@ -31,9 +31,6 @@ $EstudianteCollectorObj->insertEstudiante($cedula, $nombre, $apellido, $telefono
 <!--/************************* IFRAME centro **************************************************************-->
 
 
-<div class="section">
-
-</div>
 
 
 <!--/************************* IFRAME centro **************************************************************-->

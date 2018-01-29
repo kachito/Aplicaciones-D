@@ -9,11 +9,14 @@ class EstudianteCollector extends Collector
 
   function showEstudiante()
   {
-    $rows = self::$db->getRows("SELECT * FROM alumno ");
+    $rows = self::$db->getRows("SELECT cedula,nombre,apellido,telefono,mail,mail_rep,representante,nickname,descripcion 
+                                FROM persona   JOIN alumno ON alumno.cod_alumno=persona.alumno_cod  JOIN usuario 
+                              ON usuario.cod_usuario=alumno.usuario_cod JOIN curso ON curso.cod_curso=alumno.curso_cod");
+
     $arrayEstudiante = array();
     foreach ($rows as $c) {
-      $aux = new Estudiante($c{'id_estudiante'}, $c{'nombre'}, $c{'apellido'}, $c{'edad'}, $c{'cedula'}, $c{'genero'}, $c{'email'});
-
+      $aux = new Estudiante($c{'cedula'}, $c{'nombre'}, $c{'apellido'}, $c{'telefono'},$c{'descripcion'}, $c{'mail'},
+        $c{'mail_rep'}, $c{'representante'}, $c{'nickname'});
       array_push($arrayEstudiante, $aux);
     }
     return $arrayEstudiante;
@@ -52,15 +55,11 @@ class EstudianteCollector extends Collector
     $row = self::$db->getRow("SELECT COUNT (cedula) FROM persona where cedula = '$cedula'");
 
 
-
-    if ($row['count']==0){
-
-
+    if ($row['count'] == 0) {
 
 
       $row = self::$db->getRow("SELECT COUNT (nickname) FROM usuario where nickname = '$usuario'");
       echo '<br></br>';
-
 
 
       // no existen usuarios con ese nickname
@@ -68,13 +67,13 @@ class EstudianteCollector extends Collector
 
         $new_row = self::$db->getRow("Insert into usuario (nickname,password,tipo_cod) values ('$usuario','$password','$tipo')");
         $row = self::$db->getRow("SELECT * FROM usuario where nickname='$usuario'");
-        $id_user=$row['cod_usuario'];
+        $id_user = $row['cod_usuario'];
         $new_row = self::$db->getRow("Insert into alumno (mail_rep,curso_cod,usuario_cod,representante) values ('$email2','$curso','$id_user','$representante')");
         $row = self::$db->getRow("SELECT * FROM alumno where usuario_cod='$id_user'");
-        $id_user=$row['cod_alumno'];
+        $id_user = $row['cod_alumno'];
         $new_row = self::$db->getRow("Insert into persona (cedula,nombre,apellido, telefono,mail,alumno_cod) values ('$cedula','$nombre','$apellido', '$telefono','$email1','$id_user')");
 
-        echo'<div class="container">
+        echo '<div class="container">
 
     <div class="row object-non-visible" data-animation-effect="fadeIn">
       <div class="col-md-12">
@@ -106,7 +105,7 @@ class EstudianteCollector extends Collector
                       <br>
                       <br>
                       <h2>El usuario signado es:</h2>
-                      <h1>'.$usuario.'</h1>
+                      <h1>' . $usuario . '</h1>
 
                       <br>
                       <br>
@@ -124,7 +123,7 @@ class EstudianteCollector extends Collector
             </div>
           </div>
           <div class="modal-footer">
-            <a href="Docente_list.php">
+            <a href="form_Estudiante.php">
               <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Retornar</button>
             </a>
           </div>
@@ -132,7 +131,6 @@ class EstudianteCollector extends Collector
       </div>
     </div>
   </div>';
-
 
 
 // insertas
@@ -142,7 +140,7 @@ class EstudianteCollector extends Collector
         $cas = 1;
         $usuario = $usuario . $cas;
 
-        echo'<div class="container">
+        echo '<div class="container">
 
     <div class="row object-non-visible" data-animation-effect="fadeIn">
       <div class="col-md-12">
@@ -174,7 +172,7 @@ class EstudianteCollector extends Collector
                       <br>
                       <br>
                       <h2>El usuario signado es:</h2>
-                      <h1>'.$usuario.'</h1>
+                      <h1>' . $usuario . '</h1>
 
                       <br>
                       <br>
@@ -192,7 +190,7 @@ class EstudianteCollector extends Collector
             </div>
           </div>
           <div class="modal-footer">
-            <a href="Docente_list.php">
+            <a href="form_Estudiante.php">
               <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Retornar</button>
             </a>
           </div>
@@ -201,17 +199,13 @@ class EstudianteCollector extends Collector
     </div>
   </div>';
 
-        print('Exite al menos un registro');
+
 
 // ya existe un registro con ese id
       }
 
 
-
-
-    }
-
-    else{
+    } else {
       echo "Daniel es puto";
     }
 
