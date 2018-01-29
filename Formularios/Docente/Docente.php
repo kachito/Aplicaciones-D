@@ -1,6 +1,6 @@
 <?php
 
-class Estudiante
+class Docente
 {
   private $cedula;
   private $nombre;

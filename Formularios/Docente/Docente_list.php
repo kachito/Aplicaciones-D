@@ -4,17 +4,8 @@ if (isset($_SESSION['usuario'])) {
 } else {
   header('Location:../../index.php');
 }
-
-
-$id = $_GET['id'];
-
-// echo $id;
-include_once('Curso.php');
-include_once('CursoCollector.php');
-$CursoCollectorObj = new CursoCollector();
-$ObjCurso = $CursoCollectorObj->showCursoId($id);
-//print_r($ObjTransportista);
-
+include_once("DocenteCollector.php");
+$DocenteCollectorObj = new DocenteCollector();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +15,6 @@ $ObjCurso = $CursoCollectorObj->showCursoId($id);
   <meta name="description" content="Educacion">
   <meta name="author" content="E-learning">
   <title>B-Smart</title>
-
   <!-- core CSS -->
   <link href="../../css/bootstrap.min.css" rel="stylesheet">
   <link href="../../css/font-awesome.min.css" rel="stylesheet">
@@ -42,9 +32,7 @@ $ObjCurso = $CursoCollectorObj->showCursoId($id);
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../images/ico/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="../../images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
-
 <body class="homepage">
-
 <header id="header" style=" width: 100%; position: fixed; z-index: 100;">
   <nav class="navbar navbar-inverse">
     <div class="container">
@@ -64,7 +52,7 @@ $ObjCurso = $CursoCollectorObj->showCursoId($id);
                 class="fa fa-angle-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="../Docente/Docente_list.php">Docente</a></li>
-              <li><a href="../Estudiante/Estudiante_list.php">Alumno</a></li>
+              <li><a href="../Docente/Docente_list.php">Alumno</a></li>
               <li><a href="../Curso/Curso_list.php">Curso</a></li>
               <li><a href="../Tarea/Tarea_list.php">Tarea</a></li>
               </ul>
@@ -104,107 +92,104 @@ $ObjCurso = $CursoCollectorObj->showCursoId($id);
     </div>
     </div><!--/.container-->
   </nav><!--/nav-->
-</header><!--/header-->
+</header>
+<!--/header-->
+<!--/************************* IFRAME centro *************************************************************-->
+<section >
+  <br><br>
 
-<!--/************************* IFRAME centro *************************************************************
-    <section id="main-slider" class="no-margin">
-      <div class="item">       
-        <iframe name="info"  height="730"  src="inicio.html"  ></iframe>         
-      </div>
-   </section>
-************************ Fortmulario **************************************************************-->
-<section id="contact-page">
-  <br><br><br><br>
+  <div class="center">
+    <h2>Mantenimiento Docente</h2>
+    <p class="lead">B-Smart</p>
+  </div>
   <div class="container">
-    <div class="center">
-      <br>
-      <br>
-
-      <h2>Cursos</h2>
-      <p class="lead">B-Smart</p>
+    <div class="table-responsive">
+      <table class="table table-condensed table-bordered table-hover">
+        <thead>
+        <tr>
+          <th bgcolor="#D8D8D8">CÉDULA</th>
+          <th bgcolor="#D8D8D8">NOMBRE</th>
+          <th bgcolor="#D8D8D8">APELLIDO</th>
+          <th bgcolor="#D8D8D8">USUARIO</th>
+          <th bgcolor="#D8D8D8">CURSO</th>
+          <th bgcolor="#D8D8D8">TELÉFONO</th>
+          <th bgcolor="#D8D8D8">EMAIL</th>
+          <th bgcolor="#D8D8D8">REPRESENTANTE</th>
+          <th bgcolor="#D8D8D8">EMAIL REP.</th>
+          <th colspan=3 bgcolor="#D8D8D8">ACCION</th>
+        </tr>
+        </thead>
+        <?php
+        foreach ($DocenteCollectorObj->showDocente() as $c) {
+          echo '<tbody>
+  <tr>
+     <td>' . $c->getcedula() . '</td>
+     <td>' . $c->getnombre() . '</td>
+     <td>' . $c->getapellido() . '</td>
+     <td>' . $c->getusuario() . '</td>
+     <td>' . $c->getcurso() . '</td>
+    <td>' . $c->gettelefono() . '</td>
+     <td>' . $c->getemail1() . '</td>
+     <td>' . $c->getrepresentante() . '</td>
+     <td>' . $c->getemail2() . '</td>
+     <td><a href="form_Docente.php"><i class="fa fa-plus-square-o"></i></a></td>   
+     <td><a href="Docente_edit.php?id=<?php echo $c->getcod_alumno() ?>"><i class="fa fa-pencil-square-o" ></i></a></td>
+     <td><a href="Docente_delete.php?id=<?php echo $c->getcod_alumno() ?>"><i class="fa fa-trash-o"></i></a></td>
+     
+          
+  </tr>
+  </tbody> ';
+        }
+        ?>
+      </table>
     </div>
-    <div class="row contact-wrap">
-      <div class="status alert alert-success" style="display: none"></div>
-
-      <form action="Curso_update.php" method="post" action="form-horizontal">
-        <input type="text" name="curso" hidden="hidden" value="<?php echo $ObjCurso->getcod_curso(); ?>">
-        <div class="col-sm-5 col-sm-offset-1">
-
-          <div class="form-group">
-            <label>Descripción *</label>
-            <input type="text" name="descripcion" class="form-control" required="required"
-                   value="<?php echo $ObjCurso->getdescripcion(); ?>">
-          </div>
-          <div class="form-group">
-            <label>Paralelo *</label>
-            <input type="text" name="paralelo" class="form-control" required="required"
-                   value="<?php echo $ObjCurso->getparalelo(); ?>">
-          </div>
-
-          <br><br><br>
+  </div>
 
 
-        </div>
-        <div class="col-sm-5">
-
-
-        </div>
-
-        <div class="form-group">
-          <div class="col-xs-offset-4 col-xs-8">
-            <input type="button" value="Regresar" OnClick="history.back()" class="btn btn-primary">
-            <input type="reset" class="btn btn-primary" value="Limpiar">
-            <input type="submit" class="btn btn-primary" value="Actualizar">
-
-          </div>
-        </div>
-      </form>
-    </div><!--/.row-->
-  </div><!--/.container-->
-</section><!--/#contact-page-->
-
-<!--/************************* IFRAME centro **************************************************************-->
-
+</section>
+<!--************************ IFRAME centro **************************************************************-->
 
 <!--/************************* Foot **************************************************************-->
 <section id="bottom">
   <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
     <div class="row">
-      <div class="col-md-5 col-sm-6">
+      <div class="col-md-3 col-sm-6">
         <div class="widget">
-          <h3><a href="../../Actividad_list.php">Actividades académicas</a></h3>
+          <h3><a href="#">Actividades académicas</a></h3>
         </div>
       </div><!--/.col-md-3-->
-
-      <div class="col-md-5 col-sm-6">
+      <div class="col-md-3 col-sm-6">
         <div class="widget">
-          <h3><a href="../../horario.php"> Horarios de Clases</a></h3>
-
+          <h3><a href="#">Calendario académico</a></h3>
         </div>
       </div><!--/.col-md-3-->
-
-      <div class="col-md-2 col-sm-6">
+      <div class="col-md-3 col-sm-6">
         <div class="widget">
-          <h3><a href="curso1/Curso_list.php">Cursos</a></h3>
+          <h3><a href="#">Nuevos cursos</a></h3>
         </div>
       </div><!--/.col-md-3-->
-    </div><!--/.col-md-3-->
+      <div class="col-md-3 col-sm-6">
+        <div class="widget">
+          <h3><a href="#">Anuncios de profesores</a></h3>
+        </div>
+      </div><!--/.col-md-3-->
+    </div>
   </div>
-  </div>
-</section> <!--/#bottom-->
+</section><!--/#bottom-->
 <footer id="footer" class="midnight-blue">
   <div class="container">
     <div class="row">
       <div class="col-sm-6">
         &copy; 2015 <a target="_blank" href="http://shapebootstrap.net/"
-                       title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>.
-        All Rights Reserved.
+                       title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights
+        Reserved.
       </div>
       <div class="col-sm-6">
         <ul class="pull-right">
-          <li><a href="../../home.php">Home</a></li>
-          <li><a href="../../about-us.php">About Us</a></li>
-          <li><a href="../../contactenos.php">Contact Us</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Faq</a></li>
+          <li><a href="#">Contact Us</a></li>
         </ul>
       </div>
     </div>

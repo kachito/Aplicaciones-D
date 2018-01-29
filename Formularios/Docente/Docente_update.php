@@ -1,9 +1,9 @@
 <?php
 session_start();
  include_once('DocenteCollector.php');
- //include_once('Estudiante.php');
+ //include_once('Docente.php');
 
- $id_estudiante = $_POST['id_estudiante'];
+ $id_docente = $_POST['id_docente'];
  $nombre = $_POST['nombre'];
  $apellido = $_POST['apellido'];
  $edad = $_POST['edad'];
@@ -13,8 +13,8 @@ session_start();
 
 //echo  $cargo;		
 
- $EstudianteCollectorObj = new DocenteCollector();
- $EstudianteCollectorObj->updateEstudiante($id_estudiante,$nombre,$apellido,(int)$edad,(int)$cedula,(int)$genero,$email);
+ $DocenteCollectorObj = new DocenteCollector();
+ $DocenteCollectorObj->updateDocente($id_docente,$nombre,$apellido,(int)$edad,(int)$cedula,(int)$genero,$email);
 
 ?>
 <!doctype html>
@@ -30,7 +30,7 @@ session_start();
    </head>
 <body>
   
-      <form action="Estudiante_list.php" method="Post">
+      <form action="Docente_list.php" method="Post">
          <div>
          <input type="submit" class="btn btn-primary" name="Regresar al inicio" value="Retornar">
          </div>

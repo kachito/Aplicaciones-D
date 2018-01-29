@@ -1,10 +1,10 @@
 <?php
 session_start();
  include_once('DocenteCollector.php');
- include_once('Estudiante.php');
+ include_once('Docente.php');
  $id = $_GET['id'];
- $EstudianteCollectorObj = new PasswordCollector();
- $EstudianteCollectorObj->deleteEstudiante($id);
+ $DocenteCollectorObj = new DocenteCollector();
+ $DocenteCollectorObj->deleteDocente($id);
 ?>
 <!doctype html>
 <html lang="es">
@@ -19,7 +19,7 @@ session_start();
    </head>
 <body>
   
-      <form action="Estudiante_list.php" method="Post">
+      <form action="Docente_list.php" method="Post">
          <div>
          <input type="submit" class="btn btn-primary" name="Regresar al inicio" value="Retornar">
          </div>

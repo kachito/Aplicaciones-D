@@ -1,233 +1,208 @@
 <?php
 session_start();
+
+if (isset($_SESSION['usuario'])) {
+} else {
+  header('Location:../../index.php');
+}
+
 include_once("MateriaCollector.php");
- $NotasCollectorObj = new MateriaCollector();
+$NotasCollectorObj = new MateriaCollector();
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Educacion">
-    <meta name="author" content="E-learning">
-    <title>B-Smart</title>
-    
-    <!-- core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/font-awesome.min.css" rel="stylesheet">
-    <link href="../css/animate.min.css" rel="stylesheet">
-    <link href="../css/prettyPhoto.css" rel="stylesheet">
-    <link href="../css/main.css" rel="stylesheet">
-    <link href="../css/responsive.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->       
-    <link rel="shortcut icon" href="../images/ico/bs1.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="../images/ico/apple-touch-icon-57-precomposed.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Educacion">
+  <meta name="author" content="E-learning">
+  <title>B-Smart</title>
+
+  <!-- core CSS -->
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/font-awesome.min.css" rel="stylesheet">
+  <link href="../../css/animate.min.css" rel="stylesheet">
+  <link href="../../css/prettyPhoto.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/responsive.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="../../js/html5shiv.js"></script>
+  <script src="../../js/respond.min.js"></script>
+  <![endif]-->
+  <link rel="shortcut icon" href="../../images/ico/bs1.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../images/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../images/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../images/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="../../images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 
 <body class="homepage">
-
-    <header id="header">
-        <div class="top-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-xs-4">
-                        <div class="top-number"><p><i class="fa fa-phone-square"></i>  Call Us </p></div>
-                    </div>
-                    <div class="col-sm-6 col-xs-8">
-                       <div class="social">
-                            <ul class="social-share">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                            </ul>
-                            <div class="search">
-                                <form role="form">
-                                    <input type="text" class="search-form" autocomplete="off" placeholder="Search">
-                                    <i class="fa fa-search"></i>
-                                </form>
-                           </div>
-                       </div>
-                    </div>
-                </div>
-            </div><!--/.container-->
-        </div><!--/.top-bar-->
-
-        <nav class="navbar navbar-inverse" role="banner">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.php"><img src="../images/logo2.png" alt="logo"></a>
-                </div>
-                
-                <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="home.html">Home</a></li>
-                        <li><a href="about-us - copia.html">About Us</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Diario Virtual <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="construccion.html">Diario</a></li>                                
-                                <li><a href="horario.html">Horario de Clases</a></li>
-                                <li><a href="construccion.html">Horario de Examenes</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Asignaturas <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="materias.html">Materia</a></li>                                
-                                <li><a href="construccion.html">Cuestionarios</a></li>
-                                <li><a href="construccion.html">Otros...</a></li>
-                            </ul>
-                        </li>    
-                           <!-- target="info"-->
-                        <li><a href="construccion.html" >Calificaciones</a></li>                        
-                        <li><a href="construccion.html">Planificaciones</a></li> 
-                        <li><a href="contactenos.html">Contactenos</a></li>                        
-                    </ul>
-                </div>
-            </div><!--/.container-->
-        </nav><!--/nav-->
-        
-    </header><!--/header-->
-
-
-<!--/************************* IFRAME centro *************************************************************
-    <section id="main-slider" class="no-margin">
-      <div class="item">       
-        <iframe name="info"  height="730"  src="inicio.html"  ></iframe>         
+<header id="header" style=" width: 100%; position: fixed; z-index: 100;">
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="../../index.php"><img src="../../images/logo2.png" alt="logo" height="80%"></a>
       </div>
-   </section>
-************************ IFRAME centro **************************************************************-->
-<header>
-    <h1>Calificaciones</h1>
-</header>
-<br/>
-<br/>
-<div class="container">
-<div class="table-responsive"> 
-    <table class="table table-condensed table-bordered table-hover">
-        <thead>
-            <tr>
-                  <th bgcolor="#D8D8D8">CODIGO</th>
-                  <th bgcolor="#D8D8D8">FECHA</th>
-                  <th bgcolor="#D8D8D8">1ER PARCIAL</th>
-                  <th bgcolor="#D8D8D8">2DO PARCIAL</th>
-                  <th bgcolor="#D8D8D8">3ER PARCIAL</th>
-                    <th bgcolor="#D8D8D8">EXÁMEN</th>
-                  <th bgcolor="#D8D8D8">PROMEDIO</th>
-                  <th bgcolor="#D8D8D8">RECUPERACIÓN</th>
-                  <th colspan = 3 bgcolor="#D8D8D8">ACCION</th>
-           </tr>
-        </thead>
-  <?php  
+      <div class="collapse navbar-collapse navbar-right">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="../../users/home.php">Home</a></li>
+          <li><a href="../../users/about-us.php">About Us</a></li>
+          <li><a href="../Tarea/Tarea_list.php">Diario Virtual</a></li>
+          <?php
+          if ($_SESSION['usuario']['descripcion'] == 'Administrador') {
+            echo '
+              <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown">Herramientas <i
+                class="fa fa-angle-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="../Docente/Docente_list.php">Docente</a></li>
+              <li><a href="../Estudiante/Estudiante_list.php">Alumno</a></li>
+              <li><a href="../Curso/Curso_list.php">Curso</a></li>
+              <li><a href="../Tarea/Tarea_list.php">Tarea</a></li>
+              </ul>
+          </li>
+            ';
+          } elseif ($_SESSION['usuario']['descripcion'] == 'Docente') {
+            echo '
+                <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown">Herramientas <i
+                class="fa fa-angle-down"></i></a>
+            <ul class="dropdown-menu">
+                <li><a href="../Tarea/Tarea_list.php">Tarea</a></li>
+                </ul>
+          </li>
+                ';
+          }
+          ?>
+          <!-- target="info"-->
+          <li><a href="../../contactenos.php">Contactenos</a></li>
+          <li class=" dropdown">
+            <a href="#" class="dropdown-toggle">
+              <div class="fa fa-user-md"></div>
+              <i></i> <?php
+              echo $_SESSION['usuario']['nickname'];
+              ?></a>
+            <ul class="dropdown-menu">
+              <li><a href="../../login/logout.php">
+                  <div class="fa fa-sign-out"></div>
+                  Cerrar Sesion</a></li>
+              <?php
+              echo '<li><a href="../password/Password_edit.php?id=' . $_SESSION['usuario']['cod_usuario'] . '">Cambiar Contraseña</a></li>'
+              ?>
+            </ul>
+          </li>
+      </div>
+      </ul>
+    </div>
+    </div><!--/.container-->
+  </nav><!--/nav-->
+</header><!--/header-->
 
-    foreach ($NotasCollectorObj->showNotas() as $c){
-  ?>
+
+<!--/************************* IFRAME centro *************************************************************-->
+<section>
+   <br/>
+  <br/>
+  <div class="center">
+    <h2>Mantenimiento Materia</h2>
+    <p class="lead">B-Smart</p>
+  </div>
+  <div class="container" style="width: 50%">
+    <div class="table-responsive">
+      <table class="table table-condensed table-bordered table-hover">
+        <thead>
+        <tr>
+          <th bgcolor="#D8D8D8">MATERIA</th>
+
+          <th colspan=3 bgcolor="#D8D8D8">ACCION</th>
+        </tr>
+        </thead>
+        <?php
+
+        foreach ($NotasCollectorObj->showMateria() as $c) {
+          echo '
   <tbody>
   <tr>
-     <td><?php echo $c->getid_nota() ?></td>
-     <td><?php echo $c->getanio() ?></td>
-     <td><?php echo $c->getnota1() ?></td>
-     <td><?php echo $c->getnota2() ?></td>
-     <td><?php echo $c->getnota3() ?></td>
-     <td><?php echo $c->getnota4() ?></td>
-     <td><?php echo $c->getpromedio() ?></td>
-     <td><?php echo $c->getrecuperacion() ?></td>
-   
-     <td><a href="form_materia.php">Nuevo</a></td>
-     <td><a href="Materia_edit.php?id=<?php echo $c->getid_nota() ?>">Editar</a></td>
-     <td><a href="Materia_delete.php?id=<?php echo $c->getid_nota() ?>">Eliminar</a></td>
+     <td>' . $c->getdescripcion() . '</td>
+
+
+    <td><a href="form_Materia.php"><i class="fa fa-plus-square-o"></i> Nuevo</a></td>
+    <td><a href="Materia_edit.php?id=' . $c->getcod_materia() . '"><i class="fa fa-pencil-square-o" ></i> Editar</a></td>
+    <td ><a  href="Materia_delete.php?id=' . $c->getcod_materia() . '"><i class="fa fa-trash-o"></i> Eliminar</a></td>
   </tr>
-  </tbody> 
-  <?php  
-  }
-  ?>
-</table>
-</div>
-</div>
+  </tbody> ';
 
-
-
-
+        }
+        ?>
+      </table>
+    </div>
+  </div>
+</section>
 
 
 <!--/************************* IFRAME centro **************************************************************-->
 
 
 <!--/************************* Foot **************************************************************-->
-    <section id="bottom">
-        <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="widget">
-                        <h3><a href="#">Actividades académicas</a></h3>
-                    </div>    
-                </div><!--/.col-md-3-->
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="widget">
-                       <h3><a href="#">Calendario académico</a></h3>
-                     
-                    </div>    
-                </div><!--/.col-md-3-->
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="widget">
-                        <h3><a href="#">Nuevos cursos</a></h3>
-                    
-                    </div>    
-                </div><!--/.col-md-3-->
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="widget">
-                        <h3><a href="#">Anuncios de profesores</a></h3>
-                
-                    </div>    
-                </div><!--/.col-md-3-->
-            </div>
+<section id="bottom">
+  <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <div class="widget">
+          <h3><a href="#">Actividades académicas</a></h3>
         </div>
-    </section><!--/#bottom-->
-   
-    
+      </div><!--/.col-md-3-->
 
-    <footer id="footer" class="midnight-blue">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    &copy; 2015 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights Reserved.
-                </div>
-                <div class="col-sm-6">
-                    <ul class="pull-right">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Faq</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="widget">
+          <h3><a href="#">Calendario académico</a></h3>
+
         </div>
-    </footer><!--/#footer-->
+      </div><!--/.col-md-3-->
 
-    <script src="../js/jquery.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jquery.prettyPhoto.js"></script>
-    <script src="../js/jquery.isotope.min.js"></script>
-    <script src="../js/main.js"></script>
-    <script src="../js/wow.min.js"></script>
+      <div class="col-md-3 col-sm-6">
+        <div class="widget">
+          <h3><a href="#">Nuevos cursos</a></h3>
+
+        </div>
+      </div><!--/.col-md-3-->
+
+      <div class="col-md-3 col-sm-6">
+        <div class="widget">
+          <h3><a href="#">Anuncios de profesores</a></h3>
+
+        </div>
+      </div><!--/.col-md-3-->
+    </div>
+  </div>
+</section><!--/#bottom-->
+
+
+<footer id="footer" class="midnight-blue">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        &copy; 2015 <a target="_blank" href="http://shapebootstrap.net/"
+                       title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights
+        Reserved.
+      </div>
+      <div class="col-sm-6">
+        <ul class="pull-right">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Faq</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer><!--/#footer-->
+
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.prettyPhoto.js"></script>
+<script src="../js/jquery.isotope.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/wow.min.js"></script>
 </body>
 </html>

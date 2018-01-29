@@ -12,8 +12,8 @@ $email1 = $_POST['email1'];
 $email2 = $_POST['email2'];
 $representante = $_POST['representante'];
 $usuario = $_POST['usuario'];
-$EstudianteCollectorObj = new DocenteCollector();
-$EstudianteCollectorObj->insertEstudiante($cedula, $nombre, $apellido, $telefono, $tipo, $email1, $curso, $materia, $usuario);
+$DocenteCollectorObj = new DocenteCollector();
+$DocenteCollectorObj->insertDocente($cedula, $nombre, $apellido, $telefono, $curso, $email1, $email2, $representante, $usuario);
 ?>
 <!doctype html>
 <html lang="es">
@@ -31,9 +31,6 @@ $EstudianteCollectorObj->insertEstudiante($cedula, $nombre, $apellido, $telefono
 <!--/************************* IFRAME centro **************************************************************-->
 
 
-<div class="section">
-
-</div>
 
 
 <!--/************************* IFRAME centro **************************************************************-->

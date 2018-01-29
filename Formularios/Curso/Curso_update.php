@@ -1,5 +1,11 @@
 <?php
 session_start();
+
+if (isset($_SESSION['usuario'])) {
+} else {
+  header('Location:../../index.php');
+}
+
  include_once('CursoCollector.php');
  //include_once('Tipo.php
 

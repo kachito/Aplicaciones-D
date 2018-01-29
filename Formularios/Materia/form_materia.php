@@ -1,11 +1,17 @@
 <?php
- session_start();
- include_once('Materia.php');
- include_once('MateriaCollector.php');
- $MateriaCollectorObj = new MateriaCollector();
+session_start();
+if (isset($_SESSION['usuario'])) {
+} else {
+  header('Location:../../index.php');
+}
 
 
-include_once('../../curso1/CursoCollector.php');
+include_once('Materia.php');
+include_once('MateriaCollector.php');
+$MateriaCollectorObj = new MateriaCollector();
+
+
+include_once('../curso/CursoCollector.php');
 $CursoCollectorObj = new CursoCollector();
 
 ?>
@@ -39,108 +45,66 @@ $CursoCollectorObj = new CursoCollector();
 
 <body class="homepage">
 
-    <header id="header">
-        <div class="top-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-xs-4">
-                        <div class="top-number"><p><i class="fa fa-phone-square"></i>  Call Us </p></div>
-                    </div>
-                    <div class="col-sm-6 col-xs-8">
-                       <div class="social">
-                            <ul class="social-share">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                            </ul>
-                            <div class="search">
-                                <form role="form">
-                                    <input type="text" class="search-form" autocomplete="off" placeholder="Search">
-                                    <i class="fa fa-search"></i>
-                                </form>
-                           </div>
-                       </div>
-                    </div>
-                </div>
-            </div><!--/.container-->
-        </div><!--/.top-bar-->
-
-        <nav class="navbar navbar-inverse">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="../index.php"><img src="../images/logo2.png" alt="logo"></a>
-                </div>
-                
-                <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="../home.php">Home</a></li>
-                        <li><a href="../about-us.php">About Us</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Diario Virtual <i class="fa fa-angle-down"></i></a>
-                                 <ul class="dropdown-menu">
-                                    <li><a href="../Actividad_list.php">Diario</a></li>
-                                    <li><a href="../horario.php">Horario de Clases</a></li>
-                                    
-                                </ul>
-
-
-                           <!---doc     <ul class="dropdown-menu">
-                                <li><a href="construccion.php">Diario</a></li>                                
-                                <li><a href="horario.php">Horario de Clases</a></li>
-                                <li><a href="construccion.php">Horario de Examenes</a></li>
-                            </ul>-->
-                        </li>
-                        <li><a href="../costruccion.htl" class="dropdown-toggle" data-toggle="dropdown">Asignaturas <i class="fa fa-angle-down"></i></a>
-
-
-
-                            <ul class="dropdown-menu">
-                                <li><a href="../construccion.php">Materia</a></li>                                
-                            
-                            </ul>
-
-
-
-                            <!-- <ul class="dropdown-menu">
-                                <li><a href="materias.php">Materia</a></li>                                
-                                <li><a href="construccion.php">Cuestionarios</a></li>
-                                <li><a href="construccion.html">Otros...</a></li>
-                            </ul>-->
-                        </li>   
-
-                        <li><a href="../notas/form_notas.php" >Calificaciones</a></li>  
-
-
-                        <li><a href="../costruccion.html" class="dropdown-toggle" data-toggle="dropdown">Planificaciones <i class="fa fa-angle-down"></i></a>
-                             <ul class="dropdown-menu">
-                                <li><a href="../docente/form_docente.php">Docente</a></li>                                
-                               <!-- <li><a href="construccion.html">Alumnos</a></li> -->
-                               <li><a href="../actividades/form_Actividad.php">Actividades</a></li>
-                               <li><a href="../curso1/form_Curso.php">Cursos</a></li>
-                               <li><a href="../notas/form_notas.php">Notas</a></li>
-                            </ul>
-                        </li> 
-                           <!-- target="info"-->
-                        
-
-                       
-                        <li><a href="../contactenos.php">Contactenos</a></li>                        
-                    </ul>
-                </div>
-            </div><!--/.container-->
-        </nav><!--/nav-->
-        
-    </header><!--/header-->
-
-
+<header id="header" style=" width: 100%; position: fixed; z-index: 100;">
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="../../index.php"><img src="../../images/logo2.png" alt="logo" height="80%"></a>
+      </div>
+      <div class="collapse navbar-collapse navbar-right">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="../../users/home.php">Home</a></li>
+          <li><a href="../../users/about-us.php">About Us</a></li>
+          <li><a href="../Tarea/Tarea_list.php">Diario Virtual</a></li>
+          <?php
+          if ($_SESSION['usuario']['descripcion'] == 'Administrador') {
+            echo '
+              <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown">Herramientas <i
+                class="fa fa-angle-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="../Docente/Docente_list.php">Docente</a></li>
+              <li><a href="../Estudiante/Estudiante_list.php">Alumno</a></li>
+              <li><a href="../Curso/Curso_list.php">Curso</a></li>
+              <li><a href="../Tarea/Tarea_list.php">Tarea</a></li>
+              </ul>
+          </li>
+            ';
+          } elseif ($_SESSION['usuario']['descripcion'] == 'Docente') {
+            echo '
+                <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown">Herramientas <i
+                class="fa fa-angle-down"></i></a>
+            <ul class="dropdown-menu">
+                <li><a href="../Tarea/Tarea_list.php">Tarea</a></li>
+                </ul>
+          </li>
+                ';
+          }
+          ?>
+          <!-- target="info"-->
+          <li><a href="../../contactenos.php">Contactenos</a></li>
+          <li class=" dropdown">
+            <a href="#" class="dropdown-toggle">
+              <div class="fa fa-user-md"></div>
+              <i></i> <?php
+              echo $_SESSION['usuario']['nickname'];
+              ?></a>
+            <ul class="dropdown-menu">
+              <li><a href="../../login/logout.php">
+                  <div class="fa fa-sign-out"></div>
+                  Cerrar Sesion</a></li>
+              <?php
+              echo '<li><a href="../password/Password_edit.php?id=' . $_SESSION['usuario']['cod_usuario'] . '">Cambiar Contraseña</a></li>'
+              ?>
+            </ul>
+          </li>
+      </div>
+      </ul>
+    </div>
+    </div><!--/.container-->
+  </nav><!--/nav-->
+</header><!--/header-->
 
 
 <!--/************************* IFRAME centro *************************************************************
@@ -151,117 +115,115 @@ $CursoCollectorObj = new CursoCollector();
    </section>
 ************************ Fortmulario **************************************************************-->
 <section id="contact-page">
-        <div class="container">
-            <div class="center">        
-                <h2>Registro de Materias</h2>
-                <p class="lead">B-Smart</p>
-            </div> 
-            <div class="row contact-wrap"> 
-                <div class="status alert alert-success" style="display: none"></div>
+  <br><br><br><br><br>
+  <div class="container">
+    <div class="center">
+      <h2>Registro de Materias</h2>
+      <p class="lead">B-Smart</p>
+    </div>
+    <div class="row contact-wrap">
+      <div class="status alert alert-success" style="display: none"></div>
 
-                <form action= "Materia_insert.php" method="post" action="form-horizontal">
-                    <div class="col-sm-5 col-sm-offset-1">
-                        <div class="form-group">
-                            <label>Nombre de la Materia *</label>
-                            <input type="Text" name="descripcion" class="form-control" required="required">
-                        </div>
-
-                                               
-                    </div>
-                    <div class="col-sm-5">
-                                                
+      <form action="Materia_insert.php" method="post" action="form-horizontal">
+        <div class="col-sm-5 col-sm-offset-1">
+          <div class="form-group">
+            <label>Nombre de la Materia *</label>
+            <input type="Text" name="descripcion" class="form-control" required="required">
+          </div>
 
 
-
-                      <div class="form-group">
-                        <label>Dirigencia: *</label>
-                        <br>
-                        <fielset>
-                          <?php
-                          $i=0;
-                          foreach ($CursoCollectorObj->showCurso() as $c) {
-
-                            echo '<input type="checkbox" name="elec[' . $c->getcod_curso() .']"> '.$c->getdescripcion().'<br>';
+        </div>
+        <div class="col-sm-5">
 
 
-                          }
-                          ?>
-                        </fielset>
-                      </div>
+          <div class="form-group">
+            <label>Dirigencia: *</label>
+            <br>
+            <fielset>
+              <?php
+              $i = 0;
+              foreach ($CursoCollectorObj->showCurso() as $c) {
+
+                echo '<input type="checkbox" name="elec[' . $c->getcod_curso() . ']"> ' . $c->getdescripcion() . '<br>';
+
+              }
+              ?>
+            </fielset>
+          </div>
 
 
-                        
-                    </div>
+        </div>
 
-                    <div class="form-group">
-                        <div class="col-xs-offset-4 col-xs-8">
-                            <input type="submit" class="btn btn-primary" value="Ingresar">
-                            <input type="reset" class="btn btn-primary" value="Limpiar">
-                            <input type="button" value="Regresar" OnClick="history.back()" class="btn btn-primary">     
-                        </div>
-                    </div>
-                </form> 
-            </div><!--/.row-->
-        </div><!--/.container-->
-    </section><!--/#contact-page-->
+        <div class="form-group">
+          <div class="col-xs-offset-4 col-xs-8">
+            <input type="submit" class="btn btn-primary" value="Ingresar">
+            <input type="reset" class="btn btn-primary" value="Limpiar">
+            <input type="button" value="Regresar" OnClick="history.back()" class="btn btn-primary">
+          </div>
+        </div>
+      </form>
+    </div><!--/.row-->
+  </div><!--/.container-->
+</section><!--/#contact-page-->
 
 <!--/************************* IFRAME centro **************************************************************-->
 
 
 <!--/************************* Foot **************************************************************-->
-     <section id="bottom">
-        <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-            <div class="row">
-                <div class="col-md-5 col-sm-6">
-                    <div class="widget">
-                        <h3><a href="../Actividad_list.php">Actividades académicas</a></h3>
-                    </div>    
-                </div><!--/.col-md-3-->
-
-                <div class="col-md-5 col-sm-6">
-                    <div class="widget">
-                       <h3><a href="../horario.php"> Horarios de Clases</a></h3>
-                     
-                    </div>    
-                </div><!--/.col-md-3-->
-
-                <div class="col-md-2 col-sm-6">
-                    <div class="widget">
-                        <h3><a href="../curso1/Curso_list.php">Cursos</a></h3>
-                    
-                    </div>    
-                </div><!--/.col-md-3-->
-
-                 
-                </div><!--/.col-md-3-->
-            </div>
+<section id="bottom">
+  <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+    <div class="row">
+      <div class="col-md-5 col-sm-6">
+        <div class="widget">
+          <h3><a href="../Actividad_list.php">Actividades académicas</a></h3>
         </div>
-    </section><!--/#bottom-->
-   
-    
+      </div><!--/.col-md-3-->
 
-    <footer id="footer" class="midnight-blue">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    &copy; 2015 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights Reserved.
-                </div>
-                <div class="col-sm-6">
-                    <ul class="pull-right">
-                        <li><a href="../home.php">Home</a></li>
-                        <li><a href="../about-us.php">About Us</a></li>                        
-                        <li><a href="../contactenos.php">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
+      <div class="col-md-5 col-sm-6">
+        <div class="widget">
+          <h3><a href="../horario.php"> Horarios de Clases</a></h3>
+
         </div>
-    </footer><!--/#footer-->
+      </div><!--/.col-md-3-->
 
-    <script src="../js/jquery.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jquery.prettyPhoto.js"></script>
-    <script src="../js/jquery.isotope.min.js"></script>
-    <script src="../js/main.js"></script>
-    <script src="../js/wow.min.js"></script>
+      <div class="col-md-2 col-sm-6">
+        <div class="widget">
+          <h3><a href="../curso1/Curso_list.php">Cursos</a></h3>
+
+        </div>
+      </div><!--/.col-md-3-->
+
+
+    </div><!--/.col-md-3-->
+  </div>
+  </div>
+</section><!--/#bottom-->
+
+
+<footer id="footer" class="midnight-blue">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        &copy; 2015 <a target="_blank" href="http://shapebootstrap.net/"
+                       title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights
+        Reserved.
+      </div>
+      <div class="col-sm-6">
+        <ul class="pull-right">
+          <li><a href="../home.php">Home</a></li>
+          <li><a href="../about-us.php">About Us</a></li>
+          <li><a href="../contactenos.php">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer><!--/#footer-->
+
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.prettyPhoto.js"></script>
+<script src="../js/jquery.isotope.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/wow.min.js"></script>
 </body>
 </html>

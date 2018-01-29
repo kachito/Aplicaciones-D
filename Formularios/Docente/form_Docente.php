@@ -1,20 +1,16 @@
 <?php
 session_start();
-include_once('Estudiante.php');
+include_once('Docente.php');
 include_once('DocenteCollector.php');
 
-$EstudianteCollectorObj = new DocenteCollector();
+$DocenteCollectorObj = new DocenteCollector();
 
 
-include_once('../../tipo/TipoCollector.php');
-$TipoCollectorObj = new TipoCollector();
+include_once('../curso/CursoCollector.php');
+$CursoCollectorObj = new CursoCollector();
 
 include_once('../password/PasswordCollector.php');
 $PasswordCollectorObj = new PasswordCollector();
-
-
-include_once('../../curso1/CursoCollector.php');
-$CursoCollectorObj = new CursoCollector();
 
 ?>
 <!DOCTYPE html>
@@ -121,12 +117,12 @@ $CursoCollectorObj = new CursoCollector();
 <section id="contact-page">
   <div class="container">
     <div class="center">
-      <h2>Registro de Docente</h2>
+      <h2>Docente</h2>
       <p class="lead">B-Smart</p>
     </div>
     <div class="row contact-wrap">
       <div class="status alert alert-success" style="display: none"></div>
-      <form action="Estudiante_insert.php" method="post" action="form-horizontal">
+      <form action="Docente_insert.php" method="post" action="form-horizontal">
         <div class="col-sm-5 col-sm-offset-1">
           <div class="form-group">
             <label>Cédula *</label>
@@ -147,27 +143,29 @@ $CursoCollectorObj = new CursoCollector();
             <label>Teléfono</label>
             <input type="text" name="telefono" class="form-control" onkeypress="return isNumber(event)" onkeyup="nicknam();" onclick="nicknam();">
           </div>
-          <div class="form-group">
-            <label>Título *</label>
-            <input type="text" name="titulo" id="titulo" class="form-control" required="required">
-          </div>
 
         </div>
         <div class="col-sm-5">
           <div class="form-group">
-            <label>Email *</label>
+            <label>Email Alumno*</label>
             <input type="email" name="email1" id="email1" class="form-control" required="required"
                    onkeyup="validateEmailA();">
             <span id="messageemaila"></span>
           </div>
-
           <div class="form-group">
-            <label>Materia a dictar *</label>
+            <label>Email Representante*</label>
+            <input type="email" id="email2" name="email2" class="form-control" required="required"
+                   onkeyup="validateEmailR();">
+            <span id="messageemail"></span>
+          </div>
+          <div class="form-group">
+            <label>Nombres y Apellidos del representante legal*</label>
             <input type="text" id="representante" name="representante" class="form-control" required="required">
           </div>
 
+
           <div class="form-group">
-            <label>Dirigencia: *</label>
+            <label>curso: *</label>
             <select class="form-control" typeof="checkbox" name="curso">
 
               <?php
@@ -175,24 +173,6 @@ $CursoCollectorObj = new CursoCollector();
                 echo '<option value=' . $c->getcod_curso() . '>';
                 echo $c->getdescripcion();
                 echo '</option>';
-              }
-              ?>
-            </select>
-          </div>
-
-
-
-          <div class="form-group">
-            <label>Permisos: *</label>
-            <select class="form-control" typeof="checkbox" name="curso">
-
-              <?php
-              foreach ($TipoCollectorObj->showTipo() as $c) {
-                if($c->getcod_tipo()!=3){
-                echo '<option value=' . $c->getcod_tipo() . '>';
-                echo $c->getdescripcion();
-                echo '</option>';
-                }
               }
               ?>
             </select>

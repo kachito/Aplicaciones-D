@@ -8,10 +8,10 @@ class MateriaCollector extends Collector
 
   function showMateria()
   {
-    $rows = self::$db->getRows("SELECT * FROM nota ");
+    $rows = self::$db->getRows("SELECT * FROM materia ");
     $arrayMateria = array();
     foreach ($rows as $c) {
-      $aux = new Materia($c{'id_nota'}, $c{'anio'}, $c{'nota1'}, $c{'nota2'}, $c{'nota3'}, $c{'nota4'}, $c{'promedio'}, $c{'recuperacion'});
+      $aux = new Materia( $c{'cod_materia'},$c{'descripcion'});
 
       array_push($arrayMateria, $aux);
     }
@@ -39,7 +39,7 @@ class MateriaCollector extends Collector
   function deleteMateria($id)
   {
 
-    $delete = self::$db->getRow("Delete from nota where id_nota= '$id'");
+    $delete = self::$db->getRow("Delete from materia where cod_materia= '$id'");
     return 1;
   }
 

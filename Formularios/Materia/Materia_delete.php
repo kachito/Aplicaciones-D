@@ -3,8 +3,8 @@ session_start();
  include_once('MateriaCollector.php');
  include_once('Materia.php');
  $id = $_GET['id'];
- $NotasCollectorObj = new MateriaCollector();
- $NotasCollectorObj->deleteNotas($id);
+ $MateriaCollectorObj = new MateriaCollector();
+ $MateriaCollectorObj->deleteMateria($id);
 ?>
 <!doctype html>
 <html lang="es">
