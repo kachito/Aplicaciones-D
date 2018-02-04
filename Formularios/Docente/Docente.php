@@ -6,23 +6,34 @@ class Docente
   private $nombre;
   private $apellido;
   private $telefono;
-  private $curso;
+  private $docente_cod;
+  private $alumno_cod;
   private $email1;
-  private $email2;
-  private $representante;
+  private $curso;
+  private $cod_docente;
+  private $curso_cod;
+  private $usuario_cod;
+  private $descripcion_mat;
+  private $titulo;
   private $usuario;
 
 
-  function __construct($cedula, $nombre, $apellido, $telefono, $curso, $email1, $email2,$representante, $usuario)
+  function __construct($cedula, $nombre, $apellido, $telefono,$docente_cod,$alumno_cod, $email1 ,$curso,
+                       $cod_docente,$curso_cod, $usuario_cod,$descripcion_mat,$titulo, $usuario)
   {
     $this->cedula = $cedula;
     $this->nombre = $nombre;
     $this->apellido = $apellido;
     $this->telefono = $telefono;
-    $this->curso = $curso;
+    $this->docente_cod = $docente_cod;
+    $this->alumno_cod = $alumno_cod;
     $this->email1 = $email1;
-    $this->email2 = $email2;
-    $this->representante = $representante;
+    $this->curso = $curso;
+    $this->cod_docente = $cod_docente;
+    $this->curso_cod = $curso_cod;
+    $this->usuario_cod = $usuario_cod;
+    $this->descripcion_mat = $descripcion_mat;
+    $this->titulo = $titulo;
     $this->usuario = $usuario;
 
 
@@ -67,16 +78,25 @@ class Docente
     return $this->telefono;
   }
 
-  function setcurso($curso)
+  function setdocente_cod($docente_cod)
   {
-    $this->curso = $curso;
+    $this->docente_cod = $docente_cod;
   }
 
-  function getcurso()
+  function getdocente_cod()
   {
-    return $this->curso;
+    return $this->docente_cod;
   }
 
+  function setalumno_cod($alumno_cod)
+  {
+    $this->alumno_cod = $alumno_cod;
+  }
+
+  function getalumno_cod()
+  {
+    return $this->alumno_cod;
+  }
 
   function setemail1($email1)
   {
@@ -88,23 +108,61 @@ class Docente
     return $this->email1;
   }
 
-  function setemail2($email2)
+  function setcurso($curso)
   {
-    $this->email2 = $email2;
+    $this->curso = $curso;
   }
 
-  function getemail2()
+  function getcurso()
   {
-    return $this->email2;
+    return $this->curso;
   }
-  function setrepresentante($representante)
+  function setcod_docente($cod_docente)
   {
-    $this->representante = $representante;
+    $this->cod_codente = $cod_docente;
   }
 
-  function getrepresentante()
+  function getcod_docente()
   {
-    return $this->representante;
+    return $this->cod_docente;
+  }
+  function setcurso_cod($curso_cod)
+  {
+    $this->curso_cod = $curso_cod;
+  }
+
+  function getcurso_cod()
+  {
+    return $this->curso_cod;
+  }
+
+  function setusuario_cod($usuario_cod)
+  {
+    $this->usuario_cod = $usuario_cod;
+  }
+
+  function getusuario_cod()
+  {
+    return $this->usuario_cod;
+  }
+
+  function setdescripcion_mat($descripcion_mat)
+  {
+    $this->descripcion_mat = $descripcion_mat;
+  }
+
+  function getdescripcion_mat()
+  {
+    return $this->descripcion_mat;
+  }
+  function settitulo($titulo)
+  {
+    $this->titulo = $titulo;
+  }
+
+  function gettitulo()
+  {
+    return $this->titulo;
   }
 
   function setusuario($usuario)

@@ -108,7 +108,10 @@ $CursoCollectorObj = new CursoCollector();
     <p class="lead">B-Smart</p>
   </div>
   <br/>
-  <br/>
+  <div class="col-xs-offset-10 " >
+    <a type="button" href="form_Curso.php" class="btn btn-primary"> Nuevo </a>
+  </div>
+  <br>
   <div class="container" style="width: 50%">
     <div class="table-responsive">
       <table class="table table-condensed table-bordered table-hover">
@@ -116,7 +119,7 @@ $CursoCollectorObj = new CursoCollector();
         <tr>
           <th bgcolor="#D8D8D8">CURSO</th>
           <th bgcolor="#D8D8D8">PARALELO</th>
-          <th colspan='3' bgcolor="#D8D8D8" style="text-align: center">ACCION</th>
+          <th colspan='2' bgcolor="#D8D8D8" style="text-align: center">ACCION</th>
         </tr>
         </thead>
         <?php
@@ -126,7 +129,6 @@ $CursoCollectorObj = new CursoCollector();
         <tr>
           <td >' . $c->getdescripcion() . '</td>
           <td>' . $c->getparalelo() . '</td>
-          <td><a href="form_Curso.php"><i class="fa fa-plus-square-o"></i> Nuevo</a></td>
           <td><a href="Curso_edit.php?id=' . $c->getcod_curso() . '"><i class="fa fa-pencil-square-o" ></i> Editar</a></td>
           <td ><a  href="Curso_delete.php?id=' . $c->getcod_curso() . '"><i class="fa fa-trash-o"></i> Eliminar</a></td>
         </tr>

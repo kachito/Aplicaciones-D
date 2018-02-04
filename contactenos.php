@@ -75,7 +75,7 @@ if (isset($_SESSION['usuario'])) {
                 class="fa fa-angle-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="Formularios/Docente/Docente_list.php">Docente</a></li>
-              <li><a href="Formularios/Estudiante/Estudiante_list.php">Alumno</a></li>
+              <li><a href="Formularios/Docente/Docente_list.php">Alumno</a></li>
               <li><a href="Formularios/Curso/Curso_list.php">Curso</a></li>
               <li><a href="Formularios/Tarea/Tarea_list.php">Tarea</a></li>
               </ul>

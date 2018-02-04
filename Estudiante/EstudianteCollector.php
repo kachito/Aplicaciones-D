@@ -10,7 +10,7 @@ class EstudianteCollector extends Collector
     $rows = self::$db->getRows("SELECT * FROM estudiante ");        
     $arrayEstudiante= array();        
     foreach ($rows as $c){
-      $aux = new Estudiante($c{'id_estudiante'},$c{'nombre'},$c{'apellido'},$c{'edad'},$c{'cedula'},$c{'genero'},$c{'email'});
+      $aux = new Docente($c{'id_estudiante'},$c{'nombre'},$c{'apellido'},$c{'edad'},$c{'cedula'},$c{'genero'},$c{'email'});
 
       array_push($arrayEstudiante, $aux);
     }
@@ -21,7 +21,7 @@ class EstudianteCollector extends Collector
 
     $row = self::$db->getRow("SELECT * FROM estudiante where id_estudiante = '$id'");   
     
-    $Estudiante = new Estudiante($row{'id_estudiante'},$row{'nombre'},$row{'apellido'},$row{'edad'},$row{'cedula'},$row{'genero'},$row{'email'});
+    $Estudiante = new Docente($row{'id_estudiante'},$row{'nombre'},$row{'apellido'},$row{'edad'},$row{'cedula'},$row{'genero'},$row{'email'});
     return $Estudiante;        
   }
 

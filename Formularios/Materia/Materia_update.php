@@ -3,18 +3,21 @@ session_start();
  include_once('MateriaCollector.php');
  //include_once('Tipo.php
 
- $id_nota = $_POST['id_nota'];
- $anio = $_POST['anio'];
- $nota1 = $_POST['nota1'];
- $nota2 = $_POST['nota2'];
- $nota3 = $_POST['nota3'];
- $nota4 = $_POST['nota4'];
- $promedio = $_POST['promedio'];
- $recuperacion = $_POST['recuperacion'];
-//echo  $cargo;		
 
- $NotasCollectorObj = new MateriaCollector();
- $NotasCollectorObj->updateNotas($id_nota, $anio, (int)$nota1, (int)$nota2, (int)$nota3, (int)$nota4, (int)$promedio, (int)$recuperacion);
+$descripcion = $_POST['descripcion'];
+$cod_materia = $_POST['cod_materia'];
+$elec_array=$_POST['elec'] ;
+
+$elec_array=array_keys($elec_array);
+
+
+
+$MateriaCollectorObj = new MateriaCollector();
+$MateriaCollectorObj->updateMateria($cod_materia,$descripcion, $elec_array);
+
+
+
+//echo  $cargo;		
 
 ?>
 <!doctype html>

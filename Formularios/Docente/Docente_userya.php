@@ -4,10 +4,10 @@
   $id = $_GET['id'];
 
  // echo $id;
- include_once('Docente.php');
- include_once('DocenteCollector.php');
- $DocenteCollectorObj = new DocenteCollector();
- $ObjDocente = $DocenteCollectorObj->showDocenteId($id);
+ include_once('Estudiante.php');
+ include_once('EstudianteCollector.php');
+ $EstudianteCollectorObj = new PasswordCollector();
+ $ObjEstudiante = $EstudianteCollectorObj->showEstudianteId($id);
  //print_r($ObjTransportista);
 ?>
 
@@ -125,16 +125,16 @@
                 <br>
                 <br>        
                 
-                <h2>Docente</h2>
+                <h2>Estudiante</h2>
                 <p class="lead">B-Smart</p>
             </div> 
             <div class="row contact-wrap"> 
                 <div class="status alert alert-success" style="display: none"></div>
 
-                <form action= "Docente_update.php" method="post" action="form-horizontal">
+                <form action= "Estudiante_update.php" method="post" action="form-horizontal"> 
                     <div class="col-sm-8 col-sm-offset-4"  >
                             
-                            <input type="number" name="id_Docente" required="required" style="visibility:hidden" readonly value = "<?php echo $ObjDocente->getid_Docente(); ?>" >
+                            <input type="number" name="id_estudiante" required="required" style="visibility:hidden" readonly value = "<?php echo $ObjEstudiante->getid_estudiante(); ?>" >
                         </div>
 
                         <br>
@@ -145,19 +145,19 @@
                        
                         <div class="form-group">
                             <label>Nombre *</label>
-                            <input type="text" name="nombre" class="form-control" required="required" value = "<?php echo $ObjDocente->getnombre(); ?>">
+                            <input type="text" name="nombre" class="form-control" required="required" value = "<?php echo $ObjEstudiante->getnombre(); ?>">
                         </div>
                         <div class="form-group">
                             <label>Apellido *</label>
-                            <input type="text" name="apellido" class="form-control" required="required" value = "<?php echo $ObjDocente->getapellido(); ?>">
+                            <input type="text" name="apellido" class="form-control" required="required" value = "<?php echo $ObjEstudiante->getapellido(); ?>">
                         </div>
                         <div class="form-group" >
                             <label>Edad *</label>
-                            <input type="number" name="edad" class="form-control" required="required"value = "<?php echo $ObjDocente->getedad(); ?>">
+                            <input type="number" name="edad" class="form-control" required="required"value = "<?php echo $ObjEstudiante->getedad(); ?>">
                         </div>
                         <div class="form-group">
                             <label>Cédula</label>
-                            <input type="text" name="cedula" class="form-control" value = "<?php echo $ObjDocente->getcedula(); ?>">
+                            <input type="text" name="cedula" class="form-control" value = "<?php echo $ObjEstudiante->getcedula(); ?>">
                         </div> 
                                                
                     </div>
@@ -165,7 +165,7 @@
                         
                         <div class="form-group">
                             <label >Genero</label>
-                            <select type="number" name="genero" value = "<?php echo $ObjDocente->getgenero(); ?>">
+                            <select type="number" name="genero" value = "<?php echo $ObjEstudiante->getgenero(); ?>">
                             <option value="1" required="required">Masculino</option>
                             <option value="0" required="required">Femenino</option>
                             </select>
@@ -174,15 +174,15 @@
 
                         <div class="form-group">
                             <label>Dirigencia *</label>
-                            <input type="text" name="dirigencia" class="form-control" required="required" value = "<?php echo $ObjDocente->getdirigencia(); ?>">
+                            <input type="text" name="dirigencia" class="form-control" required="required" value = "<?php echo $ObjEstudiante->getdirigencia(); ?>">
                         </div>
                         <div class="form-group">
                             <label>Cargo*</label>
-                            <input type="text" name="cargo" class="form-control" required="required" value = "<?php echo $ObjDocente->getcargo(); ?>">
+                            <input type="text" name="cargo" class="form-control" required="required" value = "<?php echo $ObjEstudiante->getcargo(); ?>">
                         </div>
                         <div class="form-group">
                             <label>Email *</label>  
-                            <input type="email" name="email" class="form-control" required="required" value = "<?php echo $ObjDocente->getemail(); ?>">
+                            <input type="email" name="email" class="form-control" required="required" value = "<?php echo $ObjEstudiante->getemail(); ?>">
                             
                         </div>                        
                         

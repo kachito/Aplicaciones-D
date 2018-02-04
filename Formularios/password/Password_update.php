@@ -1,7 +1,7 @@
 <?php
 session_start();
  include_once('PasswordCollector.php');
- //include_once('Estudiante.php');
+ //include_once('Docentep');
 $PasswordCollectorObj = new PasswordCollector();
 
 

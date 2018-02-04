@@ -95,13 +95,17 @@ $EstudianteCollectorObj = new EstudianteCollector();
 </header>
 <!--/header-->
 <!--/************************* IFRAME centro *************************************************************-->
-<section >
-  <br><br>
-
+<section>
+  <br>
   <div class="center">
     <h2>Mantenimiento Estudiante</h2>
     <p class="lead">B-Smart</p>
   </div>
+
+  <div class="col-xs-offset-10 " >
+    <a type="button" href="form_Estudiante.php" class="btn btn-primary"> Nuevo </a>
+  </div>
+  <br>
   <div class="container">
     <div class="table-responsive">
       <table class="table table-condensed table-bordered table-hover">
@@ -116,7 +120,7 @@ $EstudianteCollectorObj = new EstudianteCollector();
           <th bgcolor="#D8D8D8">EMAIL</th>
           <th bgcolor="#D8D8D8">REPRESENTANTE</th>
           <th bgcolor="#D8D8D8">EMAIL REP.</th>
-          <th colspan=3 bgcolor="#D8D8D8">ACCION</th>
+          <th colspan=2 bgcolor="#D8D8D8">ACCION</th>
         </tr>
         </thead>
         <?php
@@ -132,9 +136,9 @@ $EstudianteCollectorObj = new EstudianteCollector();
      <td>' . $c->getemail1() . '</td>
      <td>' . $c->getrepresentante() . '</td>
      <td>' . $c->getemail2() . '</td>
-     <td><a href="form_estudiante.php"><i class="fa fa-plus-square-o"></i></a></td>   
-     <td><a href="Estudiante_edit.php?id=<?php echo $c->getcod_alumno() ?>"><i class="fa fa-pencil-square-o" ></i></a></td>
-     <td><a href="Estudiante_delete.php?id=<?php echo $c->getcod_alumno() ?>"><i class="fa fa-trash-o"></i></a></td>
+     
+     <td><a href="Estudiante_edit.php?id=' . $c->getcod_alumno() . '"><i class="fa fa-pencil-square-o" ></i></a></td>
+     <td><a href="Estudiante_delete.php?id=' . $c->getcod_alumno() . '"><i class="fa fa-trash-o"></i></a></td>
      
           
   </tr>
@@ -143,6 +147,8 @@ $EstudianteCollectorObj = new EstudianteCollector();
         ?>
       </table>
     </div>
+
+
   </div>
 
 

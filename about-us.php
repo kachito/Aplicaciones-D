@@ -45,31 +45,31 @@ if (isset($_SESSION['usuario'])) {
   <nav class="navbar navbar-inverse">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="../index.php"><img src="images/logo2.png" alt="logo" height="80%"></a>
+        <a class="navbar-brand" href="index.php"><img src="images/logo2.png" alt="logo" height="80%"></a>
       </div>
       <div class="collapse navbar-collapse navbar-right">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="home.php">Home</a></li>
+          <li class="active"><a href="users/home.php">Home</a></li>
           <li><a href="about-us.php">About Us</a></li>
-          <li><a href="../Formularios/Tarea/Tarea_list.php">Diario Virtual</a></li>
+          <li><a href="Formularios/Tarea/Tarea_list.php">Diario Virtual</a></li>
           <!--
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Diario Virtual <i
                 class="fa fa-angle-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="../horario.php">Diario</a></li>
-              <li><a href="../horario.php">Notificaciones</a></li>
-              <li><a href="../horario.php">Horario</a></li>
-              <li><a href="../horario.php">Calendario</a></li>
+              <li><a href="horario.php">Diario</a></li>
+              <li><a href="horario.php">Notificaciones</a></li>
+              <li><a href="horario.php">Horario</a></li>
+              <li><a href="horario.php">Calendario</a></li>
             </ul>
           </li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Planificaciones <i
                 class="fa fa-angle-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="../form_docente.php">Anual</a></li>
-              <li><a href="../actividades/form_Actividad.php">Bloque</a></li>
-              <li><a href="../Formularios/tipo/form_Tipo.php">Semanal</a></li>
+              <li><a href="form_docente.php">Anual</a></li>
+              <li><a href="actividades/form_Actividad.php">Bloque</a></li>
+              <li><a href="Formularios/tipo/form_Tipo.php">Semanal</a></li>
             </ul>
           </li> -->
 
@@ -81,10 +81,10 @@ if (isset($_SESSION['usuario'])) {
             <a href="" class="dropdown-toggle" data-toggle="dropdown">Herramientas <i
                 class="fa fa-angle-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="../Formularios/Docente/Docente_list.php">Docente</a></li>
-              <li><a href="../Formularios/Estudiante/Estudiante_list.php">Alumno</a></li>
-              <li><a href="../Formularios/Curso/Curso_list.php">Curso</a></li>
-              <li><a href="../Formularios/Tarea/Tarea_list.php">Tarea</a></li>
+              <li><a href="Formularios/Docente/Docente_list.php">Docente</a></li>
+              <li><a href="Formularios/Estudiante/Estudiante_list.php">Alumno</a></li>
+              <li><a href="Formularios/Curso/Curso_list.php">Curso</a></li>
+              <li><a href="Formularios/Tarea/Tarea_list.php">Tarea</a></li>
               </ul>
           </li>
             ';
@@ -95,7 +95,7 @@ if (isset($_SESSION['usuario'])) {
             <a href="" class="dropdown-toggle" data-toggle="dropdown">Herramientas <i
                 class="fa fa-angle-down"></i></a>
             <ul class="dropdown-menu">
-                <li><a href="../Formularios/Tarea/Tarea_list.php">Tarea</a></li>
+                <li><a href="Formularios/Tarea/Tarea_list.php">Tarea</a></li>
                 </ul>
           </li>
                 ';
@@ -106,7 +106,7 @@ if (isset($_SESSION['usuario'])) {
 
 
           <!-- target="info"-->
-          <li><a href="../contactenos.php">Contactenos</a></li>
+          <li><a href="contactenos.php">Contactenos</a></li>
 
           <li class=" dropdown"  >
             <a href="#" class="dropdown-toggle"  ><div class="fa fa-user-md"></div> <i></i> <?php
@@ -114,10 +114,10 @@ if (isset($_SESSION['usuario'])) {
               ?></a>
             <ul class="dropdown-menu">
 
-              <li><a href="../login/logout.php"> <div class="fa fa-sign-out"></div>  Cerrar Sesion</a></li>
+              <li><a href="login/logout.php"> <div class="fa fa-sign-out"></div>  Cerrar Sesion</a></li>
               <?php
 
-              echo '<li><a href="../Formularios/password/Password_edit.php?id='.$_SESSION['usuario']['cod_usuario'].'">Cambiar Contraseña</a></li>'
+              echo '<li><a href="Formularios/password/Password_edit.php?id='.$_SESSION['usuario']['cod_usuario'].'">Cambiar Contraseña</a></li>'
               ?>
 
             </ul>
@@ -145,7 +145,7 @@ if (isset($_SESSION['usuario'])) {
 
                </a>
             <ul class="dropdown-menu " style="width: auto; text-align: center;">
-              <li><a href="../login/logout.php"><li class="fa fa-sign-out"></li> Cerrar Sesion</a></li>
+              <li><a href="login/logout.php"><li class="fa fa-sign-out"></li> Cerrar Sesion</a></li>
 
             </ul>
           </li>

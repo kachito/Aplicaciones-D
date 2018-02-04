@@ -52,7 +52,7 @@ $DocenteCollectorObj = new DocenteCollector();
                 class="fa fa-angle-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="../Docente/Docente_list.php">Docente</a></li>
-              <li><a href="../Docente/Docente_list.php">Alumno</a></li>
+              <li><a href="../Estudiante/Estudiante_list.php">Alumno</a></li>
               <li><a href="../Curso/Curso_list.php">Curso</a></li>
               <li><a href="../Tarea/Tarea_list.php">Tarea</a></li>
               </ul>
@@ -95,13 +95,17 @@ $DocenteCollectorObj = new DocenteCollector();
 </header>
 <!--/header-->
 <!--/************************* IFRAME centro *************************************************************-->
-<section >
-  <br><br>
-
+<section>
+  <br>
   <div class="center">
     <h2>Mantenimiento Docente</h2>
     <p class="lead">B-Smart</p>
   </div>
+
+  <div class="col-xs-offset-10 " >
+    <a type="button" href="form_Docente.php" class="btn btn-primary"> Nuevo </a>
+  </div>
+  <br>
   <div class="container">
     <div class="table-responsive">
       <table class="table table-condensed table-bordered table-hover">
@@ -116,7 +120,7 @@ $DocenteCollectorObj = new DocenteCollector();
           <th bgcolor="#D8D8D8">EMAIL</th>
           <th bgcolor="#D8D8D8">REPRESENTANTE</th>
           <th bgcolor="#D8D8D8">EMAIL REP.</th>
-          <th colspan=3 bgcolor="#D8D8D8">ACCION</th>
+          <th colspan=2 bgcolor="#D8D8D8">ACCION</th>
         </tr>
         </thead>
         <?php
@@ -130,11 +134,11 @@ $DocenteCollectorObj = new DocenteCollector();
      <td>' . $c->getcurso() . '</td>
     <td>' . $c->gettelefono() . '</td>
      <td>' . $c->getemail1() . '</td>
-     <td>' . $c->getrepresentante() . '</td>
-     <td>' . $c->getemail2() . '</td>
-     <td><a href="form_Docente.php"><i class="fa fa-plus-square-o"></i></a></td>   
-     <td><a href="Docente_edit.php?id=<?php echo $c->getcod_alumno() ?>"><i class="fa fa-pencil-square-o" ></i></a></td>
-     <td><a href="Docente_delete.php?id=<?php echo $c->getcod_alumno() ?>"><i class="fa fa-trash-o"></i></a></td>
+     <td>' . $c->gettitulo() . '</td>
+     <td>' . $c->getdescripcion_mat() . '</td>
+     
+     <td><a href="Docente_edit.php?id=' . $c->getcod_docente() . '"><i class="fa fa-pencil-square-o" ></i></a></td>
+     <td><a href="Docente_delete.php?id=' . $c->getcod_docente() . '"><i class="fa fa-trash-o"></i></a></td>
      
           
   </tr>
@@ -143,6 +147,8 @@ $DocenteCollectorObj = new DocenteCollector();
         ?>
       </table>
     </div>
+
+
   </div>
 
 

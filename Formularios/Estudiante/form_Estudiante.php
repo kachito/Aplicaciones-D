@@ -3,6 +3,12 @@ session_start();
 include_once('Estudiante.php');
 include_once('EstudianteCollector.php');
 
+if (isset($_SESSION['usuario'])) {
+} else {
+  header('Location:../../index.php');
+}
+
+
 $EstudianteCollectorObj = new EstudianteCollector();
 
 
@@ -39,173 +45,158 @@ $PasswordCollectorObj = new PasswordCollector();
   <link rel="apple-touch-icon-precomposed" href="../../images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 <body class="homepage">
-<header id="header">
-  <div class="top-bar">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6 col-xs-4">
-          <div class="top-number"><p><i class="fa fa-phone-square"></i> Call Us </p></div>
-        </div>
-        <div class="col-sm-6 col-xs-8">
-          <div class="social">
-            <ul class="social-share">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-              <li><a href="#"><i class="fa fa-skype"></i></a></li>
-            </ul>
-            <div class="search">
-              <form role="form">
-                <input type="text" class="search-form" autocomplete="off" placeholder="Search">
-                <i class="fa fa-search"></i>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div><!--/.container-->
-  </div><!--/.top-bar-->
-  <nav class="navbar navbar-inverse" role="banner">
+<header id="header" style=" width: 100%; position: fixed; z-index: 100;">
+  <nav class="navbar navbar-inverse">
     <div class="container">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.php"><img src="../../images/logo2.png" alt="logo"></a>
+        <a class="navbar-brand" href="../../index.php"><img src="../../images/logo2.png" alt="logo" height="80%"></a>
       </div>
       <div class="collapse navbar-collapse navbar-right">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="home.html">Home</a></li>
-          <li><a href="about-us - copia.html">About Us</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Diario Virtual <i
+          <li class="active"><a href="../../users/home.php">Home</a></li>
+          <li><a href="../../users/about-us.php">About Us</a></li>
+          <li><a href="../Tarea/Tarea_list.php">Diario Virtual</a></li>
+          <?php
+          if ($_SESSION['usuario']['descripcion'] == 'Administrador') {
+            echo '
+              <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown">Herramientas <i
                 class="fa fa-angle-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="construccion.html">Diario</a></li>
-              <li><a href="horario.html">Horario de Clases</a></li>
-              <li><a href="construccion.html">Horario de Examenes</a></li>
-            </ul>
+              <li><a href="../Docente/Docente_list.php">Docente</a></li>
+              <li><a href="../Estudiante/Estudiante_list.php">Alumno</a></li>
+              <li><a href="../Curso/Curso_list.php">Curso</a></li>
+              <li><a href="../Tarea/Tarea_list.php">Tarea</a></li>
+              </ul>
           </li>
-          <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Asignaturas <i
+            ';
+          } elseif ($_SESSION['usuario']['descripcion'] == 'Docente') {
+            echo '
+                <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown">Herramientas <i
                 class="fa fa-angle-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="materias.html">Materia</a></li>
-              <li><a href="construccion.html">Cuestionarios</a></li>
-              <li><a href="construccion.html">Otros...</a></li>
-            </ul>
+                <li><a href="../Tarea/Tarea_list.php">Tarea</a></li>
+                </ul>
           </li>
+                ';
+          }
+          ?>
           <!-- target="info"-->
-          <li><a href="construccion.html">Calificaciones</a></li>
-          <li><a href="construccion.html">Planificaciones</a></li>
-          <li><a href="contactenos.html">Contactenos</a></li>
-        </ul>
+          <li><a href="../../contactenos.php">Contactenos</a></li>
+          <li class=" dropdown">
+            <a href="#" class="dropdown-toggle">
+              <div class="fa fa-user-md"></div>
+              <i></i> <?php
+              echo $_SESSION['usuario']['nickname'];
+              ?></a>
+            <ul class="dropdown-menu">
+              <li><a href="../../login/logout.php">
+                  <div class="fa fa-sign-out"></div>
+                  Cerrar Sesion</a></li>
+              <?php
+              echo '<li><a href="../password/Password_edit.php?id=' . $_SESSION['usuario']['cod_usuario'] . '">Cambiar Contraseña</a></li>'
+              ?>
+            </ul>
+          </li>
       </div>
+      </ul>
+    </div>
     </div><!--/.container-->
   </nav><!--/nav-->
 </header><!--/header-->
-<!--/************************* IFRAME centro *************************************************************
-    <section id="main-slider" class="no-margin">
-      <div class="item">
-        <iframe name="info"  height="730"  src="inicio.html"  ></iframe>
+<!--/************************* IFRAME centro *************************************************************-->
+<section>
+  <br><br>
+  <section id="contact-page">
+    <div class="container">
+      <div class="center">
+        <h2>Estudiante</h2>
+        <p class="lead">B-Smart</p>
       </div>
-   </section>
-************************ Fortmulario **************************************************************-->
-<section id="contact-page">
-  <div class="container">
-    <div class="center">
-      <h2>Estudiante</h2>
-      <p class="lead">B-Smart</p>
+      <div class="row contact-wrap">
+        <div class="status alert alert-success" style="display: none"></div>
+        <form action="Estudiante_insert.php" method="post" action="form-horizontal">
+          <div class="col-sm-5 col-sm-offset-1">
+            <div class="form-group">
+              <label>Cédula *</label>
+              <input type="text" name="cedula" id="cedula" class="form-control" required="required" maxlength="10"
+                     onkeypress="return isNumber(event)" onkeyup="isCedula();">
+              <span id="messageced"></span>
+            </div>
+            <div class="form-group">
+              <label>Nombre *</label>
+              <input type="text" name="nombre" id="nombre" class="form-control" required="required">
+            </div>
+            <div class="form-group">
+              <label>Apellido *</label>
+              <input type="text" name="apellido" id="apellido" class="form-control" required="required"
+                     onkeyup="nicknam();">
+            </div>
+            <div class="form-group">
+              <label>Teléfono</label>
+              <input type="text" name="telefono" class="form-control" onkeypress="return isNumber(event)"
+                     onkeyup="nicknam();" onclick="nicknam();">
+            </div>
+
+          </div>
+          <div class="col-sm-5">
+            <div class="form-group">
+              <label>Email Alumno*</label>
+              <input type="email" name="email1" id="email1" class="form-control" required="required"
+                     onkeyup="validateEmailA();">
+              <span id="messageemaila"></span>
+            </div>
+            <div class="form-group">
+              <label>Email Representante*</label>
+              <input type="email" id="email2" name="email2" class="form-control" required="required"
+                     onkeyup="validateEmailR();">
+              <span id="messageemail"></span>
+            </div>
+            <div class="form-group">
+              <label>Nombres y Apellidos del representante legal*</label>
+              <input type="text" id="representante" name="representante" class="form-control" required="required">
+            </div>
+
+
+            <div class="form-group">
+              <label>curso: *</label>
+              <select class="form-control" typeof="checkbox" name="curso">
+
+                <?php
+                foreach ($CursoCollectorObj->showCurso() as $c) {
+                  echo '<option value=' . $c->getcod_curso() . '>';
+                  echo $c->getdescripcion();
+                  echo '</option>';
+                }
+                ?>
+              </select>
+            </div>
+
+
+            <input type="text" name="usuario" id="usuario" style="visibility: hidden">
+
+
+          </div>
+
+          <div class="form-group">
+            <div class="col-xs-offset-4 col-xs-8">
+              <input type="button" value="Regresar" OnClick="history.back()" class="btn btn-primary">
+              <input type="reset" class="btn btn-primary" value="Limpiar">
+              <input type="submit" class="btn btn-primary" value="Guardar">
+            </div>
+          </div>
+
+
+        </form>
+
+      </div><!--/.row-->
     </div>
-    <div class="row contact-wrap">
-      <div class="status alert alert-success" style="display: none"></div>
-      <form action="Estudiante_insert.php" method="post" action="form-horizontal">
-        <div class="col-sm-5 col-sm-offset-1">
-          <div class="form-group">
-            <label>Cédula *</label>
-            <input type="text" name="cedula" id="cedula" class="form-control" required="required"
-                   onkeypress="return isNumber(event)" onkeyup="isCedula();">
-            <span id="messageced"></span>
-          </div>
-          <div class="form-group">
-            <label>Nombre *</label>
-            <input type="text" name="nombre" id="nombre" class="form-control" required="required">
-          </div>
-          <div class="form-group">
-            <label>Apellido *</label>
-            <input type="text" name="apellido" id="apellido" class="form-control" required="required"
-                   onkeyup="nicknam();">
-          </div>
-          <div class="form-group">
-            <label>Teléfono</label>
-            <input type="text" name="telefono" class="form-control" onkeypress="return isNumber(event)" onkeyup="nicknam();" onclick="nicknam();">
-          </div>
+    <!--/.container-->
+  </section>
+</section>
 
-        </div>
-        <div class="col-sm-5">
-          <div class="form-group">
-            <label>Email Alumno*</label>
-            <input type="email" name="email1" id="email1" class="form-control" required="required"
-                   onkeyup="validateEmailA();">
-            <span id="messageemaila"></span>
-          </div>
-          <div class="form-group">
-            <label>Email Representante*</label>
-            <input type="email" id="email2" name="email2" class="form-control" required="required"
-                   onkeyup="validateEmailR();">
-            <span id="messageemail"></span>
-          </div>
-          <div class="form-group">
-            <label>Nombres y Apellidos del representante legal*</label>
-            <input type="text" id="representante" name="representante" class="form-control" required="required">
-          </div>
-
-
-          <div class="form-group">
-            <label>curso: *</label>
-            <select class="form-control" typeof="checkbox" name="curso">
-
-              <?php
-              foreach ($CursoCollectorObj->showCurso() as $c) {
-                echo '<option value=' . $c->getcod_curso() . '>';
-                echo $c->getdescripcion();
-                echo '</option>';
-              }
-              ?>
-            </select>
-          </div>
-
-
-            <input type="text" name="usuario" id="usuario"  style="visibility: hidden"  >
-
-
-
-
-
-
-
-
-
-        </div>
-
-        <div class="form-group">
-          <div class="col-xs-offset-4 col-xs-8">
-            <input type="button" value="Regresar" OnClick="history.back()" class="btn btn-primary">
-            <input type="reset" class="btn btn-primary" value="Limpiar">
-            <input type="submit" class="btn btn-primary" value="Guardar">
-          </div>
-        </div>
-
-
-      </form>
-
-    </div><!--/.row-->
-  </div>
-  <!--/.container-->
-</section><!--/#contact-page-->
+<!--/#contact-page-->
 <!--/************************* IFRAME centro **************************************************************-->
 <!--/************************* Foot **************************************************************-->
 <section id="bottom">

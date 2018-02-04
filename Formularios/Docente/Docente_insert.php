@@ -9,11 +9,11 @@ $apellido = $_POST['apellido'];
 $telefono = $_POST['telefono'];
 $curso = $_POST['curso'];
 $email1 = $_POST['email1'];
-$email2 = $_POST['email2'];
-$representante = $_POST['representante'];
+$titulo = $_POST['titulo'];
+$materia = $_POST['materia'];
 $usuario = $_POST['usuario'];
 $DocenteCollectorObj = new DocenteCollector();
-$DocenteCollectorObj->insertDocente($cedula, $nombre, $apellido, $telefono, $curso, $email1, $email2, $representante, $usuario);
+$DocenteCollectorObj->insertDocente($cedula, $nombre, $apellido, $telefono, $curso, $email1, $titulo, $materia, $usuario);
 ?>
 <!doctype html>
 <html lang="es">

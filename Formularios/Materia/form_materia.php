@@ -64,7 +64,7 @@ $CursoCollectorObj = new CursoCollector();
                 class="fa fa-angle-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="../Docente/Docente_list.php">Docente</a></li>
-              <li><a href="../Estudiante/Estudiante_list.php">Alumno</a></li>
+              <li><a href="../Docente/Docente_list.php">Alumno</a></li>
               <li><a href="../Curso/Curso_list.php">Curso</a></li>
               <li><a href="../Tarea/Tarea_list.php">Tarea</a></li>
               </ul>
@@ -137,7 +137,7 @@ $CursoCollectorObj = new CursoCollector();
 
 
           <div class="form-group">
-            <label>Dirigencia: *</label>
+            <label>Cursos en los que se dicta: *</label>
             <br>
             <fielset>
               <?php

@@ -36,8 +36,8 @@ function showCurso() {
 
   $row = self::$db->getRow("SELECT COUNT (curso_cod) FROM alumno where curso_cod = '$id'");
 
-
   if($row['count']== 0){
+    $delete = self::$db->getRow("Delete from matexcurso where curso_cod= '$id'");
     $delete = self::$db->getRow("Delete from curso where cod_curso= '$id'");
 
     echo '

@@ -7,7 +7,7 @@ if (isset($_SESSION['usuario'])) {
 }
 
 include_once("MateriaCollector.php");
-$NotasCollectorObj = new MateriaCollector();
+$MateriaCollectorObj = new MateriaCollector();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -101,12 +101,16 @@ $NotasCollectorObj = new MateriaCollector();
 
 <!--/************************* IFRAME centro *************************************************************-->
 <section>
-   <br/>
+  <br/>
   <br/>
   <div class="center">
     <h2>Mantenimiento Materia</h2>
     <p class="lead">B-Smart</p>
   </div>
+  <div class="col-xs-offset-10 " >
+    <a type="button" href="form_materia.php" class="btn btn-primary"> Nuevo </a>
+  </div>
+  <br>
   <div class="container" style="width: 50%">
     <div class="table-responsive">
       <table class="table table-condensed table-bordered table-hover">
@@ -118,20 +122,18 @@ $NotasCollectorObj = new MateriaCollector();
         </tr>
         </thead>
         <?php
-
-        foreach ($NotasCollectorObj->showMateria() as $c) {
-          echo '
-  <tbody>
-  <tr>
-     <td>' . $c->getdescripcion() . '</td>
-
-
-    <td><a href="form_Materia.php"><i class="fa fa-plus-square-o"></i> Nuevo</a></td>
-    <td><a href="Materia_edit.php?id=' . $c->getcod_materia() . '"><i class="fa fa-pencil-square-o" ></i> Editar</a></td>
-    <td ><a  href="Materia_delete.php?id=' . $c->getcod_materia() . '"><i class="fa fa-trash-o"></i> Eliminar</a></td>
+        foreach ($MateriaCollectorObj->showMateria() as $c) {
+          echo '<tbody>
+ <tr>
+     <td>' . $c->getdescripcion_mat() . '</td>
+      
+     
+     <td><a href="Materia_edit.php?id=' . $c->getcod_materia() . '"><i class="fa fa-pencil-square-o" ></i></a></td>
+     <td><a href="Materia_delete.php?id=' . $c->getcod_materia() . '"><i class="fa fa-trash-o"></i></a></td>
+     
+          
   </tr>
   </tbody> ';
-
         }
         ?>
       </table>
