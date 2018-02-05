@@ -12,8 +12,9 @@ $email1 = $_POST['email1'];
 $titulo = $_POST['titulo'];
 $materia = $_POST['materia'];
 $usuario = $_POST['usuario'];
+$tipo = $_POST['tipo'];
 $DocenteCollectorObj = new DocenteCollector();
-$DocenteCollectorObj->insertDocente($cedula, $nombre, $apellido, $telefono, $curso, $email1, $titulo, $materia, $usuario);
+$DocenteCollectorObj->insertDocente($cedula, $nombre, $apellido, $telefono, $curso, $email1, $titulo, $materia, $usuario,$tipo);
 ?>
 <!doctype html>
 <html lang="es">

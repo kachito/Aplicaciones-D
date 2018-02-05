@@ -1,10 +1,14 @@
 <?php
 session_start();
-include_once('DocenteCollector.php');
-include_once('Docente.php');
-$id = $_GET['id'];
-$DocenteCollectorObj = new DocenteCollector();
-$DocenteCollectorObj->deleteDocente($id);
+include_once('TareaCollector.php');
+//$id = $_POST['ID'];
+
+$curso = $_POST['curso'];
+$materia = $_POST['materia'];
+$deber = $_POST['deber'];
+$fecha_entrega = $_POST['fecha_entrega'];
+$TareaCollectorObj = new TareaCollector();
+$TareaCollectorObj->insertTarea($curso, $materia, $deber, $fecha_entrega);
 ?>
 <!doctype html>
 <html lang="es">
@@ -28,4 +32,4 @@ $DocenteCollectorObj->deleteDocente($id);
 
 </form>
 </body>
-</html></html>
+</html>

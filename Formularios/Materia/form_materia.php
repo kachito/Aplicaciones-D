@@ -66,6 +66,7 @@ $CursoCollectorObj = new CursoCollector();
               <li><a href="../Docente/Docente_list.php">Docente</a></li>
               <li><a href="../Docente/Docente_list.php">Alumno</a></li>
               <li><a href="../Curso/Curso_list.php">Curso</a></li>
+              <li><a href="../Materia/Materia_list.php">Materia</a></li>
               <li><a href="../Tarea/Tarea_list.php">Tarea</a></li>
               </ul>
           </li>

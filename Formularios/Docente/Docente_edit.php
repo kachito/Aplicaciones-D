@@ -2,10 +2,12 @@
 session_start();
 $id = $_GET['id'];
 // echo $id;
-include_once('Estudiante.php');
-include_once('EstudianteCollector.php');
-$EstudianteCollectorObj = new EstudianteCollector();
-$ObjEstudiante = $EstudianteCollectorObj->showEstudianteId($id);
+include_once('Docente.php');
+include_once('DocenteCollector.php');
+$DocenteCollectorObj = new DocenteCollector();
+$ObjDocente = $DocenteCollectorObj->showDocenteId($id);
+include_once('../Materia/MateriaCollector.php');
+$MateriaCollectorObj = new MateriaCollector();
 include_once('../curso/CursoCollector.php');
 $CursoCollectorObj = new CursoCollector();
 //print_r($ObjTransportista);
@@ -57,6 +59,7 @@ $CursoCollectorObj = new CursoCollector();
               <li><a href="../Docente/Docente_list.php">Docente</a></li>
               <li><a href="../Estudiante/Estudiante_list.php">Alumno</a></li>
               <li><a href="../Curso/Curso_list.php">Curso</a></li>
+              <li><a href="../Materia/Materia_list.php">Materia</a></li>
               <li><a href="../Tarea/Tarea_list.php">Tarea</a></li>
               </ul>
           </li>
@@ -102,50 +105,56 @@ $CursoCollectorObj = new CursoCollector();
   <section id="contact-page">
     <div class="container">
       <div class="center">
-        <h2>Estudiante</h2>
+        <h2>Docente</h2>
         <p class="lead">B-Smart</p>
       </div>
       <div class="row contact-wrap">
         <div class="status alert alert-success" style="display: none"></div>
-        <form action="Estudiante_update.php" method="post" action="form-horizontal">
+        <form action="Docente_update.php" method="post" action="form-horizontal">
           <div class="col-sm-5 col-sm-offset-1">
             <div class="form-group">
               <label>Cédula *</label>
               <input type="text" name="cedula" id="cedula" class="form-control" required="required" maxlength="10"
-                     value="<?php echo $ObjEstudiante->getcedula(); ?>" onkeypress="return isNumber(event)" onkeyup="isCedula();">
+                     value="<?php echo $ObjDocente->getcedula(); ?>" onkeypress="return isNumber(event)" onkeyup="isCedula();">
               <span id="messageced"></span>
             </div>
             <div class="form-group">
               <label>Nombre *</label>
-              <input type="text" name="nombre" id="nombre" class="form-control" value="<?php echo $ObjEstudiante->getnombre(); ?>" required="required">
+              <input type="text" name="nombre" id="nombre" class="form-control" value="<?php echo $ObjDocente->getnombre(); ?>" required="required">
             </div>
             <div class="form-group">
               <label>Apellido *</label>
-              <input type="text" name="apellido" id="apellido" class="form-control" value="<?php echo $ObjEstudiante->getapellido(); ?>" required="required"
+              <input type="text" name="apellido" id="apellido" class="form-control" value="<?php echo $ObjDocente->getapellido(); ?>" required="required"
                      onkeyup="nicknam();">
             </div>
             <div class="form-group">
               <label>Teléfono</label>
-              <input type="text" name="telefono" class="form-control" value="<?php echo $ObjEstudiante->gettelefono(); ?>" onkeypress="return isNumber(event)"
+              <input type="text" name="telefono" class="form-control" value="<?php echo $ObjDocente->gettelefono(); ?>" onkeypress="return isNumber(event)"
               ">
             </div>
           </div>
           <div class="col-sm-5">
             <div class="form-group">
-              <label>Email Alumno*</label>
-              <input type="email" name="email1" id="email1" class="form-control" value="<?php echo $ObjEstudiante->getemail1(); ?>" required="required"
+              <label>Email *</label>
+              <input type="email" name="email1" id="email1" class="form-control" value="<?php echo $ObjDocente->getemail1(); ?>" required="required"
                      onkeyup="validateEmailA();">
               <span id="messageemaila"></span>
             </div>
             <div class="form-group">
-              <label>Email Representante*</label>
-              <input type="email" id="email2" name="email2" class="form-control" required="required" value="<?php echo $ObjEstudiante->getemail2(); ?>"
-                     onkeyup="validateEmailR();">
-              <span id="messageemail"></span>
+              <label>Título*</label>
+              <input type="text" id="titulo" name="titulo" class="form-control" required="required" value="<?php echo $ObjDocente->gettitulo(); ?>">
             </div>
             <div class="form-group">
-              <label>Nombres y Apellidos del representante legal*</label>
-              <input type="text" id="representante" name="representante" class="form-control" value="<?php echo $ObjEstudiante->getrepresentante(); ?>" required="required">
+              <label>Materia a dictar: *</label>
+              <select class="form-control" typeof="checkbox" name="descripcion_mat">
+                <?php
+                foreach ($MateriaCollectorObj->showMateria() as $c) {
+                  echo '<option value=' . $c->getcod_materia() . '>';
+                  echo $c->getdescripcion_mat();
+                  echo '</option>';
+                }
+                ?>
+              </select>
             </div>
             <div class="form-group">
               <label>curso: *</label>
@@ -159,11 +168,13 @@ $CursoCollectorObj = new CursoCollector();
                 ?>
               </select>
             </div>
+
+
             <input type="text" name="usuario" id="usuario" style="visibility: hidden">
           </div>
           <div class="col-sm-8 col-sm-offset-4">
-            <input type="number" name="id_estudiante" required="required" style="visibility:hidden" readonly
-                   value="<?php echo $ObjEstudiante->getcod_alumno(); ?>">
+            <input type="number" name="id_docente" required="required" style="visibility:hidden" readonly
+                   value="<?php echo $ObjDocente->getcod_docente(); ?>">
           </div>
           <br>
           <div class="form-group">

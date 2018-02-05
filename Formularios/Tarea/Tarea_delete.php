@@ -1,10 +1,10 @@
 <?php
 session_start();
-include_once('DocenteCollector.php');
-include_once('Docente.php');
+include_once('TareaCollector.php');
+include_once('Tarea.php');
 $id = $_GET['id'];
-$DocenteCollectorObj = new DocenteCollector();
-$DocenteCollectorObj->deleteDocente($id);
+$TareaCollectorObj = new TareaCollector();
+$TareaCollectorObj->deleteTarea($id);
 ?>
 <!doctype html>
 <html lang="es">

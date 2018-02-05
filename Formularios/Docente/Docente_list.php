@@ -54,6 +54,7 @@ $DocenteCollectorObj = new DocenteCollector();
               <li><a href="../Docente/Docente_list.php">Docente</a></li>
               <li><a href="../Estudiante/Estudiante_list.php">Alumno</a></li>
               <li><a href="../Curso/Curso_list.php">Curso</a></li>
+              <li><a href="../Materia/Materia_list.php">Materia</a></li>
               <li><a href="../Tarea/Tarea_list.php">Tarea</a></li>
               </ul>
           </li>
@@ -118,8 +119,8 @@ $DocenteCollectorObj = new DocenteCollector();
           <th bgcolor="#D8D8D8">CURSO</th>
           <th bgcolor="#D8D8D8">TELÉFONO</th>
           <th bgcolor="#D8D8D8">EMAIL</th>
-          <th bgcolor="#D8D8D8">REPRESENTANTE</th>
-          <th bgcolor="#D8D8D8">EMAIL REP.</th>
+          <th bgcolor="#D8D8D8">TÍTULO</th>
+          <th bgcolor="#D8D8D8">MATERIA.</th>
           <th colspan=2 bgcolor="#D8D8D8">ACCION</th>
         </tr>
         </thead>

@@ -83,6 +83,7 @@ if (isset($_SESSION['usuario'])) {
               <li><a href="../Formularios/Docente/Docente_list.php">Docente</a></li>
               <li><a href="../Formularios/Estudiante/Estudiante_list.php">Alumno</a></li>
               <li><a href="../Formularios/Curso/Curso_list.php">Curso</a></li>
+              <li><a href="../Formularios/Materia/Materia_list.php">Materia</a></li>
               <li><a href="../Formularios/Tarea/Tarea_list.php">Tarea</a></li>
               </ul>
           </li>

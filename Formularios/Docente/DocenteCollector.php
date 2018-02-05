@@ -29,26 +29,27 @@ class DocenteCollector extends Collector
 
   function showDocenteId($id)
   {
-    $row = self::$db->getRow("SELECT cedula,nombre,apellido,telefono,docente_cod,alumno_cod,mail FROM persona where alumno_cod= '$id'");
-    $row2 = self::$db->getRow("SELECT cod_alumno, mail_rep,curso_cod,usuario_cod,dirigencia FROM alumno where cod_alumno= '$id'");
+    $row = self::$db->getRow("SELECT cedula,nombre,apellido,telefono,docente_cod,alumno_cod,mail FROM persona where docente_cod= '$id'");
+    $row2 = self::$db->getRow("SELECT cod_docente,curso_cod,usuario_cod,materia_cod,titulo FROM docente where cod_docente= '$id'");
     $id2 = $row2['curso_cod'];
     $row3 = self::$db->getRow("SELECT descripcion FROM curso where cod_curso= '$id2'");
     $id2 = $row2['usuario_cod'];
     $row4 = self::$db->getRow("SELECT nickname FROM usuario where cod_usuario= '$id2'");
+    $row5 = self::$db->getRow("SELECT descripcion_mat FROM materia");
     $Docente = new Docente($row{'cedula'}, $row{'nombre'}, $row{'apellido'}, $row{'telefono'}, $row{'docente_cod'},
-      $row{'alumno_cod'}, $row{'mail'}, $row3{'descripcion'}, $row{'alumno_cod'}, $row2{'mail_rep'}, $row2{'curso_cod'}
-      , $row2{'usuario_cod'}, $row2{'dirigencia'}, $row4{'nickname'});
+      $row{'alumno_cod'}, $row{'mail'}, $row3{'descripcion'}, $row2{'cod_docente'}, $row2{'curso_cod'}
+      , $row2{'usuario_cod'}, $row5{'descripcion_mat'}, $row2{'titulo'}, $row4{'nickname'});
     return $Docente;
     return 1;
   }
 
-  function updateDocente($id_estudiante, $nombre, $apellido, $cedula, $telefono, $email1, $titulo, $dirigencia, $curso)
+  function updateDocente($id_docente, $nombre, $apellido, $cedula, $telefono, $email1, $titulo, $descripcion_mat, $curso)
   {
     //echo $cargo;
-    $update = self::$db->getRow("Update alumno set  mail_rep='$titulo',dirigencia='$dirigencia'
-      ,curso_cod='$curso' where cod_alumno='$id_estudiante'");
+    $update = self::$db->getRow("Update docente set  titulo='$titulo',materia_cod='$descripcion_mat'
+      ,curso_cod='$curso' where cod_docente='$id_docente'");
     $update = self::$db->getRow("Update persona set nombre='$nombre',apellido='$apellido',cedula='$cedula',
-      telefono='$telefono',mail='$email1' where alumno_cod='$id_estudiante'");
+      telefono='$telefono',mail='$email1' where docente_cod='$id_docente'");
     echo ' <br><br><br><div class="container">
     <div class="row object-non-visible" data-animation-effect="fadeIn">
       <div class="col-md-12">
@@ -91,8 +92,8 @@ class DocenteCollector extends Collector
 
   function deleteDocente($id)
   {
-    $delete = self::$db->getRow("Delete from persona where alumno_cod= '$id'");
-    $delete = self::$db->getRow("Delete from alumno where cod_alumno= '$id'");
+    $delete = self::$db->getRow("Delete from persona where docente_cod= '$id'");
+    $delete = self::$db->getRow("Delete from docente where cod_docente= '$id'");
 
     echo ' <br><br><br><div class="container">
     <div class="row object-non-visible" data-animation-effect="fadeIn">
@@ -134,13 +135,11 @@ class DocenteCollector extends Collector
     return 1;
   }
 
-  function insertDocente($cedula, $nombre, $apellido, $telefono, $curso, $email1, $titulo, $materia_cod, $usuario)
+  function insertDocente($cedula, $nombre, $apellido, $telefono, $curso, $email1, $titulo, $materia_cod, $usuario,$tipo)
   {
-    $tipo = 3;
+
     $password = password_hash($cedula, PASSWORD_BCRYPT);
     $row = self::$db->getRow("SELECT COUNT (cedula) FROM persona where cedula = '$cedula'");
-
-
 
     if ($row['count'] == 0) {
       $row = self::$db->getRow("SELECT COUNT (nickname) FROM usuario where nickname = '$usuario'");

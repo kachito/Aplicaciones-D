@@ -1,13 +1,25 @@
 <?php
 session_start();
+include_once('Tarea.php');
+include_once('TareaCollector.php');
 
 if (isset($_SESSION['usuario'])) {
 } else {
   header('Location:../../index.php');
 }
 
-include_once("MateriaCollector.php");
+
+$TareaCollectorObj = new TareaCollector();
+
+include_once('../Materia/MateriaCollector.php');
 $MateriaCollectorObj = new MateriaCollector();
+
+include_once('../curso/CursoCollector.php');
+$CursoCollectorObj = new CursoCollector();
+
+include_once('../password/PasswordCollector.php');
+$PasswordCollectorObj = new PasswordCollector();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +29,6 @@ $MateriaCollectorObj = new MateriaCollector();
   <meta name="description" content="Educacion">
   <meta name="author" content="E-learning">
   <title>B-Smart</title>
-
   <!-- core CSS -->
   <link href="../../css/bootstrap.min.css" rel="stylesheet">
   <link href="../../css/font-awesome.min.css" rel="stylesheet">
@@ -35,7 +46,6 @@ $MateriaCollectorObj = new MateriaCollector();
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../images/ico/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="../../images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
-
 <body class="homepage">
 <header id="header" style=" width: 100%; position: fixed; z-index: 100;">
   <nav class="navbar navbar-inverse">
@@ -98,54 +108,80 @@ $MateriaCollectorObj = new MateriaCollector();
     </div><!--/.container-->
   </nav><!--/nav-->
 </header><!--/header-->
-
-
 <!--/************************* IFRAME centro *************************************************************-->
 <section>
-  <br/>
-  <br/>
-  <div class="center">
-    <h2>Mantenimiento Materia</h2>
-    <p class="lead">B-Smart</p>
-  </div>
-  <div class="col-xs-offset-10 " >
-    <a type="button" href="form_materia.php" class="btn btn-primary"> Nuevo </a>
-  </div>
-  <br>
-  <div class="container" style="width: 50%">
-    <div class="table-responsive">
-      <table class="table table-condensed table-bordered table-hover">
-        <thead>
-        <tr>
-          <th bgcolor="#D8D8D8">MATERIA</th>
+  <br><br>
+  <section id="contact-page">
+    <div class="container">
+      <div class="center">
+        <h2>Tarea</h2>
+        <p class="lead">B-Smart</p>
+      </div>
+      <div class="row contact-wrap">
+        <div class="status alert alert-success" style="display: none"></div>
+        <form action="Tarea_insert.php" method="post" action="form-horizontal">
+          <div class="col-sm-5 col-sm-offset-1">
+            <div class="form-group">
+              <label>Curso: *</label>
+              <select class="form-control" typeof="checkbox" name="curso">
 
-          <th colspan=3 bgcolor="#D8D8D8">ACCION</th>
-        </tr>
-        </thead>
-        <?php
-        foreach ($MateriaCollectorObj->showMateria() as $c) {
-          echo '<tbody>
- <tr>
-     <td>' . $c->getdescripcion_mat() . '</td>
-      
-     
-     <td><a href="Materia_edit.php?id=' . $c->getcod_materia() . '"><i class="fa fa-pencil-square-o" ></i></a></td>
-     <td><a href="Materia_delete.php?id=' . $c->getcod_materia() . '"><i class="fa fa-trash-o"></i></a></td>
-     
-          
-  </tr>
-  </tbody> ';
-        }
-        ?>
-      </table>
+                <?php
+                foreach ($CursoCollectorObj->showCurso() as $c) {
+                  echo '<option value=' . $c->getcod_curso() . '>';
+                  echo $c->getdescripcion();
+                  echo '</option>';
+                }
+                ?>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Materia a dictar: *</label>
+              <select class="form-control" typeof="checkbox" name="materia">
+
+                <?php
+                foreach ($MateriaCollectorObj->showMateria() as $c) {
+                  echo '<option value=' . $c->getcod_materia() . '>';
+                  echo $c->getdescripcion_mat();
+                  echo '</option>';
+                }
+                ?>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <div class="form-group">
+              <label>Descripción *</label>
+              <textarea  name="deber" id="deber" class="form-control" required="required" rows="5"> </textarea>
+            </div>
+            <div class="form-group">
+              <label>Fecha de entrega *</label>
+              <input type="date" id="fecha_entrega" name="fecha_entrega" class="form-control" required="required" >
+
+            </div>
+
+
+
+          </div>
+
+          <div class="form-group">
+            <div class="col-xs-offset-4 col-xs-8">
+              <input type="button" value="Regresar" OnClick="history.back()" class="btn btn-primary">
+              <input type="reset" class="btn btn-primary" value="Limpiar">
+              <input type="submit" class="btn btn-primary" value="Guardar">
+            </div>
+          </div>
+
+
+        </form>
+
+      </div><!--/.row-->
     </div>
-  </div>
+    <!--/.container-->
+  </section>
 </section>
 
-
+<!--/#contact-page-->
 <!--/************************* IFRAME centro **************************************************************-->
-
-
 <!--/************************* Foot **************************************************************-->
 <section id="bottom">
   <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
@@ -155,32 +191,24 @@ $MateriaCollectorObj = new MateriaCollector();
           <h3><a href="#">Actividades académicas</a></h3>
         </div>
       </div><!--/.col-md-3-->
-
       <div class="col-md-3 col-sm-6">
         <div class="widget">
           <h3><a href="#">Calendario académico</a></h3>
-
         </div>
       </div><!--/.col-md-3-->
-
       <div class="col-md-3 col-sm-6">
         <div class="widget">
           <h3><a href="#">Nuevos cursos</a></h3>
-
         </div>
       </div><!--/.col-md-3-->
-
       <div class="col-md-3 col-sm-6">
         <div class="widget">
           <h3><a href="#">Anuncios de profesores</a></h3>
-
         </div>
       </div><!--/.col-md-3-->
     </div>
   </div>
 </section><!--/#bottom-->
-
-
 <footer id="footer" class="midnight-blue">
   <div class="container">
     <div class="row">
@@ -200,12 +228,12 @@ $MateriaCollectorObj = new MateriaCollector();
     </div>
   </div>
 </footer><!--/#footer-->
-
-<script src="../js/jquery.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/jquery.prettyPhoto.js"></script>
-<script src="../js/jquery.isotope.min.js"></script>
-<script src="../js/main.js"></script>
-<script src="../js/wow.min.js"></script>
+<script src="js/datos.js"></script>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/jquery.prettyPhoto.js"></script>
+<script src="../../js/jquery.isotope.min.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/wow.min.js"></script>
 </body>
 </html>

@@ -68,6 +68,7 @@ $PasswordCollectorObj = new PasswordCollector();
               <li><a href="../Docente/Docente_list.php">Docente</a></li>
               <li><a href="../Estudiante/Estudiante_list.php">Alumno</a></li>
               <li><a href="../Curso/Curso_list.php">Curso</a></li>
+              <li><a href="../Materia/Materia_list.php">Materia</a></li>
               <li><a href="../Tarea/Tarea_list.php">Tarea</a></li>
               </ul>
           </li>
@@ -141,14 +142,16 @@ $PasswordCollectorObj = new PasswordCollector();
                      onkeyup="nicknam();" onclick="nicknam();">
             </div>
 
-          </div>
-          <div class="col-sm-5">
             <div class="form-group">
               <label>Email *</label>
               <input type="email" name="email1" id="email1" class="form-control" required="required"
                      onkeyup="validateEmailA();">
               <span id="messageemaila"></span>
             </div>
+
+          </div>
+          <div class="col-sm-5">
+
             <div class="form-group">
               <label>Título *</label>
               <input type="text" id="titulo" name="titulo" class="form-control" required="required" >
@@ -180,6 +183,14 @@ $PasswordCollectorObj = new PasswordCollector();
                   echo '</option>';
                 }
                 ?>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Restriccion Usuario: *</label>
+              <select class="form-control" typeof="checkbox" name="tipo">
+                <option value="2"> Docente</option>
+                <option value="1"> Administrador</option>
               </select>
             </div>
 

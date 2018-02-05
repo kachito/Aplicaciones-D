@@ -1,13 +1,11 @@
 <?php
 session_start();
-
 if (isset($_SESSION['usuario'])) {
 } else {
   header('Location:../../index.php');
 }
-
-include_once("MateriaCollector.php");
-$MateriaCollectorObj = new MateriaCollector();
+include_once("TareaCollector.php");
+$TareaCollectorObj = new TareaCollector();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +15,6 @@ $MateriaCollectorObj = new MateriaCollector();
   <meta name="description" content="Educacion">
   <meta name="author" content="E-learning">
   <title>B-Smart</title>
-
   <!-- core CSS -->
   <link href="../../css/bootstrap.min.css" rel="stylesheet">
   <link href="../../css/font-awesome.min.css" rel="stylesheet">
@@ -35,7 +32,6 @@ $MateriaCollectorObj = new MateriaCollector();
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../images/ico/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="../../images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
-
 <body class="homepage">
 <header id="header" style=" width: 100%; position: fixed; z-index: 100;">
   <nav class="navbar navbar-inverse">
@@ -97,54 +93,100 @@ $MateriaCollectorObj = new MateriaCollector();
     </div>
     </div><!--/.container-->
   </nav><!--/nav-->
-</header><!--/header-->
-
-
+</header>
+<!--/header-->
 <!--/************************* IFRAME centro *************************************************************-->
 <section>
-  <br/>
-  <br/>
+  <br>
   <div class="center">
-    <h2>Mantenimiento Materia</h2>
+    <h2>Mantenimiento Tarea</h2>
     <p class="lead">B-Smart</p>
   </div>
-  <div class="col-xs-offset-10 " >
-    <a type="button" href="form_materia.php" class="btn btn-primary"> Nuevo </a>
+
+  <div class="col-xs-offset-10 ">
+    <a type="button" href="form_Tarea.php" class="btn btn-primary"> Nuevo </a>
   </div>
   <br>
-  <div class="container" style="width: 50%">
+  <div class="container">
     <div class="table-responsive">
       <table class="table table-condensed table-bordered table-hover">
         <thead>
         <tr>
+          <th bgcolor="#D8D8D8">FECHA</th>
           <th bgcolor="#D8D8D8">MATERIA</th>
+          <th bgcolor="#D8D8D8">CURSO</th>
+          <th bgcolor="#D8D8D8">DESCRIPCIÓN</th>
+          <th bgcolor="#D8D8D8">FECHA ENTREGA</th>
+          <?php
+          if ($_SESSION['usuario']['descripcion'] != 'Alumno') {
 
-          <th colspan=3 bgcolor="#D8D8D8">ACCION</th>
+            echo '
+          <th colspan=2 bgcolor="#D8D8D8">ACCION</th>';
+          }
+
+          ?>
         </tr>
         </thead>
         <?php
-        foreach ($MateriaCollectorObj->showMateria() as $c) {
-          echo '<tbody>
- <tr>
+        if ($_SESSION['usuario']['descripcion'] == 'Alumno') {
+
+          foreach ($TareaCollectorObj->showTareaCurso() as $c) {
+            echo '<tbody>
+  <tr>
+     <td>' . $c->getfecha() . '</td>
      <td>' . $c->getdescripcion_mat() . '</td>
-      
-     
-     <td><a href="Materia_edit.php?id=' . $c->getcod_materia() . '"><i class="fa fa-pencil-square-o" ></i></a></td>
-     <td><a href="Materia_delete.php?id=' . $c->getcod_materia() . '"><i class="fa fa-trash-o"></i></a></td>
-     
-          
+     <td>' . $c->getdescripcion() . '</td>
+     <td>' . $c->getdescripcion_ta() . '</td>
+     <td>' . $c->getfecha_entrega() . '</td>     ';
+            if ($_SESSION['usuario']['descripcion'] != 'Alumno') {
+
+              echo '
+                <td><a href="Tarea_edit.php?id=' . $c->getcod_Tarea() . '"><i class="fa fa-pencil-square-o" ></i></a></td> 
+                <td><a href="Tarea_delete.php?id=' . $c->getcod_Tarea() . '"><i class="fa fa-trash-o"></i></a></td>';
+            }
+
+            echo '
   </tr>
   </tbody> ';
+          }
+
+
         }
+
+        else{
+
+          foreach ($TareaCollectorObj->showTarea() as $c) {
+            echo '<tbody>
+  <tr>
+     <td>' . $c->getfecha() . '</td>
+     <td>' . $c->getdescripcion_mat() . '</td>
+     <td>' . $c->getdescripcion() . '</td>
+     <td>' . $c->getdescripcion_ta() . '</td>
+     <td>' . $c->getfecha_entrega() . '</td>     ';
+            if ($_SESSION['usuario']['descripcion'] != 'Alumno') {
+
+              echo '
+                <td><a href="Tarea_edit.php?id=' . $c->getcod_Tarea() . '"><i class="fa fa-pencil-square-o" ></i></a></td> 
+                <td><a href="Tarea_delete.php?id=' . $c->getcod_Tarea() . '"><i class="fa fa-trash-o"></i></a></td>';
+            }
+
+            echo '
+  </tr>
+  </tbody> ';
+          }
+
+        }
+
         ?>
       </table>
     </div>
+
+
   </div>
+
+
 </section>
-
-
-<!--/************************* IFRAME centro **************************************************************-->
-
+<!--************************ IFRAME centro **************************************************************-->
 
 <!--/************************* Foot **************************************************************-->
 <section id="bottom">
@@ -155,32 +197,24 @@ $MateriaCollectorObj = new MateriaCollector();
           <h3><a href="#">Actividades académicas</a></h3>
         </div>
       </div><!--/.col-md-3-->
-
       <div class="col-md-3 col-sm-6">
         <div class="widget">
           <h3><a href="#">Calendario académico</a></h3>
-
         </div>
       </div><!--/.col-md-3-->
-
       <div class="col-md-3 col-sm-6">
         <div class="widget">
           <h3><a href="#">Nuevos cursos</a></h3>
-
         </div>
       </div><!--/.col-md-3-->
-
       <div class="col-md-3 col-sm-6">
         <div class="widget">
           <h3><a href="#">Anuncios de profesores</a></h3>
-
         </div>
       </div><!--/.col-md-3-->
     </div>
   </div>
 </section><!--/#bottom-->
-
-
 <footer id="footer" class="midnight-blue">
   <div class="container">
     <div class="row">
@@ -200,12 +234,11 @@ $MateriaCollectorObj = new MateriaCollector();
     </div>
   </div>
 </footer><!--/#footer-->
-
-<script src="../js/jquery.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/jquery.prettyPhoto.js"></script>
-<script src="../js/jquery.isotope.min.js"></script>
-<script src="../js/main.js"></script>
-<script src="../js/wow.min.js"></script>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/jquery.prettyPhoto.js"></script>
+<script src="../../js/jquery.isotope.min.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/wow.min.js"></script>
 </body>
 </html>
