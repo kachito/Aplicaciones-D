@@ -117,6 +117,11 @@ $PasswordCollectorObj = new PasswordCollector();
         <h2>Tarea</h2>
         <p class="lead">B-Smart</p>
       </div>
+
+      <div class="col-xs-offset-10 ">
+        <a type="button" href="Tarea_list.php" class="btn btn-primary"> Mostar Tareas </a>
+      </div>
+
       <div class="row contact-wrap">
         <div class="status alert alert-success" style="display: none"></div>
         <form action="Tarea_insert.php" method="post" action="form-horizontal">

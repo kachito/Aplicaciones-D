@@ -160,6 +160,7 @@ if (isset($_SESSION['usuario'])) {
 <!--/************************* IFRAME centro **************************************************************-->
 
 <section id="about-us" >
+  <br><br>
   <div class="container" >
 
     <!-- about us slider -->

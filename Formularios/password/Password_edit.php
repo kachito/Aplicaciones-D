@@ -16,101 +16,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Educacion">
-    <meta name="author" content="E-learning">
-    <title>B-Smart</title>
-    
-    <!-- core CSS -->
-    <link href="../../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../css/font-awesome.min.css" rel="stylesheet">
-    <link href="../../css/animate.min.css" rel="stylesheet">
-    <link href="../../css/prettyPhoto.css" rel="stylesheet">
-    <link href="../../css/main.css" rel="stylesheet">
-    <link href="../../css/responsive.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="../../js/html5shiv.js"></script>
-    <script src="../../js/respond.min.js"></script>
-    <![endif]-->       
-    <link rel="shortcut icon" href="images/ico/bs1.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="../../images/ico/apple-touch-icon-57-precomposed.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Educacion">
+  <meta name="author" content="E-learning">
+  <title>B-Smart</title>
+  <!-- core CSS -->
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/font-awesome.min.css" rel="stylesheet">
+  <link href="../../css/animate.min.css" rel="stylesheet">
+  <link href="../../css/prettyPhoto.css" rel="stylesheet">
+  <link href="../../css/main.css" rel="stylesheet">
+  <link href="../../css/responsive.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="../../js/html5shiv.js"></script>
+  <script src="../../js/respond.min.js"></script>
+  <![endif]-->
+  <link rel="shortcut icon" href="../../images/ico/bs1.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../images/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../images/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../images/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="../../images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 
 <body class="homepage">
 
-    <header id="header">
-        <div class="top-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-xs-4">
-                        <div class="top-number"><p><i class="fa fa-phone-square"></i>  Call Us </p></div>
-                    </div>
-                    <div class="col-sm-6 col-xs-8">
-                       <div class="social">
-                            <ul class="social-share">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                            </ul>
-                            <div class="search">
-                                <form role="form">
-                                    <input type="text" class="search-form" autocomplete="off" placeholder="Search">
-                                    <i class="fa fa-search"></i>
-                                </form>
-                           </div>
-                       </div>
-                    </div>
-                </div>
-            </div><!--/.container-->
-        </div><!--/.top-bar-->
-
-        <nav class="navbar navbar-inverse" role="banner">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.php"><img src="images/logo2.png" alt="logo"></a>
-                </div>
-                
-                <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="home.html">Home</a></li>
-                        <li><a href="about-us - copia.html">About Us</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Diario Virtual <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="construccion.html">Diario</a></li>                                
-                                <li><a href="horario.html">Horario de Clases</a></li>
-                                <li><a href="construccion.html">Horario de Examenes</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Asignaturas <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="materias.html">Materia</a></li>                                
-                                <li><a href="construccion.html">Cuestionarios</a></li>
-                                <li><a href="construccion.html">Otros...</a></li>
-                            </ul>
-                        </li>    
-                           <!-- target="info"-->
-                        <li><a href="construccion.html" >Calificaciones</a></li>                        
-                        <li><a href="construccion.html">Planificaciones</a></li> 
-                        <li><a href="contactenos.html">Contactenos</a></li>                        
-                    </ul>
-                </div>
-            </div><!--/.container-->
-        </nav><!--/nav-->
-        
-    </header><!--/header-->
+<header id="header" style=" width: 100%; position: fixed; z-index: 100;">
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="../../index.php"><img src="../../images/logo2.png" alt="logo" height="80%"></a>
+      </div>
+      <div class="collapse navbar-collapse navbar-right">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="../../users/home.php">Home</a></li>
+          <li><a href="../../users/about-us.php">About Us</a></li>
+          <li><a href="../Tarea/Tarea_list.php">Diario Virtual</a></li>
+          <?php
+          if ($_SESSION['usuario']['descripcion'] == 'Administrador') {
+            echo '
+              <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown">Herramientas <i
+                class="fa fa-angle-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="../Docente/Docente_list.php">Docente</a></li>
+              <li><a href="../Estudiante/Estudiante_list.php">Alumno</a></li>
+              <li><a href="../Curso/Curso_list.php">Curso</a></li>
+              <li><a href="../Materia/Materia_list.php">Materia</a></li>
+              <li><a href="../Tarea/Tarea_list.php">Tarea</a></li>
+              </ul>
+          </li>
+            ';
+          } elseif ($_SESSION['usuario']['descripcion'] == 'Docente') {
+            echo '
+                <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown">Herramientas <i
+                class="fa fa-angle-down"></i></a>
+            <ul class="dropdown-menu">
+                <li><a href="../Tarea/Tarea_list.php">Tarea</a></li>
+                </ul>
+          </li>
+                ';
+          }
+          ?>
+          <!-- target="info"-->
+          <li><a href="../../contactenos.php">Contactenos</a></li>
+          <li class=" dropdown">
+            <a href="#" class="dropdown-toggle">
+              <div class="fa fa-user-md"></div>
+              <i></i> <?php
+              echo $_SESSION['usuario']['nickname'];
+              ?></a>
+            <ul class="dropdown-menu">
+              <li><a href="../../login/logout.php">
+                  <div class="fa fa-sign-out"></div>
+                  Cerrar Sesion</a></li>
+              <?php
+              echo '<li><a href="../password/Password_edit.php?id=' . $_SESSION['usuario']['cod_usuario'] . '">Cambiar Contraseña</a></li>'
+              ?>
+            </ul>
+          </li>
+      </div>
+      </ul>
+    </div>
+    </div><!--/.container-->
+  </nav><!--/nav-->
+</header><!--/header-->
 
 
 <!--/************************* IFRAME centro *************************************************************
@@ -120,12 +111,12 @@
       </div>
    </section>
 ************************ Fortmulario **************************************************************-->
-    <section id="contact-page">
+    <section >
       <div class="container">
         <div class="center">
           <br>
           <br>
-          <h2>Docente</h2>
+          <h2>Cambio de Contraseña</h2>
           <p class="lead">B-Smart</p>
         </div>
         <div class="row contact-wrap">

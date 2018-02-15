@@ -103,13 +103,70 @@ $TareaCollectorObj = new TareaCollector();
     <p class="lead">B-Smart</p>
   </div>
 
-  <div class="col-xs-offset-10 ">
+  <?php
+  if ($_SESSION['usuario']['descripcion'] != 'Alumno') {
+
+    echo '
+    <div class="col-xs-offset-10 ">
     <a type="button" href="form_Tarea.php" class="btn btn-primary"> Nuevo </a>
   </div>
+  ';
+  }
+  ?>
   <br>
   <div class="container">
     <div class="table-responsive">
+
+
+
+
+
+
+      <?php
+      if ($_SESSION['usuario']['descripcion'] == 'Alumno')
+      {
+        echo '
+      <div class="table-responsive">
       <table class="table table-condensed table-bordered table-hover">
+        <thead>
+        <tr>          
+          <th bgcolor="#D8D8D8">MATERIA</th>
+          <th bgcolor="#D8D8D8">DESCRIPCIÓN</th>
+          <th bgcolor="#D8D8D8">FECHA ENTREGA</th>
+        </tr>
+        </thead>';
+        $ban=0;
+
+        foreach ($TareaCollectorObj->showTareaCurso() as $c) {
+
+          if($ban==0){
+            $fech=$c->getfecha();
+            $ban=1;
+            echo '<h3> Fecha: '.$c->getfecha().' </h3>';
+          }
+          if ($fech == $c->getfecha()){
+            echo '<tbody>
+              <tr>
+              <td>' . $c->getdescripcion_mat() . '</td>
+              <td>' . $c->getdescripcion_ta() .'</td>
+              <td>' . $c->getfecha_entrega() . '</td>';
+          }
+          else{
+            $ban=0;
+          }
+
+        }
+        echo '
+            </tr>
+            </tbody>
+            </table>
+            </div> ';
+      }
+
+      else{
+        echo'
+    	<div class="table-responsive">
+    	<table class="table table-condensed table-bordered table-hover">
         <thead>
         <tr>
           <th bgcolor="#D8D8D8">FECHA</th>
@@ -117,68 +174,41 @@ $TareaCollectorObj = new TareaCollector();
           <th bgcolor="#D8D8D8">CURSO</th>
           <th bgcolor="#D8D8D8">DESCRIPCIÓN</th>
           <th bgcolor="#D8D8D8">FECHA ENTREGA</th>
-          <?php
-          if ($_SESSION['usuario']['descripcion'] != 'Alumno') {
-
-            echo '
-          <th colspan=2 bgcolor="#D8D8D8">ACCION</th>';
-          }
-
-          ?>
+          <th colspan=2 bgcolor="#D8D8D8">ACCION</th>                  
         </tr>
-        </thead>
-        <?php
-        if ($_SESSION['usuario']['descripcion'] == 'Alumno') {
-
-          foreach ($TareaCollectorObj->showTareaCurso() as $c) {
-            echo '<tbody>
-  <tr>
-     <td>' . $c->getfecha() . '</td>
-     <td>' . $c->getdescripcion_mat() . '</td>
-     <td>' . $c->getdescripcion() . '</td>
-     <td>' . $c->getdescripcion_ta() . '</td>
-     <td>' . $c->getfecha_entrega() . '</td>     ';
-            if ($_SESSION['usuario']['descripcion'] != 'Alumno') {
-
-              echo '
-                <td><a href="Tarea_edit.php?id=' . $c->getcod_Tarea() . '"><i class="fa fa-pencil-square-o" ></i></a></td> 
-                <td><a href="Tarea_delete.php?id=' . $c->getcod_Tarea() . '"><i class="fa fa-trash-o"></i></a></td>';
-            }
-
-            echo '
-  </tr>
-  </tbody> ';
-          }
+        </thead>';
 
 
+        foreach ($TareaCollectorObj->showTarea() as $c) {
+          echo '<tbody>
+              		<tr>
+            			<td>' . $c->getfecha() . '</td>
+            			<td>' . $c->getdescripcion_mat() . '</td>
+            			<td>' . $c->getdescripcion() . '</td>
+            			<td>' . $c->getdescripcion_ta() . '</td>
+            			<td>' . $c->getfecha_entrega() . '</td> 
+            			<td><a href="Tarea_edit.php?id=' . $c->getcod_Tarea() . '"><i class="fa fa-pencil-square-o" ></i></a></td> 
+                		<td><a href="Tarea_delete.php?id=' . $c->getcod_Tarea() . '"><i class="fa fa-trash-o"></i></a></td>
+              		</tr>
+              	  </tbody>';
         }
+        echo'</table> ';
 
-        else{
 
-          foreach ($TareaCollectorObj->showTarea() as $c) {
-            echo '<tbody>
-  <tr>
-     <td>' . $c->getfecha() . '</td>
-     <td>' . $c->getdescripcion_mat() . '</td>
-     <td>' . $c->getdescripcion() . '</td>
-     <td>' . $c->getdescripcion_ta() . '</td>
-     <td>' . $c->getfecha_entrega() . '</td>     ';
-            if ($_SESSION['usuario']['descripcion'] != 'Alumno') {
 
-              echo '
-                <td><a href="Tarea_edit.php?id=' . $c->getcod_Tarea() . '"><i class="fa fa-pencil-square-o" ></i></a></td> 
-                <td><a href="Tarea_delete.php?id=' . $c->getcod_Tarea() . '"><i class="fa fa-trash-o"></i></a></td>';
-            }
+      }
 
-            echo '
-  </tr>
-  </tbody> ';
-          }
 
-        }
 
-        ?>
-      </table>
+      ?>
+
+
+
+
+
+
+
+
     </div>
 
 
